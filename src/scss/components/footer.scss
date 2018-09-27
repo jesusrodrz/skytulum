@@ -1,0 +1,42 @@
+.footer{
+  background-color: $color-darkgray;
+  color:white;
+  padding: 1em;
+  &__section{
+    border-top: solid white 1px;
+    &:last-of-type{
+      border-bottom: solid white 1px;
+    }
+    padding: .8em;
+  }
+  &__title{
+    text-align: left;
+  }
+}
+.notices-ft__title{
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.notice-item{
+  margin: .5em 0;
+  &__title{
+    font-size: 1em;
+    font-weight: 600;
+  }
+  &__text,&__title{
+    margin: 0;
+  }
+  &__date{
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+}
+
+.develop-copy{
+  &__img{
+    max-height: 90px
+  }
+}
+  

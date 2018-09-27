@@ -10,6 +10,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+.section.hero,.section.gallery{
+  max-width: none;
+  // margin: 1em
+}
 
 .section.description,.section.contact{
   padding: 1em;
