@@ -662,7 +662,8 @@ figure {
     clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%); }
 
 .contact {
-  background-color: #429994; }
+  background-color: #429994;
+  margin: 0 1em; }
   .contact__title {
     width: 100%;
     text-align: center;
