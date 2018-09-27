@@ -1,0 +1,21 @@
+mixin navBar(items)
+  nav.main-nav#mainNavigation
+    a.menu__btn#menuOpen(href="#")
+      .menu__icon
+        span.menu__icon-span
+        span.menu__icon-span
+        span.menu__icon-span
+      span.menu__text Menu
+    ul.menu#mainMenu
+      a.menu__btn--close#menuClose(href="#")
+        .menu__icon--close
+          span.menu__icon--close-span
+          span.menu__icon--close-span
+      each item in items
+        li.menu__item(class=`${item.active ? 'active' : ''}`)
+          a.menu__link(href=item.url) #{item.name}
+          if item.subMenu
+            ul.menu--sub-menu
+              each subItem in item.subMenu
+                li.menu__item--sub-menu
+                  a.menu__link--sub-menu(href=subItem.url) #{subItem.name}

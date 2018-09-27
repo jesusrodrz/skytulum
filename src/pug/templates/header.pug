@@ -1,0 +1,14 @@
+include ../components/menu.pug
+-
+  const menuItems = [
+    { name:'Inicio',url:'#', active:'true'},
+    { name:'Proyecto',url:'#'},
+    { name:'Modelos',url:'#'},
+    { name:'Tulum',url:'#'},
+    { name:'Noticias',url:'#'}
+  ]
+header.main-header
+  figure.main-logo
+    img.main-logo__img(src="../img/skytulum-logo.png", alt="Sky Tulum logo")
+  +navBar(menuItems)
+    

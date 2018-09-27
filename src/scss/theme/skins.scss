@@ -1,0 +1,7 @@
+.bg-square{
+  @extend %bg-square;
+}
+
+.theme-white{
+  --theme-color: white;
+}

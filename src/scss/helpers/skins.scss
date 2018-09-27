@@ -1,0 +1,24 @@
+%bg-square{
+  position: relative;
+  z-index: 100;
+  &::before{
+    content:'';
+    z-index: -10;
+    position: absolute;
+    width: 80%;
+    height: 40%;
+    bottom: 20%;
+    background-color: var(--theme-color)
+
+  }
+}
+%bg-square-centered{
+  @extend %bg-square;
+  &::before{
+    content:'';
+    width: 100%;
+    height: 65%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

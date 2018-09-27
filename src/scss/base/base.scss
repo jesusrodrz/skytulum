@@ -1,0 +1,22 @@
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin : 0;
+  font-family : $primary-font;
+  font-size: 1.4em;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family:$font-family;
+}
+
+a{
+  text-decoration: none;
+  color:inherit
+}
+figure{
+  margin:0
+}

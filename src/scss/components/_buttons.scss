@@ -1,0 +1,25 @@
+.btn,[class^='btn']{
+  --theme-color: #{color(cta)};
+  text-transform: uppercase;
+  outline: none;
+  font-size: 1.2em;
+  padding: .6em;
+  color:var(--theme-color);
+  border: solid 1px var(--theme-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out .4s;
+  background-color: inherit;
+  cursor: pointer;
+  &:hover{
+    background-color: var(--theme-color);
+    color: white;
+  }
+}
+.btn-white{
+  --theme-color: white;
+  &:hover{
+    background-color: rgba($color: #fff, $alpha: .7);
+  }
+}
