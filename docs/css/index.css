@@ -676,51 +676,46 @@ figure {
 .description__text {
   grid-area: text; }
 
-.gallery__item {
-  width: 100%;
-  perspective: 100vw;
-  perspective-origin: 50% 50%;
-  margin: 1em 0; }
-
-.gallery__item:nth-of-type(odd) .gallery__img {
-  transform: rotateY(30deg) scaleX(1.602); }
-
-.gallery__item:nth-of-type(even) .gallery__img {
-  transform: rotateY(-30deg) scaleX(1.602); }
-
-.gallery__item:nth-of-type(odd):hover .gallery__img {
-  transform: rotateY(0deg) scaleX(1); }
-
-.gallery__item:nth-of-type(even):hover .gallery__img {
-  transform: rotateY(0deg) scaleX(1); }
-
-.gallery__img {
-  display: block;
-  width: 100%;
-  transition: transform ease-in-out .4s; }
-
-.gallery__btn {
-  margin: 1em 0; }
-
-@media (min-width: 54rem) {
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, auto);
-    grid-gap: 30px; }
-    .gallery__title {
-      justify-self: center;
-      grid-area: title; }
-    .gallery__item:nth-of-type(1) {
-      grid-area: item1; }
-    .gallery__item:nth-of-type(2) {
-      grid-area: item2; }
-    .gallery__item:nth-of-type(3) {
-      grid-area: item3; }
-    .gallery__item:nth-of-type(4) {
-      grid-area: item4; }
-    .gallery__item:nth-of-type(5) {
-      grid-area: item5; } }
+.gallery {
+  overflow-x: hidden; }
+  .gallery__item {
+    width: 100%;
+    perspective: 100vw;
+    perspective-origin: 50% 50%;
+    margin: 1em 0; }
+  .gallery__item:nth-of-type(odd) .gallery__img {
+    transform: rotateY(30deg) scaleX(1.602); }
+  .gallery__item:nth-of-type(even) .gallery__img {
+    transform: rotateY(-30deg) scaleX(1.602); }
+  .gallery__item:nth-of-type(odd):hover .gallery__img {
+    transform: rotateY(0deg) scaleX(1); }
+  .gallery__item:nth-of-type(even):hover .gallery__img {
+    transform: rotateY(0deg) scaleX(1); }
+  .gallery__img {
+    display: block;
+    width: 100%;
+    transition: transform ease-in-out .4s; }
+  .gallery__btn {
+    margin: 1em 0; }
+  @media (min-width: 54rem) {
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(12, auto);
+      grid-gap: 30px; }
+      .gallery__title {
+        justify-self: center;
+        grid-area: title; }
+      .gallery__item:nth-of-type(1) {
+        grid-area: item1; }
+      .gallery__item:nth-of-type(2) {
+        grid-area: item2; }
+      .gallery__item:nth-of-type(3) {
+        grid-area: item3; }
+      .gallery__item:nth-of-type(4) {
+        grid-area: item4; }
+      .gallery__item:nth-of-type(5) {
+        grid-area: item5; } }
 
 .contact {
   background-color: #429994;
