@@ -1,4 +1,4 @@
-.section{
+.section,[class^='section']{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,24 +10,25 @@
   margin-left: auto;
   margin-right: auto;
 }
-.section.hero,.section.gallery{
+.section.hero,.section-gallery{
   max-width: none;
   // margin: 1em
 }
 
-.section.description,.section.contact{
+.section-description,.section.contact{
   padding: 1em;
 }
 
-.section.description{
+.section-description{
   padding: 1em;
 
   @include media(md){
-    
+    display: grid;
+    grid-template-columns: 3fr;
   }
   
 }
-.section.contact{
-  align-items: flex-start;
+.section-contact{
+  padding: 1em;
   // margin: 1em
 }

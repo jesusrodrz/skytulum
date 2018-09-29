@@ -1,0 +1,19 @@
+.description{
+  @include media(md){
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    // grid-template-columns: 
+    grid-template-areas: ". title title" ". text text"
+
+  }
+
+  &__title{
+    grid-area: title;
+    justify-self: start;
+  }
+  &__text{
+    grid-area: text;
+
+  }
+
+}
