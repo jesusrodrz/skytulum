@@ -12,7 +12,7 @@ module.exports = {
   },
   entry: { index: './src/js/index.js' },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'js/[name].js'
   },
   devServer: {
@@ -25,7 +25,7 @@ module.exports = {
       name: true
     }
   },
-  mode: 'production',
+  mode: 'development',
   module: {
     rules: [
       {
