@@ -1,0 +1,50 @@
+.gallery{
+  margin: 0;
+  // overflow-x: unset;
+  &__fig{
+    background-color: rgba(255, 74, 74, 0.404);
+    margin-top:15%;
+    perspective: 2000px;
+    perspective-origin: 50% 50%;
+    // overflow-y: visible;
+
+  }
+  &__img{
+    transition: transform .4s ease-out ;
+  }
+  &__fig:nth-of-type(1) &__img{
+    transform: rotateY(0deg) rotateX(0deg) scale(.6);
+    transform: rotateY(-30deg) rotateX(15deg) scale(1);
+
+  }
+  &__fig:nth-of-type(1):hover &__img{
+    // transform-origin: 
+    transform: rotateY(-22deg) rotateX(7deg) scale(.8);
+  }
+  &__fig:nth-of-type(2) &__img{
+    transform-origin: center center;
+    // transform-origin: 
+    transform: rotateY(0deg) rotateX(0deg) scale(.6);
+    transform: rotateY(-30deg) scale(1.2) translateX(-5%);
+
+  }
+  &__fig:nth-of-type(2):hover &__img{ //DERECHA
+    // transform-origin: 
+    // transform: rotateY(-22deg) scale(.8);
+    transform: rotateY(0deg) scale(1) translateX(0);
+  }
+
+  &__fig:nth-of-type(3) &__img{
+    transform-origin: center center;
+    // transform-origin: 
+    transform: rotateY(0deg) rotateX(0deg) scale(.6);
+    transform: rotateY(30deg) scale(1.2) translateX(5%);
+
+  }
+  &__fig:nth-of-type(3):hover &__img{//IZQUIERDA
+    // transform-origin: 
+    // transform: rotateY(-22deg) scale(.8);
+    transform: rotateY(0deg) scale(1) translateX(0);
+  }
+
+}

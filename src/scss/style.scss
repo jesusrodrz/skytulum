@@ -31,6 +31,7 @@
 @import "components/gallery.scss";
 @import "components/contact.scss";
 @import "components/footer.scss";
+@import "components/proyecto.scss";
 
 // Theme (colors and fonts)
 @import "theme/typography";
@@ -41,10 +42,10 @@
   // o resolver situaciones extremas. Se espera poder mejorarlos luego.
 @import "hacks/hacks";
 
-.none{
-  display: none;
-}
-img{
-  display: block;
-  max-width: 100%;
-}
+// .none{
+//   display: none;
+// }
+// img{
+//   display: block;
+//   max-width: 100%;
+// }
