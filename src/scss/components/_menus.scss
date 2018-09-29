@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row-reverse;
   flex-grow: 1;
-  padding: .8em;
+  padding: .5em;
   color: color(text);
   @include media(md) {
   flex-direction: row;
@@ -54,7 +54,7 @@
 
   }
   &__btn{
-    width: calc( #{$header-height} * 1.5);
+    width: calc( #{$header-height} * 2);
     display: flex;
     transition: transform ease-in-out .2s;
     &:active{

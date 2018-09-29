@@ -42,13 +42,8 @@ $primary-font-bold: 'Scheherazade-Bold';
 
 
 :root{
-  --header-height: 80px;
+  --header-height: 60px;
+  
 }
-// @include media(md){
-//   :root{
-//     --header-height: 60px;
-    
-//   }
-// }
 
 $header-height: var(--header-height);

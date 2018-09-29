@@ -2,7 +2,7 @@
   Based in ITCSS and SMACSS
 */
 :root {
-  --header-height: 80px; }
+  --header-height: 60px; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -431,15 +431,20 @@ figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
-  margin: 1em;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 1em; }
   .section__title, [class^='section']__title {
     margin: 1em; }
+  @media (min-width: 1200px) {
+    .section, [class^='section'] {
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto; } }
 
 .section.hero, .section-gallery {
   max-width: none; }
+
+.section.hero {
+  margin: 0; }
 
 .section-description, .section.contact {
   padding: 1em; }
@@ -454,10 +459,10 @@ figure {
 .section-contact {
   padding: 1em; }
 
-.hero__title, .menu__item.active, .title-2, .bg-square {
+.hero__title, .menu__item.active, .title-2, .bg-square, .bg-square-center {
   position: relative;
   z-index: 100; }
-  .hero__title::before, .menu__item.active::before, .title-2::before, .bg-square::before {
+  .hero__title::before, .menu__item.active::before, .title-2::before, .bg-square::before, .bg-square-center::before {
     content: '';
     z-index: -10;
     position: absolute;
@@ -500,7 +505,7 @@ figure {
   display: flex;
   flex-direction: row-reverse;
   flex-grow: 1;
-  padding: .8em;
+  padding: .5em;
   color: #636366; }
   @media (min-width: 54rem) {
     .main-nav {
@@ -546,7 +551,7 @@ figure {
   font-size: 1.4em; }
 
 .menu__btn, .menu__btn--close {
-  width: calc( var(--header-height) * 1.5);
+  width: calc( var(--header-height) * 2);
   display: flex;
   transition: transform ease-in-out .2s; }
   .menu__btn:active, .menu__btn--close:active {
@@ -610,18 +615,19 @@ figure {
 .main-header {
   height: var(--header-height);
   display: flex;
-  max-width: 1200px;
-  margin: 1em;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: .4em; }
   @media (min-width: 54rem) {
     .main-header {
       position: relative; } }
+  @media (min-width: 1200px) {
+    .main-header {
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto; } }
 
 .main-logo {
   height: 100%;
-  padding: .2em 0;
-  margin-left: .8em; }
+  padding: .2em 0; }
   @media (min-width: 54rem) {
     .main-logo {
       position: absolute;
@@ -676,46 +682,68 @@ figure {
 .description__text {
   grid-area: text; }
 
-.gallery {
-  overflow-x: hidden; }
-  .gallery__item {
-    width: 100%;
-    perspective: 100vw;
-    perspective-origin: 50% 50%;
-    margin: 1em 0; }
-  .gallery__item:nth-of-type(odd) .gallery__img {
-    transform: rotateY(30deg) scaleX(1.602); }
-  .gallery__item:nth-of-type(even) .gallery__img {
-    transform: rotateY(-30deg) scaleX(1.602); }
-  .gallery__item:nth-of-type(odd):hover .gallery__img {
-    transform: rotateY(0deg) scaleX(1); }
-  .gallery__item:nth-of-type(even):hover .gallery__img {
-    transform: rotateY(0deg) scaleX(1); }
-  .gallery__img {
-    display: block;
-    width: 100%;
-    transition: transform ease-in-out .4s; }
-  .gallery__btn {
-    margin: 1em 0; }
-  @media (min-width: 54rem) {
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: repeat(12, auto);
-      grid-gap: 30px; }
-      .gallery__title {
-        justify-self: center;
-        grid-area: title; }
-      .gallery__item:nth-of-type(1) {
-        grid-area: item1; }
-      .gallery__item:nth-of-type(2) {
-        grid-area: item2; }
-      .gallery__item:nth-of-type(3) {
-        grid-area: item3; }
-      .gallery__item:nth-of-type(4) {
-        grid-area: item4; }
-      .gallery__item:nth-of-type(5) {
-        grid-area: item5; } }
+@media (max-width: 54rem) {
+  .gallery {
+    overflow-x: hidden; }
+    .gallery__item {
+      width: 100%;
+      perspective: 100vw;
+      perspective-origin: 50% 50%;
+      margin: 1em 0; }
+    .gallery__item:nth-of-type(odd) .gallery__img {
+      transform: rotateY(30deg) scaleX(1.602); }
+    .gallery__item:nth-of-type(even) .gallery__img {
+      transform: rotateY(-30deg) scaleX(1.602); }
+    .gallery__item:nth-of-type(odd):hover .gallery__img {
+      transform: rotateY(0deg) scaleX(1); }
+    .gallery__item:nth-of-type(even):hover .gallery__img {
+      transform: rotateY(0deg) scaleX(1); }
+    .gallery__img {
+      display: block;
+      width: 100%;
+      transition: transform ease-in-out .4s; }
+    .gallery__btn {
+      margin: 1em 0; } }
+
+@media (min-width: 54rem) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(16, auto);
+    grid-gap: 45px;
+    grid-template-areas: "title  title  title  item1  item1   item1  item1  item1  item1  item1  item1  item1" ".      .      .      .      .       .      btn    btn    btn    btn    btn    btn" ".      item2  item2  item2  item2   item2  btn    btn    btn    btn    btn    btn" ".      item2  item2  item2  item2   item2  item5  item5  item5  item5  item5  item5" ".      item2  item2  item2  item2   item2  item5  item5  item5  item5  item5  item5" ".      item2  item2  item2  item2   item2  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      .      .       .      item5  item5  item5  item5  item5  item5" ".      .      .      .      .       .      item5  item5  item5  item5  item5  item5"; }
+    .gallery__title {
+      justify-self: center;
+      grid-area: title; }
+      .gallery__title::before {
+        width: 120%;
+        left: 50%;
+        transform: translateX(-50%); }
+    .gallery__btn {
+      grid-area: btn; }
+    .gallery__item {
+      width: 100%;
+      height: 100%; }
+    .gallery__item:first-of-type .gallery__img {
+      box-shadow: none; }
+    .gallery__img {
+      box-shadow: 8px 8px 15px #c3c3c3; }
+    .gallery__item:nth-of-type(even) .gallery__img, .gallery__item:nth-of-type(even) .gallery__img {
+      transform: rotateY(0deg) scaleX(1); }
+    .gallery__item:nth-of-type(1) {
+      grid-area: item1; }
+    .gallery__item:nth-of-type(2) {
+      grid-area: item2; }
+    .gallery__item:nth-of-type(3) {
+      grid-area: item3; }
+    .gallery__item:nth-of-type(4) {
+      grid-area: item4; }
+    .gallery__item:nth-of-type(5) {
+      grid-area: item5; }
+    .gallery__item:nth-of-type(5) .gallery__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; } }
 
 .contact {
   background-color: #429994;
@@ -846,6 +874,11 @@ figure {
 
 .t-uppercase {
   text-transform: uppercase; }
+
+.bg-square-center::before {
+  width: 150%;
+  left: 50%;
+  transform: translateX(-50%); }
 
 .theme-white {
   --theme-color: white; }

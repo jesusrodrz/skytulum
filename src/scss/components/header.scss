@@ -1,25 +1,28 @@
 :root{
   @include media(md){
-    // --header-height: 60px
+    // --header-height: 80px
   }
 }
 .main-header{
   height: $header-height;
 
   display: flex;
-  max-width: 1200px;
-  margin: 1em;
-  margin-left: auto;
-  margin-right: auto;
+  margin: .4em ;
   @include media(md){
     position: relative;
+  }
+  @include media(1200px){
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+
   }
 }
 
 .main-logo{
   height: 100%;
   padding:.2em 0;
-  margin-left: .8em;
+  // margin-left: .8em;
   @include media(md){
     position: absolute;
     top: 0;
