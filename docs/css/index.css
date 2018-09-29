@@ -707,6 +707,7 @@ figure {
 
 @media (min-width: 54rem) {
   .gallery {
+    overflow-x: hidden;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(16, auto);
@@ -727,11 +728,19 @@ figure {
     .gallery__item:first-of-type .gallery__img {
       box-shadow: none; }
     .gallery__img {
-      box-shadow: 8px 8px 15px #c3c3c3; }
+      box-shadow: 8px 8px 15px #c3c3c3;
+      transition: transform ease-in-out .4s; }
     .gallery__item:nth-of-type(even) .gallery__img, .gallery__item:nth-of-type(even) .gallery__img {
       transform: rotateY(0deg) scaleX(1); }
     .gallery__item:nth-of-type(1) {
-      grid-area: item1; }
+      grid-area: item1;
+      perspective: calc( 3 / 4 * 100vw);
+      perspective-origin: 50% 50%; }
+    .gallery__item:nth-of-type(1) .gallery__img {
+      transform-origin: center right;
+      transform: rotateY(-30deg) scaleX(1.602); }
+    .gallery__item:nth-of-type(1):hover .gallery__img {
+      transform: rotateY(0deg) scaleX(1); }
     .gallery__item:nth-of-type(2) {
       grid-area: item2; }
     .gallery__item:nth-of-type(3) {
