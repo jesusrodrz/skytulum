@@ -32,6 +32,7 @@
 @import "components/contact.scss";
 @import "components/footer.scss";
 @import "components/proyecto.scss";
+@import "components/modal.scss";
 
 // Theme (colors and fonts)
 @import "theme/typography";
@@ -49,3 +50,6 @@
 //   display: block;
 //   max-width: 100%;
 // }
+.none{
+  display: none;
+}

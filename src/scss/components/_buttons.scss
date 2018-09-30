@@ -23,3 +23,43 @@
     background-color: rgba($color: #fff, $alpha: .7);
   }
 }
+
+.cta-btn{
+  position: absolute;
+  height: 50%;
+  background-color: color(cta);
+  color: white;
+  top: calc( 50% + 25% );
+  right: 0;
+  z-index: 200;
+  padding: .5em 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: .8em;
+  cursor: pointer;
+  transition: transform ease-out .4s;
+  transform-origin: center right;
+  transform: translateX(0em);
+  &::before{
+    background-color: inherit;
+    transition: inherit;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: calc(1em + 1px);
+    top:0;
+    right: 0;
+  }
+  &:hover{
+    transform: translateX(-1em);
+    &::before{
+      transform: translateX(1em);
+    }
+  }
+
+  @include media(md,max){
+    display: none;
+  }
+
+}

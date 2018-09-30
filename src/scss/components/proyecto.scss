@@ -14,7 +14,6 @@
     transition: transform .4s ease-out ;
   }
   &__fig:nth-of-type(1) &__img{
-    transform: rotateY(0deg) rotateX(0deg) scale(.6);
     transform: rotateY(-30deg) rotateX(15deg) scale(1);
 
   }

@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row-reverse;
   flex-grow: 1;
-  padding: .5em;
+  padding: .2em;
   color: color(text);
   @include media(md) {
   flex-direction: row;
@@ -38,6 +38,7 @@
   }
   &__item{
     margin: .5em 0;
+    color:color(cta);
     &.active{
       @extend %bg-square;
       --theme-color:#{color(primary)};
@@ -51,14 +52,21 @@
     justify-content: center;
     align-items: center;
     font-size: 1.4em;
+    
 
   }
   &__btn{
-    width: calc( #{$header-height} * 2);
+    width: calc( #{$header-height} * 1.5);
     display: flex;
     transition: transform ease-in-out .2s;
     &:active{
       transform: scale(.8)
+    }
+    @include media(md){
+      // width: calc( #{$header-height} * 1.5);
+    }
+    @include media(md,max){
+      padding: .3em 0;
     }
 
   }

@@ -3,10 +3,12 @@
 }
 .bg-square-center{
   @extend %bg-square;
-  &::before{
-    width: 150%;
-    left: 50%;
-    transform: translateX(-50%) ;
+  @include media(md) {
+      &::before{
+      width: 150%;
+      left: 50%;
+      transform: translateX(-50%) ;
+    }
   }
 }
 .theme-white{

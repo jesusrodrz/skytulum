@@ -35,5 +35,13 @@
 }
 .section-contact{
   padding: 1em;
+  margin: 0;
+  @include media(md){
+    padding: 4em;
+    margin: 0 auto;
+  }
+  max-width: 1400px;
+  
+  // width: 100%;
   // margin: 1em
 }

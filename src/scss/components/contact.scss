@@ -6,6 +6,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  grid-area: contact;
+  // &.
+
 
   &__title{
     width: 100%;
@@ -51,9 +54,86 @@
     }
   }
   &__btn{
-    margin: .5em 0;
+    margin: .8em 0;
     &:hover{
       --theme-color: rgba(#fff,.7);
     }
   }
+}
+
+.section-contact{
+  overflow: hidden;
+  position: relative;
+  &__img{
+    @include media(lg,max){
+      transform: translate(25%,30%) scale(.9);
+    }
+    @include media(md,max){
+      display: none;
+    }
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    transform-origin: top left;
+    transform: translate(15%,20%)
+  }
+}
+
+.modal-contact{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(#000,.8);
+  grid-template-columns: 1fr 60%;
+  grid-template-areas: 'menu contact';
+  grid-template-areas: '. contact';
+  grid-auto-flow: dense;
+  display: none;
+  top: 0;
+  z-index: 1000;
+
+  .menu{
+    display: none;
+    position: static;
+    transform: none;
+    position: relative;
+    z-index: 1050;
+    background-color: color(background)
+  }
+  &.nav{
+    // display: flex;
+    .menu{
+      display: flex;
+      width: 80%;
+      justify-self: end;
+      margin: 2em 0;
+
+    }
+    .close-contact{
+      display: none;
+    }
+  }
+
+  .contact{
+    position: relative;
+    z-index: 1100;
+    box-shadow: -7px 0 50px rgba(#000,.6);
+    margin: 0;
+    padding: 4em;
+    &__container{
+      width: 100%;
+      justify-content: center;
+    }
+    &__form{
+      align-items: flex-start;
+    }
+
+  }
+  &.active{
+    display: grid;
+  }
+}
+.overflow-hidden{
+  overflow: hidden;
 }

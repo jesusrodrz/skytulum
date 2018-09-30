@@ -2,7 +2,7 @@
   Based in ITCSS and SMACSS
 */
 :root {
-  --header-height: 60px; }
+  --header-height: 80px; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -457,7 +457,13 @@ figure {
       grid-template-columns: 3fr; } }
 
 .section-contact {
-  padding: 1em; }
+  padding: 1em;
+  margin: 0;
+  max-width: 1400px; }
+  @media (min-width: 54rem) {
+    .section-contact {
+      padding: 4em;
+      margin: 0 auto; } }
 
 .hero__title, .menu__item.active, .title-2, .bg-square, .bg-square-center {
   position: relative;
@@ -501,11 +507,45 @@ figure {
   .btn-white:hover {
     background-color: rgba(255, 255, 255, 0.7); }
 
+.cta-btn {
+  position: absolute;
+  height: 50%;
+  background-color: #636366;
+  color: white;
+  top: calc( 50% + 25%);
+  right: 0;
+  z-index: 200;
+  padding: .5em 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: .8em;
+  cursor: pointer;
+  transition: transform ease-out .4s;
+  transform-origin: center right;
+  transform: translateX(0em); }
+  .cta-btn::before {
+    background-color: inherit;
+    transition: inherit;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: calc(1em + 1px);
+    top: 0;
+    right: 0; }
+  .cta-btn:hover {
+    transform: translateX(-1em); }
+    .cta-btn:hover::before {
+      transform: translateX(1em); }
+  @media (max-width: 54rem) {
+    .cta-btn {
+      display: none; } }
+
 .main-nav {
   display: flex;
   flex-direction: row-reverse;
   flex-grow: 1;
-  padding: .5em;
+  padding: .2em;
   color: #636366; }
   @media (min-width: 54rem) {
     .main-nav {
@@ -537,7 +577,8 @@ figure {
   transform: translateX(0); }
 
 .menu__item {
-  margin: .5em 0; }
+  margin: .5em 0;
+  color: #636366; }
   .menu__item.active {
     --theme-color:#429994;
     color: #000; }
@@ -551,11 +592,14 @@ figure {
   font-size: 1.4em; }
 
 .menu__btn, .menu__btn--close {
-  width: calc( var(--header-height) * 2);
+  width: calc( var(--header-height) * 1.5);
   display: flex;
   transition: transform ease-in-out .2s; }
   .menu__btn:active, .menu__btn--close:active {
     transform: scale(0.8); }
+  @media (max-width: 54rem) {
+    .menu__btn, .menu__btn--close {
+      padding: .3em 0; } }
 
 .menu__icon, .menu__icon--close, .menu__text {
   display: block; }
@@ -612,16 +656,21 @@ figure {
   align-items: center;
   font-size: 1.5em; }
 
+@media (min-width: 54rem) {
+  :root {
+    --header-height: 100px
+  ; } }
+
 .main-header {
   height: var(--header-height);
   display: flex;
-  margin: .4em; }
+  padding: .4em; }
   @media (min-width: 54rem) {
     .main-header {
-      position: relative; } }
+      position: relative;
+      padding: 1em; } }
   @media (min-width: 1200px) {
     .main-header {
-      max-width: 1200px;
       margin-right: auto;
       margin-left: auto; } }
 
@@ -682,26 +731,28 @@ figure {
 .description__text {
   grid-area: text; }
 
+.gallery__img {
+  transition: transform .4s ease-out; }
+
 @media (max-width: 54rem) {
   .gallery {
     overflow-x: hidden; }
     .gallery__item {
       width: 100%;
-      perspective: 100vw;
+      perspective: 2000px;
       perspective-origin: 50% 50%;
-      margin: 1em 0; }
+      margin-top: 15%; }
     .gallery__item:nth-of-type(odd) .gallery__img {
-      transform: rotateY(30deg) scaleX(1.602); }
+      transform: rotateY(-30deg) rotateX(15deg) scale(1); }
+    .gallery__item:nth-of-type(odd):hover .gallery__img, .gallery__item:nth-of-type(odd).active .gallery__img {
+      transform: rotateY(-22deg) rotateX(7deg) scale(0.8); }
     .gallery__item:nth-of-type(even) .gallery__img {
-      transform: rotateY(-30deg) scaleX(1.602); }
-    .gallery__item:nth-of-type(odd):hover .gallery__img {
-      transform: rotateY(0deg) scaleX(1); }
-    .gallery__item:nth-of-type(even):hover .gallery__img {
-      transform: rotateY(0deg) scaleX(1); }
+      transform: rotateY(30deg) rotateX(15deg) scale(1); }
+    .gallery__item:nth-of-type(even):hover .gallery__img, .gallery__item:nth-of-type(even).active .gallery__img {
+      transform: rotateY(22deg) rotateX(7deg) scale(0.8); }
     .gallery__img {
       display: block;
-      width: 100%;
-      transition: transform ease-in-out .4s; }
+      width: 100%; }
     .gallery__btn {
       margin: 1em 0; } }
 
@@ -710,14 +761,15 @@ figure {
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(16, auto);
+    grid-template-rows: repeat(16, auto) 10px;
     grid-gap: 45px;
-    grid-template-areas: "title  title  title  item1  item1   item1  item1  item1  item1  item1  item1  item1" ".      .      .      .      .       .      btn    btn    btn    btn    btn    btn" ".      item2  item2  item2  item2   item2  btn    btn    btn    btn    btn    btn" ".      item2  item2  item2  item2   item2  item5  item5  item5  item5  item5  item5" ".      item2  item2  item2  item2   item2  item5  item5  item5  item5  item5  item5" ".      item2  item2  item2  item2   item2  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      .      .       .      item5  item5  item5  item5  item5  item5" ".      .      .      .      .       .      item5  item5  item5  item5  item5  item5"; }
+    grid-template-areas: "title  title  title  item1  item1   item1  item1  item1  item1  item1  item1  item1" ".      .      .      .      .       .      btn    btn    btn    btn    btn    btn" ".      item2  item2  item2  item2   item2  btn    btn    btn    btn    btn    btn" ".      item2  item2  item2  item2   item2  item5  item5  item5  item5  item5  item5" ".      item2  item2  item2  item2   item2  item5  item5  item5  item5  item5  item5" ".      item2  item2  item2  item2   item2  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      item3  item3  item3   item3  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      item4  item4   item4  item5  item5  item5  item5  item5  item5" ".      .      .      .      .       .      item5  item5  item5  item5  item5  item5" ".      .      .      .      .       .      item5  item5  item5  item5  item5  item5" ".      .      .      .      .       .      .      .      .      .      .      .    "; }
     .gallery__title {
       justify-self: center;
-      grid-area: title; }
+      grid-area: title;
+      margin-left: 1em; }
       .gallery__title::before {
-        width: 120%;
+        width: 110%;
         left: 50%;
         transform: translateX(-50%); }
     .gallery__btn {
@@ -738,10 +790,9 @@ figure {
       perspective: calc( 3 / 4 * 100vw);
       perspective-origin: 50% 50%; }
     .gallery__item:nth-of-type(1) .gallery__img {
-      transform-origin: center right;
-      transform: rotateY(-30deg) scaleX(1.602); }
+      transform: rotateY(-30deg) rotateX(15deg) scale(0.8); }
     .gallery__item:nth-of-type(1):hover .gallery__img {
-      transform: rotateY(0deg) scaleX(1); }
+      transform: rotateY(-22deg) rotateX(7deg) scale(0.6); }
     .gallery__item:nth-of-type(2) {
       grid-area: item2; }
     .gallery__item:nth-of-type(3) {
@@ -762,7 +813,8 @@ figure {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  grid-area: contact; }
   .contact__title {
     width: 100%;
     text-align: center;
@@ -796,9 +848,69 @@ figure {
     .contact__input::placeholder {
       color: rgba(255, 255, 255, 0.6); }
   .contact__btn {
-    margin: .5em 0; }
+    margin: .8em 0; }
     .contact__btn:hover {
       --theme-color: rgba(#fff,.7); }
+
+.section-contact {
+  overflow: hidden;
+  position: relative; }
+  .section-contact__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    transform-origin: top left;
+    transform: translate(15%, 20%); }
+    @media (max-width: 64rem) {
+      .section-contact__img {
+        transform: translate(25%, 30%) scale(0.9); } }
+    @media (max-width: 54rem) {
+      .section-contact__img {
+        display: none; } }
+
+.modal-contact {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  grid-template-columns: 1fr 60%;
+  grid-template-areas: 'menu contact';
+  grid-template-areas: '. contact';
+  grid-auto-flow: dense;
+  display: none;
+  top: 0;
+  z-index: 1000; }
+  .modal-contact .menu {
+    display: none;
+    position: static;
+    transform: none;
+    position: relative;
+    z-index: 1050;
+    background-color: #eaeaea; }
+  .modal-contact.nav .menu {
+    display: flex;
+    width: 80%;
+    justify-self: end;
+    margin: 2em 0; }
+  .modal-contact.nav .close-contact {
+    display: none; }
+  .modal-contact .contact {
+    position: relative;
+    z-index: 1100;
+    box-shadow: -7px 0 50px rgba(0, 0, 0, 0.6);
+    margin: 0;
+    padding: 4em; }
+    .modal-contact .contact__container {
+      width: 100%;
+      justify-content: center; }
+    .modal-contact .contact__form {
+      align-items: flex-start; }
+  .modal-contact.active {
+    display: grid; }
+
+.overflow-hidden {
+  overflow: hidden; }
 
 .footer {
   --paddin-footer:1em;
@@ -878,7 +990,6 @@ figure {
   .gallery__img {
     transition: transform .4s ease-out; }
   .gallery__fig:nth-of-type(1) .gallery__img {
-    transform: rotateY(0deg) rotateX(0deg) scale(0.6);
     transform: rotateY(-30deg) rotateX(15deg) scale(1); }
   .gallery__fig:nth-of-type(1):hover .gallery__img {
     transform: rotateY(-22deg) rotateX(7deg) scale(0.8); }
@@ -912,11 +1023,15 @@ figure {
 .t-uppercase {
   text-transform: uppercase; }
 
-.bg-square-center::before {
-  width: 150%;
-  left: 50%;
-  transform: translateX(-50%); }
+@media (min-width: 54rem) {
+  .bg-square-center::before {
+    width: 150%;
+    left: 50%;
+    transform: translateX(-50%); } }
 
 .theme-white {
   --theme-color: white; }
+
+.none {
+  display: none; }
 

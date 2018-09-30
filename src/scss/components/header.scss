@@ -1,22 +1,25 @@
 :root{
   @include media(md){
-    // --header-height: 80px
+    --header-height: 100px
   }
 }
 .main-header{
   height: $header-height;
-
+  // overflow-x: hidden;
   display: flex;
-  margin: .4em ;
+  // margin: .4em ;
+  padding: .4em ;
   @include media(md){
     position: relative;
+    padding: 1em ;
   }
   @include media(1200px){
-    max-width: 1200px;
+    // max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
 
   }
+  // display: none;
 }
 
 .main-logo{
