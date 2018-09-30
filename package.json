@@ -16,7 +16,9 @@
     "docs": "webpack --mode production --watch --colors --progress --config webpack.config.docs.js",
     "dev": "webpack --mode development",
     "start": "webpack-dev-server --colors --progress --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "push-pages":"git subtree push --prefix dist origin gh-pages",
+    "push":"git push origin master && git subtree push --prefix dist origin gh-pages"
   },
   "license": "MIT",
   "devDependencies": {
