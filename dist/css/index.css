@@ -794,11 +794,26 @@ figure {
     .gallery__item:nth-of-type(1):hover .gallery__img {
       transform: rotateY(-22deg) rotateX(7deg) scale(0.6); }
     .gallery__item:nth-of-type(2) {
-      grid-area: item2; }
+      grid-area: item2;
+      perspective: calc( 3 / 4 * 100vw);
+      perspective-origin: 50% 50%;
+      transform: translateX(-2.6em); }
+    .gallery__item:nth-of-type(2):hover .gallery__img {
+      transform: translateX(-2.6em) rotateY(22deg) rotateX(7deg) scale(0.9); }
     .gallery__item:nth-of-type(3) {
-      grid-area: item3; }
+      grid-area: item3;
+      perspective: calc( 3 / 4 * 100vw);
+      perspective-origin: 50% 50%;
+      transform: translateX(-2.2em); }
+    .gallery__item:nth-of-type(3):hover .gallery__img {
+      transform: translateX(-2.2em) rotateY(22deg) rotateX(7deg) scale(0.9); }
     .gallery__item:nth-of-type(4) {
-      grid-area: item4; }
+      grid-area: item4;
+      perspective: calc( 3 / 4 * 100vw);
+      perspective-origin: 50% 50%;
+      transform: translateX(-1.2em); }
+    .gallery__item:nth-of-type(4):hover .gallery__img {
+      transform: translateX(-1.2em) rotateY(22deg) rotateX(7deg) scale(0.9); }
     .gallery__item:nth-of-type(5) {
       grid-area: item5; }
     .gallery__item:nth-of-type(5) .gallery__img {
