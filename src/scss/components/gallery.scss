@@ -42,7 +42,7 @@
   }
 
   @include media(md){
-    overflow-x: hidden;
+    overflow: hidden;
     display: grid;
     grid-template-columns:  repeat(12,1fr);
     grid-template-rows:  repeat(16,auto);
@@ -76,6 +76,7 @@
     }
     &__btn{
       grid-area: btn;
+      justify-self: center;
     }
     &__item{
       width: 100%;
@@ -87,10 +88,9 @@
     }
     &__img{
       box-shadow: 8px 8px 15px rgb(195, 195, 195); 
-      transition: transform ease-in-out .4s;     
-    }
-    &__item:nth-of-type(even) &__img, &__item:nth-of-type(even) &__img  {
-    transform: rotateY(0deg) scaleX(1);
+      transition: transform ease-in-out .4s;   
+      display: block;
+      width: 100%;  
     }
     &__item:nth-of-type(1) {
       
@@ -110,12 +110,15 @@
     }
     &__item:nth-of-type(3) {
       grid-area: item3;
+
     }
     &__item:nth-of-type(4) {
       grid-area: item4;
+
     }
     &__item:nth-of-type(5) {
       grid-area: item5;
+
 
     }
     &__item:nth-of-type(5) &__img{

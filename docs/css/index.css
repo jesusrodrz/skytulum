@@ -707,7 +707,7 @@ figure {
 
 @media (min-width: 54rem) {
   .gallery {
-    overflow-x: hidden;
+    overflow: hidden;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(16, auto);
@@ -721,7 +721,8 @@ figure {
         left: 50%;
         transform: translateX(-50%); }
     .gallery__btn {
-      grid-area: btn; }
+      grid-area: btn;
+      justify-self: center; }
     .gallery__item {
       width: 100%;
       height: 100%; }
@@ -729,9 +730,9 @@ figure {
       box-shadow: none; }
     .gallery__img {
       box-shadow: 8px 8px 15px #c3c3c3;
-      transition: transform ease-in-out .4s; }
-    .gallery__item:nth-of-type(even) .gallery__img, .gallery__item:nth-of-type(even) .gallery__img {
-      transform: rotateY(0deg) scaleX(1); }
+      transition: transform ease-in-out .4s;
+      display: block;
+      width: 100%; }
     .gallery__item:nth-of-type(1) {
       grid-area: item1;
       perspective: calc( 3 / 4 * 100vw);
@@ -892,7 +893,7 @@ figure {
     transform: rotateY(0deg) rotateX(0deg) scale(0.6);
     transform: rotateY(30deg) scale(1.2) translateX(5%); }
   .gallery__fig:nth-of-type(3):hover .gallery__img {
-    transform: rotateY(0deg) scale(1) translateX(0); }
+    transform: rotateY(0deg) scale(1.3) translateX(0); }
 
 .title-1 {
   font-size: 1.2em; }
