@@ -11,6 +11,12 @@
     }
   }
 }
+.center-down-square{
+  &::before{
+    height: 80%;
+    top:75%;
+  }
+}
 .theme-white{
   --theme-color: white;
 }

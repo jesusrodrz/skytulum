@@ -1,0 +1,11 @@
+mixin models(items)
+  section.section-models.models
+    each item in items
+      article.models__item
+        h2.models__title.section__title.title-2.bg-square-center.t-uppercase #{item.title}
+        .models__description
+          p.models__text #{item.text}
+          ul.models__list
+            each listItem in item.list
+              li.models__list-item #{listItem}
+        figure.models__fig: img.models__img(src=item.img, alt="")

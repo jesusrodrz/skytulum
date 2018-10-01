@@ -1,4 +1,37 @@
 extends templates/template.pug
+
+include components/models.pug
+
 block main
+  section.hero.section
+    h1.hero__title.title-1.center-down-square.t-uppercase Modelos
+    img.hero__img(src=img('interior'), alt="interior apartamento")
+  -
+    const modelsItems = [
+      {
+        title:'Estudio',
+        text: '65.8 m2',
+        img: img('sky-roof'),
+        list: [
+          '1 baño',
+          'Totalmente Amueblado',
+          'Totalmente Equipado',
+          'Jacuzzi Privado'
+        ]
+      },
+      {
+        title:'1 Habitación',
+        text: '59.0 m2',
+        img: img('sky-roof'),
+        list: [
+          '1 baño',
+          'Totalmente Amueblado',
+          'Totalmente Equipado',
+          'Jacuzzi Privado'
+        ]
+      }
+    ]
+  +models(modelsItems)
   
+
 

@@ -1,0 +1,92 @@
+.models{
+  max-width: none;
+  overflow: hidden;
+  margin: 2em 0;
+  padding-bottom: 10%;
+  width: 100%;
+  &__title{
+    grid-area: title;
+    align-self: end;
+  }
+  &__item:nth-of-type(odd){
+    grid-template-areas: "img title" "img description";
+    grid-template-columns: 60% 1fr;
+  }
+  &__item:nth-of-type(odd) &__description, &__item:nth-of-type(odd) &__title{
+    justify-self: start;
+    
+  }
+  &__item:nth-of-type(even){
+    grid-template-areas: "title img" "description img";
+    grid-template-columns: 1fr 60%;
+  }
+  &__item:nth-of-type(even) &__description, &__item:nth-of-type(even) &__title{
+    justify-self: end;
+  }
+  
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    @include media(md){
+      display: grid;
+      grid-template-columns: 60% 1fr;
+      grid-template-rows: auto auto;
+      grid-column-gap: 2 * $gap;
+      align-items: center;
+      
+    }
+    
+  }
+  &__description{
+    // justify-self: start;
+    grid-area: description;
+    align-self: start;
+    @include media(md,max){
+      display: none;
+    }
+  }
+  &__fig{
+    grid-area: img;
+
+    width: 100%;
+    perspective: 100vw;
+    perspective-origin: 50% 50%;
+    margin-top:10%;
+  }
+  &__img{
+    transition: transform .4s ease-out ;
+  }
+  &__item:nth-of-type(even) &__img{
+    transform: rotateY(-30deg) rotateX(15deg) scale(.8);
+  }
+  &__item:nth-of-type(even):hover &__img, &__item:nth-of-type(even).active &__img{
+    transform: rotateY(-12deg) rotateX(7deg) scale(1);
+  }
+  &__item:nth-of-type(odd) &__img{
+    transform: rotateY(30deg) rotateX(15deg) scale(.8);
+  }
+  &__item:nth-of-type(odd):hover &__img, &__item:nth-of-type(odd).active &__img{
+    transform: rotateY(12deg) rotateX(7deg) scale(1);
+  }
+  &__img{
+    display: block;
+    width: 100%;
+  }
+
+  &__list{
+    list-style: none;
+    padding-left: 0;
+  }
+  &__list-item{
+    position: relative;
+    left: 1.2em;
+    &::before{
+      content:'✓';
+      position: absolute;
+      top: 0;
+      left: -1.2em;
+    }
+  }
+}
