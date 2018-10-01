@@ -29,19 +29,24 @@ class Menu {
     this.closeContactBtn = this.closeBtn.cloneNode(true)
     this.closeContactBtn.classList.add('close-contact')
     this.contact.appendChild(this.closeContactBtn)
-    modal.appendChild(this.menu)
+    this.menuModal = this.menu.cloneNode(true)
+    // console.log(this.closeBtn,this.menuModal,this.closeContactBtn)
+    this.closeMenuBtn = this.closeBtn.cloneNode(true)
+    this.closeMenuBtn.classList.add('close-btn')
+    this.menuModal.prepend(this.closeMenuBtn)
+    modal.appendChild(this.menuModal)
     modal.appendChild(this.contact)
     modal.addEventListener('click', this.handleClick)
 
     return modal
   }
   closeContact = () => {
-    console.log('close')
     this.body.classList.remove('overflow-hidden')
     this.modal.classList.remove('active')
     this.modal.classList.toggle('nav')
   }
   openContact = (isNav) => {
+
     if (!this.modal) this.modal = this.createModal()
     
     this.body.classList.add('overflow-hidden')
@@ -51,11 +56,13 @@ class Menu {
     this.body.appendChild(this.modal)
   }
   handleClick = (e) => {
-    e.preventDefault();
-    console.log('click')
-
-    const target = e.target
-
+    // e.preventDefault();
+    console.log(e,e.target)
+    const target = e.target,
+      isLink = e.target.parentElement.nodeName === 'LI'
+    // check if is a link and not a button
+    if (!isLink)  e.preventDefault() 
+    
     // mobile menu
     if (window.innerWidth < 864) {
       
@@ -63,11 +70,15 @@ class Menu {
       if (this.closeBtn.contains(target)) this.close()
     }
     //Desktop
-    if (this.openBtn.contains(target)) this.openContact(true)
-    if (this.cta.contains(target)) this.openContact(false)
-    if (this.closeBtn.contains(target)) this.closeContact()
-    if (this.closeContactBtn.contains(target)) this.closeContact()
-    if (this.modal === target ) this.closeContact()
+    if (window.innerWidth >= 864) {
+      
+      if (this.openBtn.contains(target)) this.openContact(true)
+      if (this.cta.contains(target)) this.openContact(false)
+      if (this.closeBtn.contains(target)) this.closeContact()
+      if (this.closeContactBtn.contains(target)) this.closeContact()
+      if (this.closeMenuBtn.contains(target)) this.closeContact()
+      if (this.modal === target ) this.closeContact()
+    }
 
   }
   

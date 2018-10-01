@@ -105,7 +105,7 @@
       transform: translateX(-2.6em)
     }
     &__item:nth-of-type(2):hover &__img {
-      transform: translateX(-2.6em) rotateY(22deg) rotateX(7deg) scale(.9);
+      transform: translateX(-2.6em) rotateY(22deg) rotateX(8deg) scale(.9);
       // transform: 
     }
     &__item:nth-of-type(3) {
@@ -116,7 +116,7 @@
 
     }
     &__item:nth-of-type(3):hover &__img {
-      transform: translateX(-2.2em) rotateY(22deg) rotateX(7deg) scale(.9);
+      transform: translateX(-2.2em) rotateY(22deg) rotateX(10deg) scale(.9);
       // transform: 
     }
     &__item:nth-of-type(4) {
@@ -126,7 +126,7 @@
       transform: translateX(-1.2em)
     }
     &__item:nth-of-type(4):hover &__img {
-      transform: translateX(-1.2em) rotateY(22deg) rotateX(7deg) scale(.9);
+      transform: translateX(-1.2em) rotateY(22deg) rotateX(12deg) scale(.9);
       // transform: 
     }
     &__item:nth-of-type(5) {

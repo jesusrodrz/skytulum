@@ -64,6 +64,10 @@
 .section-contact{
   overflow: hidden;
   position: relative;
+  display: none;
+  &.visible{
+    display: block;
+  }
   &__img{
     @include media(lg,max){
       transform: translate(25%,30%) scale(.9);
@@ -112,6 +116,9 @@
     }
     .close-contact{
       display: none;
+    }
+    .close-btn{
+      z-index: 2000;
     }
   }
 

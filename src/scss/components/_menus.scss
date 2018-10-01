@@ -39,7 +39,11 @@
   &__item{
     margin: .5em 0;
     color:color(cta);
-    &.active{
+    transition: all ease-in-out .6s;
+    &::before{
+      transition: inherit;
+    }
+    &.active,&:hover{
       @extend %bg-square;
       --theme-color:#{color(primary)};
       color: color(black)

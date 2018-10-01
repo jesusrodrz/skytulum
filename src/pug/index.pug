@@ -1,4 +1,6 @@
 extends templates/template.pug
+block vars
+  - let contactVisible = true;
 block main
   section.hero.section
     h1.hero__title.title-1 Un increible proyecto en medio de la selva
@@ -14,14 +16,6 @@ block main
     figure.gallery__item: img.gallery__img(src=img('sky-roof'), alt="sky tulum techo")
     figure.gallery__item: img.gallery__img(src=img('sky-roof'), alt="sky tulum techo")
     a.gallery__btn.btn(href="#") Ver Galería
-  section.section.section-contact
-    article.contact#contact
-      .contact__container
-        h3.contact__title.t-uppercase Solicitar Información
-        form.contact__form(action="")
-          input.contact__input(type="text", name="name", placeholder="Nombre Completo")
-          input.contact__input(type="email", name="email", placeholder="Correo Electrónico")
-          button.btn-white(type="submit") Enviar
-    img.section-contact__img(src=img('piñanona','png'), alt="alt")
+  
 
 

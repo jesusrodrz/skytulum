@@ -5,16 +5,14 @@
 }
 .main-header{
   height: $header-height;
-  // overflow-x: hidden;
   display: flex;
-  // margin: .4em ;
   padding: .4em ;
+  background-color: color(background);
   @include media(md){
     position: relative;
     padding: 1em ;
   }
   @include media(1200px){
-    // max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
 
