@@ -58,6 +58,12 @@
     color: color(text);
     padding: .5em;
     padding-left: 2.5em;
+    cursor: pointer;
+
+    &:hover{
+      background-color: saturate(darken(color(primary,trans80),20), 90);
+      background-color: darken(saturate(color(primary,trans80),90), 20);
+    }
   }
 
 }
