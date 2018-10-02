@@ -1,6 +1,6 @@
 .contact{
   background-color: color(primary);
-  margin: 0 1em;
+  // margin: 0 1em;
   width: 100%;
   min-height: 80vh;
   display: flex;
@@ -8,6 +8,8 @@
   justify-content: center;
   grid-area: contact;
   // &.
+  background: linear-gradient(to right, #357a6d 0%,#429994 100%);
+  min-height: auto;
 
 
   &__title{
@@ -15,6 +17,9 @@
     text-align: center;
     color:white;
     font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    font-size: 1.5em;
     
   }
   &__container{
@@ -43,6 +48,10 @@
     border: none;
     color: white;
     outline: none;
+    font-family: 'Scheherazade', serif;
+    letter-spacing: .2em;
+    text-transform: uppercase ;
+
     &:focus{
       background-color: rgba(#fff,.4);
       &::placeholder{
@@ -54,7 +63,12 @@
     }
   }
   &__btn{
-    margin: .8em 0;
+    // margin: .8em 0;
+    // font-family: 'Scheherazade', serif;
+    // font-size: 1.5em;
+    // letter-spacing: .3em;
+    // margin-top: .8em;
+    // margin-bottom: .8em;
     &:hover{
       --theme-color: rgba(#fff,.7);
     }

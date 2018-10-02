@@ -2,7 +2,6 @@
   --theme-color: #{color(cta)};
   text-transform: uppercase;
   outline: none;
-  font-size: 1.2em;
   padding: .6em;
   color:var(--theme-color);
   border: solid 1px var(--theme-color);
@@ -11,6 +10,13 @@
   align-items: center;
   transition: all ease-in-out .4s;
   background-color: inherit;
+
+  font-family: 'Scheherazade', serif;
+	font-size: 1.5em;
+	letter-spacing: .3em;
+	margin-top: .8em;
+  margin-bottom: .8em;
+  
   cursor: pointer;
   &:hover{
     background-color: var(--theme-color);
@@ -19,8 +25,11 @@
 }
 .btn-white{
   --theme-color: white;
+  font-family: 'Scheherazade', serif;
+	// font-size: 1em;
+	letter-spacing: .3em;
   &:hover{
-    background-color: rgba($color: #fff, $alpha: .7);
+    background-color: rgba(#fff,.1);
   }
 }
 

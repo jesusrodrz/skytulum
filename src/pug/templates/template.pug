@@ -7,6 +7,9 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge",)
     title Document
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Raleway:200|Scheherazade&amp;subset=latin-ext")
+    block stylesheets
+
     block vars
   body
     include ./header.pug
@@ -22,4 +25,4 @@ html(lang="en")
               button.btn-white(type="submit") Enviar
         img.section-contact__img(src=img('piñanona','png'), alt="alt")
     include ./footer.pug
-    
+    block scripts

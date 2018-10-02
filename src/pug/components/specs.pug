@@ -1,0 +1,19 @@
+mixin specs(items)
+  section.section-specs.specs
+    h2.specs__title.section__title.title-2.bg-square-center.t-uppercase Especificaciones
+    each item in items
+      article.level
+        h3.level__title.section__title.title-2.bg-center.font-1-6 #{item.title}
+        table.table-level.level__table
+          thead
+            tr
+              th.table-level__col Unidad
+              th.table-level__col Tipo
+              th.table-level__col Total
+          tbody
+            each itemList in item.list
+              tr.table-level__row
+                th.table-level__col #{itemList.unit}
+                th.table-level__col #{itemList.type}
+                th.table-level__col #{itemList.total}
+                th.table-level__col.table-level__col--btn: button.t-uppercase.table-level__btn(data-src=`${itemList.src}`) ver

@@ -19,7 +19,7 @@
     color:#fff;
     --theme-color: #{color(primary,trans20)};
     @include media(md){
-      width: 40%;
+      width: 50%;
     }
     @include media(md){
       // width: 30%;

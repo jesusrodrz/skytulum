@@ -5,10 +5,17 @@
   @extend %bg-square;
   @include media(md) {
       &::before{
-      width: 150%;
+      width: 130%;
       left: 50%;
       transform: translateX(-50%) ;
     }
+  }
+}
+
+.bg-center{
+  &::before{
+    width: 100%;
+    left: 0;
   }
 }
 .center-down-square{

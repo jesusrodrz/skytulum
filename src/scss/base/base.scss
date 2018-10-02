@@ -8,6 +8,7 @@ body {
   margin : 0;
   font-family : $primary-font;
   font-size: 1.4em;
+  color: color(text);
 }
 h1,h2,h3,h4,h5,h6{
   font-family:$font-family;
@@ -19,4 +20,8 @@ a{
 }
 figure{
   margin:0
+}
+
+th {
+  font-weight: normal;
 }

@@ -3,6 +3,7 @@
   background-color: $color-darkgray;
   color:white;
   padding: var(--paddin-footer);
+  background: linear-gradient(#404052 0%, #23222b 100%);
 
   &__section{
     border-top: solid white 1px;
@@ -14,6 +15,10 @@
   }
   &__title{
     text-align: left;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 200;
   }
 
   @include media(md){
@@ -28,16 +33,13 @@
   }
 
 }
-// .notices-ft__title{
-//   font-size: 1.1em;
-//   font-weight: 400;
-// }
-
 .notice-item{
   margin: .5em 0;
+  font-family: 'Scheherazade', serif;
   &__title{
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 1.2em;
   }
   &__text,&__title{
     margin: 0;
@@ -45,7 +47,7 @@
   &__date{
     font-style: italic;
     font-weight: 300;
-    font-size: 1.2em;
+  	font-size: .9em
   }
 }
 
@@ -71,6 +73,7 @@
       width: 100%;
       background-color: rgba($color: #000000, $alpha: .15);
       top: 50%;
+      box-shadow: -2px 2px 2px rgba(0,0,0, .3);
       transform: translateY(-50%);
     }
   }
@@ -90,4 +93,10 @@
     }
   }
 }
-  
+
+.subscribe{
+
+  &__btn{
+    font-size: 1em;
+  }
+}
