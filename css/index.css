@@ -1200,7 +1200,11 @@ body {
     font-size: .6em;
     color: #636366;
     padding: .5em;
-    padding-left: 2.5em; }
+    padding-left: 2.5em;
+    cursor: pointer; }
+    .table-level__btn:hover {
+      background-color: rgba(0, 117, 110, 0.2);
+      background-color: rgba(0, 117, 110, 0.2); }
 
 .title-1 {
   font-size: 1.2em;
