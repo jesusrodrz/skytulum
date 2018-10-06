@@ -12,13 +12,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:watch": "webpack --mode development --watch --colors --progress",
-    "react1": "webpack --mode development --watch --colors --progress --config react-1/webpack.config.js",
-    "docs": "webpack --mode production --watch --colors --progress --config webpack.config.docs.js",
+    "prod:watch": "webpack --mode production --watch --colors --progress --config webpack.config.prod.js",
+    "prod": "webpack --mode production --colors --progress --config webpack.config.prod.js --json > dist/stats.json",
     "dev": "webpack --mode development",
     "start": "webpack-dev-server --colors --progress --open",
     "build": "webpack --mode production",
-    "push-pages":"git subtree push --prefix dist origin gh-pages",
-    "push":"git push origin master && git subtree push --prefix dist origin gh-pages"
+    "push-pages": "git subtree push --prefix dist origin gh-pages",
+    "push": "git push origin master && git subtree push --prefix dist origin gh-pages"
   },
   "license": "MIT",
   "devDependencies": {
@@ -38,9 +38,11 @@
     "resolve-url-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.22.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^3.1.5",
+    "webpack-stats-plugin": "^0.2.1"
   },
   "dependencies": {}
 }

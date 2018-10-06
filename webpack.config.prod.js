@@ -2,7 +2,8 @@
 const path = require('path')
 const views = require('./webpack.helper.js')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+// const OptimizeCSSAssetsPlugin = require('optim')
 module.exports = {
   stats: {
     modules: false,
@@ -23,9 +24,18 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
       name: true
-    }
+    },
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true
+        // sourceMap: true // set to true if you want JS source maps
+      })
+      // ,
+      // new OptimizeCSSAssetsPlugin({})
+    ]
   },
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
@@ -38,20 +48,21 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          // {
-          //   loader: MiniCssExtractPlugin.loader,
-          //   options: {
-          //     publicPath: '../'
-          //   }
-          // },
-          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
           
           'css-loader',
           {
             loader:'sass-loader',
             options:{
-              sourceMap: true,
-              sourceMapContents: false
+              // sourceMap: true,
+              sourceMapContents: false,
+              outputStyle: 'compressed'
+
             }
           }
           
@@ -101,6 +112,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
     }),
+    // new StatsWriterPlugin({
+    //   filename: "stats.json" // Default
+    // }),
     ...views.pages({
       srcDir: './src/pug',
       filesExt: 'pug'
