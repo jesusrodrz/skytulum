@@ -12,7 +12,7 @@ exports.pages = function (options) {
       filename: `${fileName.split('.')[0]}.html`,
       template: `${options.srcDir}/${fileName}`,
       inject: true,
-      hash: true
+      hash: options.hash
     }
 
     return new HtmlWebpackPlugin(optionsPlugin)

@@ -112,12 +112,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
     }),
-    // new StatsWriterPlugin({
-    //   filename: "stats.json" // Default
-    // }),
     ...views.pages({
       srcDir: './src/pug',
-      filesExt: 'pug'
+      filesExt: 'pug',
+      hash: true
     })
   ]
 };

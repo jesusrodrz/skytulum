@@ -103,7 +103,8 @@ module.exports = {
     }),
     ...views.pages({
       srcDir: './src/pug',
-      filesExt: 'pug'
+      filesExt: 'pug',
+      hash: false
     })
   ]
 };
