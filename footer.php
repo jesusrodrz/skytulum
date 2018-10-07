@@ -2,7 +2,7 @@
     <section class="section section-contact visible">
       <article class="contact" id="contact">
         <div class="contact__container">
-          <h3 class="contact__title t-uppercase">Solicitar Información</h3>
+          <h3 class="contact__title t-uppercase"><?php echo _e( 'Solicitar Información', 'sky-tulum' );?></h3>
           <form class="contact__form" action="">
             <input class="contact__input" type="text" name="name" placeholder="Nombre Completo">
             <input class="contact__input" type="email" name="email" placeholder="Correo Electrónico">
@@ -41,14 +41,14 @@
       </article>
     </section>
     <section class="footer__section subcribe">
-      <h2 class="footer__title subcribe__title contact__title t-uppercase">Suscribirse</h2>
+      <h2 class="footer__title subcribe__title contact__title t-uppercase"><?php echo _e( 'Suscribirse', 'sky-tulum' );?></h2>
       <form class="subscribe__form">
         <input class="contact__input" type="email" name="email" placeholder="Correo Electrónico">
-        <button class="btn-white subscribe__btn btn" type="submit">Enviar</button>
+        <button class="btn-white subscribe__btn btn" type="submit"><?php echo _e( 'Enviar', 'sky-tulum' );?></button>
       </form>
     </section>
     <section class="footer__section develop-copy">
-      <h2 class="footer__title">Un desarrollo de</h2>
+      <h2 class="footer__title"><?php echo _e( 'Un desarrollo de', 'sky-tulum' );?></h2>
       <figure class="develop-copy__fig"><img class="develop-copy__img" src="<?php echo get_stylesheet_directory_uri();?>/dist/assets/img/Mia.png" alt="alt"></figure>
     </section>
   </footer>
