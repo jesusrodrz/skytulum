@@ -1,6 +1,7 @@
 <?php
 require_once(__DIR__ . '/includes/custom-functions.php');
 
+// get the hash from the stats.json file provided by webpack this hash is used for cache busting
 function get_version_hash(){
   $stats = file_get_contents( get_stylesheet_directory_uri().'/dist/stats.json');
   $stats_json = json_decode($stats, true);
@@ -8,6 +9,8 @@ function get_version_hash(){
   return $hash;
 }
 
+
+// Add theme support for menu and register the main menu
 function skytulum_menu_support(){
   
   add_theme_support('menus');
@@ -18,9 +21,9 @@ function skytulum_menu_support(){
 
 add_action('init','skytulum_menu_support');
 
-
+// add stylessheets and scripst
 function skytulum_script_enqueue(){
-
+  
   wp_enqueue_style( 
     'theme-fonts',
     'https://fonts.googleapis.com/css?family=Raleway:200|Scheherazade&amp;amp;subset=latin-ext',
