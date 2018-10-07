@@ -8,7 +8,7 @@ function get_version_hash(){
   return $hash;
 }
 
-function mytheme_setup(){
+function skytulum_menu_support(){
   
   add_theme_support('menus');
 
@@ -16,10 +16,10 @@ function mytheme_setup(){
 
 }
 
-add_action('init','mytheme_setup');
+add_action('init','skytulum_menu_support');
 
 
-function mytheme_script_enqueue(){
+function skytulum_script_enqueue(){
 
   wp_enqueue_style( 
     'theme-fonts',
@@ -41,4 +41,4 @@ function mytheme_script_enqueue(){
   );
 }
 
-add_action('wp_enqueue_scripts','mytheme_script_enqueue');
+add_action('wp_enqueue_scripts','skytulum_script_enqueue');
