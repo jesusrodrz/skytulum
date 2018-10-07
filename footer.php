@@ -4,8 +4,8 @@
         <div class="contact__container">
           <h3 class="contact__title t-uppercase"><?php echo _e( 'Solicitar Información', 'sky-tulum' );?></h3>
           <form class="contact__form" action="">
-            <input class="contact__input" type="text" name="name" placeholder="Nombre Completo">
-            <input class="contact__input" type="email" name="email" placeholder="Correo Electrónico">
+            <input class="contact__input" type="text" name="name" placeholder="<?php echo _e( 'Nombre Completo', 'sky-tulum' );?>">
+            <input class="contact__input" type="email" name="email" placeholder="<?php echo _e( 'Correo Electrónico', 'sky-tulum' );?>">
             <button class="btn-white" type="submit">Enviar</button>
           </form>
         </div>
@@ -43,7 +43,7 @@
     <section class="footer__section subcribe">
       <h2 class="footer__title subcribe__title contact__title t-uppercase"><?php echo _e( 'Suscribirse', 'sky-tulum' );?></h2>
       <form class="subscribe__form">
-        <input class="contact__input" type="email" name="email" placeholder="Correo Electrónico">
+        <input class="contact__input" type="email" name="email" placeholder="<?php echo _e( 'Correo Electrónico', 'sky-tulum' );?>">
         <button class="btn-white subscribe__btn btn" type="submit"><?php echo _e( 'Enviar', 'sky-tulum' );?></button>
       </form>
     </section>

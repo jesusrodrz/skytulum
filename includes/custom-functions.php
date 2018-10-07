@@ -47,7 +47,7 @@ function print_custom_menu($menu_name) {
 						<div class="menu__icon--close"><span class="menu__icon--close-span"></span><span class="menu__icon--close-span"></span></div></a>
 					<li class="menu__item active"><a class="menu__link" href="./"><?php echo _e( 'No Nav Selected', 'sky-tulum' );?></a>
 					</li>
-				</ul><a class="cta-btn" id="ctaBtn" href="#"><span class="cta-btn__text">Solicita <br> Info</span></a>
+				</ul><a class="cta-btn" id="ctaBtn" href="#"><span class="cta-btn__text"><?php echo _e( 'No Nav Selected', 'sky-tulum' );?></span></a>
 			</nav>
 		<?php
 	endif;
