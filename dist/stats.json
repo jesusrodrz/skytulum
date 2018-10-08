@@ -1,24 +1,28 @@
 {
   "errors": [],
   "warnings": [
-    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  assets/img/piñanona.png (343 KiB)\n  assets/img/sky-roof.jpg (1.18 MiB)\n  assets/img/interior.jpg (7.87 MiB)\n  assets/fonts/Scheherazade-Regular.ttf (489 KiB)\n  assets/fonts/Scheherazade-Bold.ttf (535 KiB)",
+    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  assets/img/piñanona.png (343 KiB)\n  assets/img/sky-roof.jpg (1.18 MiB)\n  assets/img/interior.jpg (7.87 MiB)\n  assets/fonts/Scheherazade-Bold.ttf (535 KiB)\n  assets/fonts/Scheherazade-Regular.ttf (489 KiB)",
     "webpack performance recommendations: \nYou can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.\nFor more info visit https://webpack.js.org/guides/code-splitting/"
   ],
-  "hash": "fb07ce878d320fd9519f",
-  "time": 26471,
-  "builtAt": 1538841742398,
+  "hash": "c57d2c95614c2213bfe6",
+  "time": 27683,
+  "builtAt": 1538978774879,
   "publicPath": "",
   "outputPath": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\dist",
   "assetsByChunkName": {
     "index": [
       "css/index.css",
       "js/index.js"
+    ],
+    "admin": [
+      "css/admin.css",
+      "js/admin.js"
     ]
   },
   "assets": [
     {
       "name": "css/index.css",
-      "size": 20938,
+      "size": 20983,
       "chunks": [
         0
       ],
@@ -58,6 +62,14 @@
       "isOverSizeLimit": true
     },
     {
+      "name": "assets/fonts/Scheherazade-Bold.ttf",
+      "size": 547772,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
       "name": "assets/fonts/Scheherazade-Regular.ttf",
       "size": 500396,
       "chunks": [],
@@ -66,12 +78,11 @@
       "isOverSizeLimit": true
     },
     {
-      "name": "assets/fonts/Scheherazade-Bold.ttf",
-      "size": 547772,
+      "name": "assets/fonts/untitled-font-1.ttf",
+      "size": 4384,
       "chunks": [],
       "chunkNames": [],
-      "emitted": true,
-      "isOverSizeLimit": true
+      "emitted": true
     },
     {
       "name": "assets/img/piñanona.png",
@@ -93,36 +104,58 @@
       "emitted": true
     },
     {
+      "name": "css/admin.css",
+      "size": 1947,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "admin"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "js/admin.js",
+      "size": 3317,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "admin"
+      ],
+      "emitted": true
+    },
+    {
       "name": "index.html",
-      "size": 6751,
+      "size": 6895,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
       "name": "modelos.html",
-      "size": 6466,
+      "size": 6610,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
       "name": "noticias.html",
-      "size": 4790,
+      "size": 4934,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
       "name": "proyecto.html",
-      "size": 12492,
+      "size": 12636,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
       "name": "tulum.html",
-      "size": 4790,
+      "size": 4934,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
@@ -140,6 +173,17 @@
       ],
       "children": {},
       "childAssets": {}
+    },
+    "admin": {
+      "chunks": [
+        1
+      ],
+      "assets": [
+        "css/admin.css",
+        "js/admin.js"
+      ],
+      "children": {},
+      "childAssets": {}
     }
   },
   "namedChunkGroups": {
@@ -153,6 +197,17 @@
       ],
       "children": {},
       "childAssets": {}
+    },
+    "admin": {
+      "chunks": [
+        1
+      ],
+      "assets": [
+        "css/admin.css",
+        "js/admin.js"
+      ],
+      "children": {},
+      "childAssets": {}
     }
   },
   "chunks": [
@@ -161,7 +216,7 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 24308,
+      "size": 24353,
       "names": [
         "index"
       ],
@@ -169,7 +224,7 @@
         "css/index.css",
         "js/index.js"
       ],
-      "hash": "1f0290aa7eb31aefa7d1",
+      "hash": "08d31b541aafb7696302",
       "siblings": [],
       "parents": [],
       "children": [],
@@ -244,8 +299,8 @@
           "errors": 0,
           "warnings": 0,
           "assets": [
-            "assets/fonts/Scheherazade-Regular.ttf",
-            "assets/fonts/Scheherazade-Bold.ttf"
+            "assets/fonts/Scheherazade-Bold.ttf",
+            "assets/fonts/Scheherazade-Regular.ttf"
           ],
           "reasons": [
             {
@@ -272,7 +327,7 @@
           "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/style.scss",
           "index": 2,
           "index2": 0,
-          "size": 20937,
+          "size": 20982,
           "built": false,
           "optional": false,
           "prefetched": false,
@@ -322,6 +377,175 @@
           "moduleName": "",
           "loc": "index",
           "request": "./src/js/index.js",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 5928,
+      "names": [
+        "admin"
+      ],
+      "files": [
+        "css/admin.css",
+        "js/admin.js"
+      ],
+      "hash": "b488e1b4edc715d42959",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [
+        {
+          "id": 3,
+          "identifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\babel-loader\\lib\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\js\\admin.js",
+          "name": "./src/js/admin.js",
+          "index": 3,
+          "index2": 5,
+          "size": 3943,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "./src/js/admin.js",
+              "loc": "admin"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 0,
+          "source": "'use strict';\n\nrequire('../scss/admin.scss');\n\nfunction _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Gallery = function Gallery(gallery, addBtn, figClass) {\n  var _this = this;\n\n  _classCallCheck(this, Gallery);\n\n  this.init = function () {\n    _this.gallery.addEventListener(\"click\", _this.handleClick);\n  };\n\n  this.helper = function (url) {\n    console.log(_this.target);\n    // this.target\n    _this.target.getElementsByTagName('input')[0].value = url;\n    _this.target.getElementsByTagName('img')[0].src = url;\n  };\n\n  this.openMediaSingle = function (element) {\n    _this.target = element;\n    if (_this.wp_media_s) {\n      _this.wp_media_s.open();\n      return;\n    }\n    _this.wp_media_s = wp.media.frames.wp_media_s = wp.media({\n      title: _this.gallery.dataset.titleS,\n      button: {\n        text: _this.gallery.dataset.button\n      }\n    });\n    _this.wp_media_s.on('select', function () {\n\n      var attachment = _this.wp_media_s.state().get('selection').first().toJSON();\n      _this.helper(attachment.url);\n    });\n    _this.wp_media_s.open();\n  };\n\n  this.openMedia = function () {\n    if (_this.wp_media) {\n      _this.wp_media.open();\n      return;\n    }\n    // Sets up the media library frame\n    _this.wp_media = wp.media.frames.wp_media = wp.media({\n      title: _this.gallery.dataset.title,\n      button: {\n        text: _this.gallery.dataset.button\n      },\n      multiple: true\n    });\n\n    _this.wp_media.on('select', function () {\n      var attachments = _this.wp_media.state().get('selection').map(function (e) {\n\n        e.toJSON();\n        var item = {\n          url: e.attributes.url,\n          id: e.id\n        };\n        return item;\n      });\n\n      attachments.forEach(function (item) {\n        _this.addImg(item.url);\n      });\n    });\n\n    _this.wp_media.open();\n  };\n\n  this.handleClick = function (e) {\n    e.preventDefault();\n    var target = e.target;\n    // console.log(target)\n    if (target === _this.addBtn) _this.openMedia();\n\n    if (target.closest('.gallery__close')) {\n\n      _this.remove(target.closest('.gallery__fig'), _this.images);\n    } else if (target.closest('.gallery__fig')) {\n\n      _this.openMediaSingle(target.closest('.gallery__fig'));\n    }\n  };\n\n  this.remove = function (element, items) {\n    _this.gallery.removeChild(element);\n    items.splice(items.indexOf(element), 1);\n    items.forEach(function (e, index) {\n      e.getElementsByTagName('input')[0].name = _this.gallery.dataset.name + '[' + index + ']';\n    });\n  };\n\n  this.addImg = function () {\n    var imgSrc = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'img/src';\n\n    var fig = document.createElement('figure'),\n        img = document.createElement('img'),\n        input = document.createElement('input'),\n        close = document.createElement('button');\n\n    input.type = 'text';\n    input.name = _this.gallery.dataset.name + '[' + _this.images.length + ']';\n    img.src = imgSrc;\n    input.value = imgSrc;\n    fig.classList.add('gallery__fig');\n    img.classList.add('gallery__img');\n    input.classList.add('gallery__input');\n    close.classList.add('gallery__close');\n    close.classList.add('gallery__btn');\n    fig.appendChild(img);\n    fig.appendChild(input);\n    fig.appendChild(close);\n\n    _this.gallery.insertBefore(fig, _this.addBtn);\n    _this.images.push(fig);\n  };\n\n  this.gallery = document.getElementById(gallery);\n  this.addBtn = document.getElementById(addBtn);\n  this.images = [].concat(_toConsumableArray(this.gallery.getElementsByClassName(figClass)));\n};\n\nvar gallery = new Gallery('galleryContainer', 'addBtn', 'gallery__fig');\ngallery.init();\n// alert('aquita')"
+        },
+        {
+          "id": 4,
+          "identifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\css-loader\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\sass-loader\\lib\\loader.js??ref--5-2!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\scss\\admin.scss",
+          "name": "./src/scss/admin.scss",
+          "index": 4,
+          "index2": 4,
+          "size": 39,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "issuer": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\babel-loader\\lib\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\js\\admin.js",
+          "issuerId": 3,
+          "issuerName": "./src/js/admin.js",
+          "issuerPath": [
+            {
+              "id": 3,
+              "identifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\babel-loader\\lib\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\js\\admin.js",
+              "name": "./src/js/admin.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+            "assets/fonts/untitled-font-1.ttf"
+          ],
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\babel-loader\\lib\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\js\\admin.js",
+              "module": "./src/js/admin.js",
+              "moduleName": "./src/js/admin.js",
+              "type": "cjs require",
+              "userRequest": "../scss/admin.scss",
+              "loc": "3:0-29"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1,
+          "source": "// extracted by mini-css-extract-plugin"
+        },
+        {
+          "id": 5,
+          "identifier": "css C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\css-loader\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\sass-loader\\lib\\loader.js??ref--5-2!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\scss\\admin.scss 0",
+          "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/admin.scss",
+          "index": 5,
+          "index2": 3,
+          "size": 1946,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "issuer": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\css-loader\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\sass-loader\\lib\\loader.js??ref--5-2!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\scss\\admin.scss",
+          "issuerId": 4,
+          "issuerName": "./src/scss/admin.scss",
+          "issuerPath": [
+            {
+              "id": 3,
+              "identifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\babel-loader\\lib\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\js\\admin.js",
+              "name": "./src/js/admin.js"
+            },
+            {
+              "id": 4,
+              "identifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\css-loader\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\sass-loader\\lib\\loader.js??ref--5-2!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\scss\\admin.scss",
+              "name": "./src/scss/admin.scss"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\css-loader\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\sass-loader\\lib\\loader.js??ref--5-2!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\scss\\admin.scss",
+              "module": "./src/scss/admin.scss",
+              "moduleName": "./src/scss/admin.scss"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 2
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "admin",
+          "request": "./src/js/admin.js",
           "reasons": []
         }
       ]
@@ -397,8 +621,8 @@
       "errors": 0,
       "warnings": 0,
       "assets": [
-        "assets/fonts/Scheherazade-Regular.ttf",
-        "assets/fonts/Scheherazade-Bold.ttf"
+        "assets/fonts/Scheherazade-Bold.ttf",
+        "assets/fonts/Scheherazade-Regular.ttf"
       ],
       "reasons": [
         {
@@ -425,7 +649,7 @@
       "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/style.scss",
       "index": 2,
       "index2": 0,
-      "size": 20937,
+      "size": 20982,
       "built": false,
       "optional": false,
       "prefetched": false,
@@ -457,6 +681,143 @@
           "moduleIdentifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\css-loader\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\sass-loader\\lib\\loader.js??ref--5-2!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\scss\\style.scss",
           "module": "./src/scss/style.scss",
           "moduleName": "./src/scss/style.scss"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 2
+    },
+    {
+      "id": 3,
+      "identifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\babel-loader\\lib\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\js\\admin.js",
+      "name": "./src/js/admin.js",
+      "index": 3,
+      "index2": 5,
+      "size": 3943,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "./src/js/admin.js",
+          "loc": "admin"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 0,
+      "source": "'use strict';\n\nrequire('../scss/admin.scss');\n\nfunction _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Gallery = function Gallery(gallery, addBtn, figClass) {\n  var _this = this;\n\n  _classCallCheck(this, Gallery);\n\n  this.init = function () {\n    _this.gallery.addEventListener(\"click\", _this.handleClick);\n  };\n\n  this.helper = function (url) {\n    console.log(_this.target);\n    // this.target\n    _this.target.getElementsByTagName('input')[0].value = url;\n    _this.target.getElementsByTagName('img')[0].src = url;\n  };\n\n  this.openMediaSingle = function (element) {\n    _this.target = element;\n    if (_this.wp_media_s) {\n      _this.wp_media_s.open();\n      return;\n    }\n    _this.wp_media_s = wp.media.frames.wp_media_s = wp.media({\n      title: _this.gallery.dataset.titleS,\n      button: {\n        text: _this.gallery.dataset.button\n      }\n    });\n    _this.wp_media_s.on('select', function () {\n\n      var attachment = _this.wp_media_s.state().get('selection').first().toJSON();\n      _this.helper(attachment.url);\n    });\n    _this.wp_media_s.open();\n  };\n\n  this.openMedia = function () {\n    if (_this.wp_media) {\n      _this.wp_media.open();\n      return;\n    }\n    // Sets up the media library frame\n    _this.wp_media = wp.media.frames.wp_media = wp.media({\n      title: _this.gallery.dataset.title,\n      button: {\n        text: _this.gallery.dataset.button\n      },\n      multiple: true\n    });\n\n    _this.wp_media.on('select', function () {\n      var attachments = _this.wp_media.state().get('selection').map(function (e) {\n\n        e.toJSON();\n        var item = {\n          url: e.attributes.url,\n          id: e.id\n        };\n        return item;\n      });\n\n      attachments.forEach(function (item) {\n        _this.addImg(item.url);\n      });\n    });\n\n    _this.wp_media.open();\n  };\n\n  this.handleClick = function (e) {\n    e.preventDefault();\n    var target = e.target;\n    // console.log(target)\n    if (target === _this.addBtn) _this.openMedia();\n\n    if (target.closest('.gallery__close')) {\n\n      _this.remove(target.closest('.gallery__fig'), _this.images);\n    } else if (target.closest('.gallery__fig')) {\n\n      _this.openMediaSingle(target.closest('.gallery__fig'));\n    }\n  };\n\n  this.remove = function (element, items) {\n    _this.gallery.removeChild(element);\n    items.splice(items.indexOf(element), 1);\n    items.forEach(function (e, index) {\n      e.getElementsByTagName('input')[0].name = _this.gallery.dataset.name + '[' + index + ']';\n    });\n  };\n\n  this.addImg = function () {\n    var imgSrc = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'img/src';\n\n    var fig = document.createElement('figure'),\n        img = document.createElement('img'),\n        input = document.createElement('input'),\n        close = document.createElement('button');\n\n    input.type = 'text';\n    input.name = _this.gallery.dataset.name + '[' + _this.images.length + ']';\n    img.src = imgSrc;\n    input.value = imgSrc;\n    fig.classList.add('gallery__fig');\n    img.classList.add('gallery__img');\n    input.classList.add('gallery__input');\n    close.classList.add('gallery__close');\n    close.classList.add('gallery__btn');\n    fig.appendChild(img);\n    fig.appendChild(input);\n    fig.appendChild(close);\n\n    _this.gallery.insertBefore(fig, _this.addBtn);\n    _this.images.push(fig);\n  };\n\n  this.gallery = document.getElementById(gallery);\n  this.addBtn = document.getElementById(addBtn);\n  this.images = [].concat(_toConsumableArray(this.gallery.getElementsByClassName(figClass)));\n};\n\nvar gallery = new Gallery('galleryContainer', 'addBtn', 'gallery__fig');\ngallery.init();\n// alert('aquita')"
+    },
+    {
+      "id": 4,
+      "identifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\css-loader\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\sass-loader\\lib\\loader.js??ref--5-2!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\scss\\admin.scss",
+      "name": "./src/scss/admin.scss",
+      "index": 4,
+      "index2": 4,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\babel-loader\\lib\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\js\\admin.js",
+      "issuerId": 3,
+      "issuerName": "./src/js/admin.js",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\babel-loader\\lib\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\js\\admin.js",
+          "name": "./src/js/admin.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+        "assets/fonts/untitled-font-1.ttf"
+      ],
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\babel-loader\\lib\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\js\\admin.js",
+          "module": "./src/js/admin.js",
+          "moduleName": "./src/js/admin.js",
+          "type": "cjs require",
+          "userRequest": "../scss/admin.scss",
+          "loc": "3:0-29"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 1,
+      "source": "// extracted by mini-css-extract-plugin"
+    },
+    {
+      "id": 5,
+      "identifier": "css C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\css-loader\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\sass-loader\\lib\\loader.js??ref--5-2!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\scss\\admin.scss 0",
+      "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/admin.scss",
+      "index": 5,
+      "index2": 3,
+      "size": 1946,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\css-loader\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\sass-loader\\lib\\loader.js??ref--5-2!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\scss\\admin.scss",
+      "issuerId": 4,
+      "issuerName": "./src/scss/admin.scss",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\babel-loader\\lib\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\js\\admin.js",
+          "name": "./src/js/admin.js"
+        },
+        {
+          "id": 4,
+          "identifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\css-loader\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\sass-loader\\lib\\loader.js??ref--5-2!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\scss\\admin.scss",
+          "name": "./src/scss/admin.scss"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\css-loader\\index.js!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\node_modules\\sass-loader\\lib\\loader.js??ref--5-2!C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\src\\scss\\admin.scss",
+          "module": "./src/scss/admin.scss",
+          "moduleName": "./src/scss/admin.scss"
         }
       ],
       "usedExports": true,
