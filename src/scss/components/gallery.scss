@@ -149,5 +149,7 @@
 
   }
 
-
+  &__item:nth-of-type( n + 6 ){
+    display: none;
+  }
 }
