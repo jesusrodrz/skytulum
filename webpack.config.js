@@ -10,7 +10,10 @@ module.exports = {
     version: false,
     children: false
   },
-  entry: { index: './src/js/index.js' },
+  entry: {
+    index: './src/js/index.js',
+    admin:'./src/js/admin.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js'
@@ -21,8 +24,8 @@ module.exports = {
   },
   optimization: {
     splitChunks: {
-      chunks: 'all',
-      name: true
+      // chunks: 'all',
+      // name: true
     }
   },
   mode: 'development',
@@ -38,13 +41,13 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          // {
-          //   loader: MiniCssExtractPlugin.loader,
-          //   options: {
-          //     publicPath: '../'
-          //   }
-          // },
-          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
+          // 'style-loader',
           
           'css-loader',
           {

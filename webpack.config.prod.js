@@ -11,7 +11,10 @@ module.exports = {
     version: false,
     children: false
   },
-  entry: { index: './src/js/index.js' },
+  entry: {
+    index: './src/js/index.js',
+    admin:'./src/js/admin.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js'
@@ -21,10 +24,10 @@ module.exports = {
     historyApiFallback: true
   },
   optimization: {
-    splitChunks: {
-      chunks: 'all',
-      name: true
-    },
+    // splitChunks: {
+    //   chunks: 'all',
+    //   name: true
+    // },
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
