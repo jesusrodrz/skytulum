@@ -52,3 +52,8 @@ function print_custom_menu($menu_name) {
 		<?php
 	endif;
 }
+
+
+function get_asset($path) {
+	echo get_stylesheet_directory_uri() . '/dist/'. $path;
+}
