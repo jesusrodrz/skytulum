@@ -8,7 +8,7 @@
 get_header();
 ?>
   <section class="hero section">
-    <h1 class="hero__title title-1">Un increible proyecto en medio de la selva</h1><img class="hero__img" src="<?php echo get_stylesheet_directory_uri();?>/dist/assets/img/interior.jpg" alt="interior apartamento">
+    <h1 class="hero__title title-1 bg-square-1">Un increible proyecto en medio de la selva</h1><img class="hero__img" src="<?php echo get_stylesheet_directory_uri();?>/dist/assets/img/interior.jpg" alt="interior apartamento">
   </section>
   <?php 
     if ( have_posts() ) : 
