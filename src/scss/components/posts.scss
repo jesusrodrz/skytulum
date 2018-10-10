@@ -1,0 +1,78 @@
+.post{
+  position: relative;
+  @at-root [class^="post__btn"]{
+    border: none;
+    outline: none;
+    position: absolute;
+    width: 2em;
+    min-height: 5em;
+    height: 30vh;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: color(dark-footer);
+
+  }
+  &__btn--next{
+    right: 0;
+  }
+  &__btn--prev{
+    
+  }
+  &__text{
+    padding: 1em 3em;
+    font-size: 1.3em
+  }
+
+}
+
+.posts{
+  padding: 2em;
+  @include media(md){
+    padding: 3em;
+    display: grid;
+    grid-gap: $gap * 2;
+    grid-template-columns: repeat(3,1fr);
+  }
+  &__item{
+    margin-bottom: 2em;
+    @include media(md,max){
+      display: grid;
+      grid-column-gap: 2em;
+      grid-auto-columns: 30% 1fr;
+      grid-template-rows: repeat(3,auto);
+      grid-template-areas: "img title" "img date" "img post"
+
+    }
+
+  }
+  &__img{
+    grid-area: img;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__title, &__date{
+    font-family: Raleway;
+    @include media(md,max){
+      font-size: .8em;
+      
+    }
+  }
+  &__date{
+    grid-area: date;
+  }
+  &__title{
+    grid-area: title;
+
+    font-weight: bolder;
+    margin: .2em 0;
+  }
+  &__text{
+    grid-area: post;
+
+    @include media(md){
+      display: none;
+    }
+  }
+}

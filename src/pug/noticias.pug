@@ -1,10 +1,39 @@
 extends templates/template.pug
+include components/posts.pug
+
 block main
-  .perspective.right
-    h2.perspective__title.section__title.title-2.bg-square-center.t-uppercase Right Title
+  section.perspective.left.news
+    h2.perspective__title.section__title.title-2.bg-square-center.t-uppercase.news__title Left Title
+    time(datetime="2018-10-12").news__date 12 octubre 2018
     .perspective__body Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam facere fugit recusandae eligendi nulla corporis animi enim quas, a sed vitae harum cupiditate rem repudiandae? Adipisci soluta dignissimos nisi ex. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem eveniet culpa odit! Ducimus nesciunt quae corporis saepe vitae neque aspernatur, impedit sapiente, soluta commodi maiores quis id aliquam ipsam quos.
     figure.perspective__fig: img.perspective__img(src=img('sky-roof'))
-  .perspective.left
-    h2.perspective__title.section__title.title-2.bg-square-center.t-uppercase Left Title
-    .perspective__body Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam facere fugit recusandae eligendi nulla corporis animi enim quas, a sed vitae harum cupiditate rem repudiandae? Adipisci soluta dignissimos nisi ex. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem eveniet culpa odit! Ducimus nesciunt quae corporis saepe vitae neque aspernatur, impedit sapiente, soluta commodi maiores quis id aliquam ipsam quos.
-    figure.perspective__fig: img.perspective__img(src=img('sky-roof'))
+  
+  section.post
+    button.post__btn--next
+    button.post__btn--prev
+    .post__text
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum libero distinctio optio, voluptates adipisci delectus reiciendis quo sunt cum inventore, enim, consequatur praesentium quis odio voluptas. Distinctio, quos doloribus?Fugiat saepe, fuga reiciendis molestiae quod sapiente cupiditate nesciunt odio consequuntur, earum voluptates non eveniet dolores vero possimus fugit pariatur dicta quia dolorem. Recusandae consequatur temporibus odio dolor. Quaerat, non?Dolorum exercitationem eum accusantium assumenda libero, voluptatibus ea aliquid amet tenetur porro, dolore obcaecati quasi, expedita inventore cupiditate nulla ipsum repellat voluptates atque velit sequi vel! Asperiores voluptas eaque earum.Libero similique incidunt qui numquam? Incidunt, est eligendi. Accusamus error itaque eos voluptas, labore obcaecati sint distinctio magnam, voluptatum facere, illum nostrum odit laborum quia! Sit necessitatibus nam excepturi reprehenderit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum libero distinctio optio, voluptates adipisci delectus reiciendis quo sunt cum inventore, enim, consequatur praesentium quis odio voluptas.
+  section.posts
+    -
+      const posts = [
+        {
+          title: 'La primera piedra del desarrollo', img:img('sky-roof'), date:'12 octubre 2018', post:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum libero distinctio optio, voluptates adipisci delectus reiciendis quo sunt cum inventore.'
+        },
+        {
+          title: 'La primera piedra del desarrollo', img:img('sky-roof'), date:'12 octubre 2018', post:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum libero distinctio optio, voluptates adipisci delectus reiciendis quo sunt cum inventore.'
+        },
+        {
+          title: 'La primera piedra del desarrollo', img:img('sky-roof'), date:'12 octubre 2018', post:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum libero distinctio optio, voluptates adipisci delectus reiciendis quo sunt cum inventore.'
+        },
+        {
+          title: 'La primera piedra del desarrollo', img:img('sky-roof'), date:'12 octubre 2018', post:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum libero distinctio optio, voluptates adipisci delectus reiciendis quo sunt cum inventore.'
+        },
+        {
+          title: 'La primera piedra del desarrollo', img:img('sky-roof'), date:'12 octubre 2018', post:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum libero distinctio optio, voluptates adipisci delectus reiciendis quo sunt cum inventore.'
+        },
+        {
+          title: 'La primera piedra del desarrollo', img:img('sky-roof'), date:'12 octubre 2018', post:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum libero distinctio optio, voluptates adipisci delectus reiciendis quo sunt cum inventore.'
+        }
+
+      ]
+    +posts(posts)

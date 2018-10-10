@@ -1,0 +1,7 @@
+mixin posts(items)
+  each item in items
+    article.posts__item
+      img.posts__img(src=item.img)
+      h3.posts__title #{item.title}
+      time.posts__date #{item.date}
+      p.posts__text #{item.post}

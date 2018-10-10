@@ -1,0 +1,47 @@
+.tulum{
+  position:relative;
+  padding-bottom: 50vh;
+  margin-top: 2em;
+  @include media(md){
+    padding-bottom: 20vh;
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas: "title map" "text map";
+    min-height: 100vh;
+  }
+  &__title, &__text{
+    margin: 0em 2em;
+  }
+  &__title{
+    grid-area: title;
+    align-self: start;
+  }
+  &__text{
+    grid-area: text;
+
+  }
+  &__palm{
+    display: block;
+    z-index: -1;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-25%);
+    grid-area: palm;
+    @include media(md){
+      width: 40%;
+    }
+  }
+  &__map{
+    grid-area: map;
+    display: block;
+    width: 100%;
+    @include media(md){
+      align-self: center;
+      height: 95%;
+      object-fit: cover;
+    }
+  }
+}

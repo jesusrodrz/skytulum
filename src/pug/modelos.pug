@@ -1,7 +1,8 @@
 extends templates/template.pug
 
 include components/models.pug
-
+block vars
+  - let contactVisible = true;
 block main
   section.hero.section
     h1.hero__title.title-1.center-down-square.t-uppercase Modelos
