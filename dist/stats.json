@@ -1,12 +1,12 @@
 {
   "errors": [],
   "warnings": [
-    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  assets/img/piñanona.png (343 KiB)\n  assets/img/sky-roof.jpg (1.18 MiB)\n  assets/img/interior.jpg (7.87 MiB)\n  assets/fonts/Scheherazade-Bold.ttf (535 KiB)\n  assets/fonts/Scheherazade-Regular.ttf (489 KiB)",
+    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  assets/img/interior.jpg (7.87 MiB)\n  assets/img/sky-roof.jpg (1.18 MiB)\n  assets/img/piñanona.png (343 KiB)\n  assets/img/palm.png (475 KiB)\n  assets/fonts/Scheherazade-Regular.ttf (489 KiB)\n  assets/fonts/Scheherazade-Bold.ttf (535 KiB)",
     "webpack performance recommendations: \nYou can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.\nFor more info visit https://webpack.js.org/guides/code-splitting/"
   ],
-  "hash": "c57d2c95614c2213bfe6",
-  "time": 27683,
-  "builtAt": 1538978774879,
+  "hash": "477969d1b331ea19725c",
+  "time": 63934,
+  "builtAt": 1539148726198,
   "publicPath": "",
   "outputPath": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\dist",
   "assetsByChunkName": {
@@ -21,26 +21,15 @@
   },
   "assets": [
     {
-      "name": "css/index.css",
-      "size": 20983,
-      "chunks": [
-        0
-      ],
-      "chunkNames": [
-        "index"
-      ],
-      "emitted": true
-    },
-    {
-      "name": "assets/img/skytulum-logo.png",
-      "size": 17653,
+      "name": "assets/fonts/untitled-font-1.ttf",
+      "size": 4384,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
-      "name": "assets/img/Mia.png",
-      "size": 42179,
+      "name": "assets/img/skytulum-logo.png",
+      "size": 17653,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
@@ -54,16 +43,30 @@
       "isOverSizeLimit": true
     },
     {
-      "name": "assets/img/interior.jpg",
-      "size": 8252640,
+      "name": "assets/img/piñanona.png",
+      "size": 351067,
       "chunks": [],
       "chunkNames": [],
       "emitted": true,
       "isOverSizeLimit": true
     },
     {
-      "name": "assets/fonts/Scheherazade-Bold.ttf",
-      "size": 547772,
+      "name": "assets/img/Mia.png",
+      "size": 42179,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "assets/img/mapa.png",
+      "size": 218870,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "assets/img/palm.png",
+      "size": 485912,
       "chunks": [],
       "chunkNames": [],
       "emitted": true,
@@ -78,19 +81,31 @@
       "isOverSizeLimit": true
     },
     {
-      "name": "assets/fonts/untitled-font-1.ttf",
-      "size": 4384,
-      "chunks": [],
-      "chunkNames": [],
-      "emitted": true
-    },
-    {
-      "name": "assets/img/piñanona.png",
-      "size": 351067,
+      "name": "assets/fonts/Scheherazade-Bold.ttf",
+      "size": 547772,
       "chunks": [],
       "chunkNames": [],
       "emitted": true,
       "isOverSizeLimit": true
+    },
+    {
+      "name": "assets/img/interior.jpg",
+      "size": 8252640,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "css/index.css",
+      "size": 25933,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "index"
+      ],
+      "emitted": true
     },
     {
       "name": "js/index.js",
@@ -105,7 +120,7 @@
     },
     {
       "name": "css/admin.css",
-      "size": 1947,
+      "size": 1919,
       "chunks": [
         1
       ],
@@ -127,35 +142,35 @@
     },
     {
       "name": "index.html",
-      "size": 6895,
+      "size": 6907,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
       "name": "modelos.html",
-      "size": 6610,
+      "size": 6702,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
       "name": "noticias.html",
-      "size": 4934,
+      "size": 9864,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
       "name": "proyecto.html",
-      "size": 12636,
+      "size": 12412,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
       "name": "tulum.html",
-      "size": 4934,
+      "size": 6106,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
@@ -216,7 +231,7 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 24353,
+      "size": 29303,
       "names": [
         "index"
       ],
@@ -224,7 +239,7 @@
         "css/index.css",
         "js/index.js"
       ],
-      "hash": "08d31b541aafb7696302",
+      "hash": "931f60b6963958a1c999",
       "siblings": [],
       "parents": [],
       "children": [],
@@ -299,8 +314,8 @@
           "errors": 0,
           "warnings": 0,
           "assets": [
-            "assets/fonts/Scheherazade-Bold.ttf",
-            "assets/fonts/Scheherazade-Regular.ttf"
+            "assets/fonts/Scheherazade-Regular.ttf",
+            "assets/fonts/Scheherazade-Bold.ttf"
           ],
           "reasons": [
             {
@@ -327,7 +342,7 @@
           "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/style.scss",
           "index": 2,
           "index2": 0,
-          "size": 20982,
+          "size": 25932,
           "built": false,
           "optional": false,
           "prefetched": false,
@@ -386,7 +401,7 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 5928,
+      "size": 5900,
       "names": [
         "admin"
       ],
@@ -394,7 +409,7 @@
         "css/admin.css",
         "js/admin.js"
       ],
-      "hash": "b488e1b4edc715d42959",
+      "hash": "80c4093fefdbdf9f0e05",
       "siblings": [],
       "parents": [],
       "children": [],
@@ -496,7 +511,7 @@
           "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/admin.scss",
           "index": 5,
           "index2": 3,
-          "size": 1946,
+          "size": 1918,
           "built": false,
           "optional": false,
           "prefetched": false,
@@ -621,8 +636,8 @@
       "errors": 0,
       "warnings": 0,
       "assets": [
-        "assets/fonts/Scheherazade-Bold.ttf",
-        "assets/fonts/Scheherazade-Regular.ttf"
+        "assets/fonts/Scheherazade-Regular.ttf",
+        "assets/fonts/Scheherazade-Bold.ttf"
       ],
       "reasons": [
         {
@@ -649,7 +664,7 @@
       "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/style.scss",
       "index": 2,
       "index2": 0,
-      "size": 20982,
+      "size": 25932,
       "built": false,
       "optional": false,
       "prefetched": false,
@@ -786,7 +801,7 @@
       "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/admin.scss",
       "index": 5,
       "index2": 3,
-      "size": 1946,
+      "size": 1918,
       "built": false,
       "optional": false,
       "prefetched": false,
