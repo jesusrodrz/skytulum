@@ -8,4 +8,6 @@ mixin models(items)
           ul.models__list
             each listItem in item.list
               li.models__list-item #{listItem}
-        figure.models__fig: img.models__img(src=item.img, alt="")
+        figure.models__fig 
+          img.models__img(src=item.img, alt="")
+          span.models__sold Vendido

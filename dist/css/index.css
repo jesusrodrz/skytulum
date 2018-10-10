@@ -1103,7 +1103,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5%; }
+    margin-top: 5%;
+    position: relative; }
     @media (min-width: 54rem) {
       .models__item {
         display: grid;
@@ -1148,6 +1149,35 @@ body {
       position: absolute;
       top: 0;
       left: -1.2em; }
+  .models__sold {
+    font-family: Raleway;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 1px 1px 3px #777777;
+    position: absolute;
+    top: 3em;
+    transition: transform .4s ease-out; }
+    .models__sold::before {
+      position: absolute;
+      content: "";
+      display: block;
+      z-index: -1;
+      height: 4em;
+      width: 4em;
+      background-color: rgba(253, 202, 202, 0.8);
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      border-radius: 50%; }
+  .models__item:nth-of-type(even) .models__sold {
+    right: 3em;
+    transform: translate(-3em, 1em) rotateY(-30deg) rotateX(15deg) scale(0.8); }
+  .models__item:nth-of-type(even):hover .models__sold, .models__item:nth-of-type(even).active .models__sold {
+    transform: rotateY(-12deg) rotateX(7deg) scale(1); }
+  .models__item:nth-of-type(odd) .models__sold {
+    left: 3em;
+    transform: translate(3em, 1em) rotateY(30deg) rotateX(15deg) scale(0.8); }
+  .models__item:nth-of-type(odd):hover .models__sold, .models__item:nth-of-type(odd).active .models__sold {
+    transform: rotateY(12deg) rotateX(7deg) scale(1); }
 
 .level {
   display: flex;

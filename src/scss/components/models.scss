@@ -4,6 +4,7 @@
   margin: 2em 0;
   padding-bottom: 10%;
   width: 100%;
+  
   &__title{
     grid-area: title;
     align-self: end;
@@ -29,6 +30,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 5%;
+    position: relative;
     @include media(md){
       display: grid;
       grid-template-columns: 60% 1fr;
@@ -88,5 +90,41 @@
       top: 0;
       left: -1.2em;
     }
+  }
+
+  &__sold{
+    font-family: Raleway;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 1px 1px 3px rgb(119, 119, 119);
+    position: absolute;
+    top: 3em;
+    transition: transform .4s ease-out;
+    &::before{
+      position: absolute;
+      content: "";
+      display: block;
+      z-index: -1;
+      height: 4em;
+      width: 4em;
+      background-color: rgba(#fdcaca, .8);
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      border-radius: 50%;
+    }
+  }
+  &__item:nth-of-type(even) &__sold{
+    right: 3em;
+    transform: translate(-3em,1em) rotateY(-30deg) rotateX(15deg) scale(.8);
+  }
+  &__item:nth-of-type(even):hover &__sold, &__item:nth-of-type(even).active &__sold{
+    transform: rotateY(-12deg) rotateX(7deg) scale(1);
+  }
+  &__item:nth-of-type(odd) &__sold{
+    left: 3em;
+    transform: translate(3em,1em) rotateY(30deg) rotateX(15deg) scale(.8);
+  }
+  &__item:nth-of-type(odd):hover &__sold, &__item:nth-of-type(odd).active &__sold{
+    transform: rotateY(12deg) rotateX(7deg) scale(1);
   }
 }
