@@ -1,38 +1,13 @@
 extends templates/template.pug
 include components/specs.pug
-  -
-    //- const specs = [
-    //-   {
-    //-     title:'Nivel 1',
-    //-     list: [
-    //-       { unit:'S-101', type: 'Studio-lock Off Swim Up', total: '71.92 m2', src: 'src/img/image' },
-    //-       { unit:'S-102', type: 'Studio-lock Off Swim Up', total: '71.92 m2', src: 'src/img/image' },
-    //-       { unit:'S-103', type: 'Studio-lock Off Swim Up', total: '73.18 m2', src: 'src/img/image' },
-    //-       { unit:'S-104', type: 'Studio-lock Off Swim Up', total: '73.18 m2', src: 'src/img/image' },
-    //-       { unit:'S-105', type: 'Studio-lock Off Swim Up', total: '73.18 m2', src: 'src/img/image' },
-    //-       { unit:'S-106', type: 'Studio-lock Off Swim Up', total: '73.18 m2', src: 'src/img/image' }
-    //-     ]
-    //-   },
-    //-   {
-    //-     title:'Nivel 2',
-    //-     list: [
-    //-       { unit:'k-201', type: '1 Habitación 1 Jacuzzi', total: '59.0 m2', src: 'src/img/image' },
-    //-       { unit:'k-202', type: '2 habitaciones Lock Off Jacuzzi', total: '84.5 m2', src: 'src/img/image' },
-    //-       { unit:'k-203', type: '1 Habitación 1 Jacuzzi', total: '59.6 m2', src: 'src/img/image' },
-    //-       { unit:'k-204', type: '1 Habitación 1 Jacuzzi', total: '59.6 m2', src: 'src/img/image' },
-    //-       { unit:'k-205', type: '1 Habitación 1 Jacuzzi', total: '59.6 m2', src: 'src/img/image' },
-    //-       { unit:'k-206', type: '1 Habitación 1 Jacuzzi', total: '59.6 m2', src: 'src/img/image' }
-    //-     ]
-    //-   }
-    //- ]
-
+ 
 block main
   section.hero.section
     h1.hero__title.title-1.center-down-square.t-uppercase Proyecto
     img.hero__img(src=img('interior'), alt="interior apartamento") 
   section.section-project.project
     h2.project__title.section__title.title-2.bg-square-center.t-uppercase Sky Tulum
-    p.project__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque beatae iure necessitatibus aperiam adipisci placeat! Maiores optio, est laudantium sequi consectetur nisi, aut exercitationem vitae sed ipsum dicta aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium provident similique in eum nulla vel atque ab, officia iste ipsa commodi. Suscipit similique dolorum aliquid vero voluptates voluptate quam.
+    div.project__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque beatae iure necessitatibus aperiam adipisci placeat! Maiores optio, est laudantium sequi consectetur nisi, aut exercitationem vitae sed ipsum dicta aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium provident similique in eum nulla vel atque ab, officia iste ipsa commodi. Suscipit similique dolorum aliquid vero voluptates voluptate quam.
     figure.project__fig: img.project__img(src=img('sky-roof'), alt="")
   -
     const specs = [

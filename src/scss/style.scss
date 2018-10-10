@@ -35,6 +35,13 @@
 @import "components/modal.scss";
 @import "components/models.scss";
 @import "components/specs.scss";
+@import "components/perspective.scss";
+
+// Helpers
+  // Codigo reutilisable para componentes y otros elementos
+  @import "helpers/skins";
+  @import "helpers/display.scss";
+
 
 // Theme (colors and fonts)
 @import "theme/typography";
@@ -52,6 +59,6 @@
 //   display: block;
 //   max-width: 100%;
 // }
-.none{
-  display: none;
-}
+// .none{
+//   display: none;
+// }

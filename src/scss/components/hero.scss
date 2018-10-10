@@ -10,7 +10,7 @@
   justify-content: center;
   &__title{
     // background-color: rebeccapurple;
-    @extend %bg-square-centered;
+    // @extend %bg-square-centered;
     width: 60%;
     position: absolute;
     bottom: 20%;
@@ -20,11 +20,6 @@
     --theme-color: #{color(primary,trans20)};
     @include media(md){
       width: 50%;
-    }
-    @include media(md){
-      // width: 30%;
-    }
-    &::before{
     }
 
   }

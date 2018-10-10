@@ -1,10 +1,10 @@
 :root{
   @include media(md){
-    --header-height: 100px
+    --header-height: 100px;
   }
 }
 .main-header{
-  height: $header-height;
+  height: var(--header-height);
   display: flex;
   padding: .4em ;
   background-color: color(background);

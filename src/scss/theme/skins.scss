@@ -27,3 +27,20 @@
 .theme-white{
   --theme-color: white;
 }
+
+.bg-square-1{
+  z-index: 300;
+  &::before{
+    content: '';
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    // left: 50%;
+    // top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(.9,.8);
+    transform: translateX( -.6em ) scale(1,.65);
+    transform-origin: center center;
+    background-color: var(--theme-color)
+  }
+}
