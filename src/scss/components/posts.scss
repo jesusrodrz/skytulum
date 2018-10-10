@@ -10,6 +10,13 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: color(dark-footer);
+    color:white;
+    transition: background-color ease-in-out .3s; 
+
+    &:hover{
+      background-color: saturate(lighten(color(dark-footer), 20),20);
+      background-color: lighten(color(dark-footer), 10);
+    }
 
   }
   &__btn--next{
