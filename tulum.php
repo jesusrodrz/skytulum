@@ -8,7 +8,7 @@
 get_header();
 ?>
 <section class="hero section">
-  <h1 class="hero__title title-1 bg-square-1">Tulum</h1><img class="hero__img" src="assets/img/interior.jpg" alt="interior apartamento">
+  <h1 class="hero__title title-1 bg-square-1">Tulum</h1><img class="hero__img" src="<?php get_asset('assets/img/interior.jpg'); ?>" alt="interior apartamento">
 </section>
 <section class="tulum">
   <h2 class="title-2 t-uppercase tulum__title">Tulum</h2>
