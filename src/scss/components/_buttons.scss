@@ -72,3 +72,48 @@
   }
 
 }
+
+.up-btn{
+  @at-root .icon-up::before{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    transform: translateX(1px)
+  }
+
+  cursor: pointer;
+  height: 6em;
+  outline: none;
+  z-index: 2000;
+  border: none;
+  position: fixed;
+  color:white;
+  bottom: 10%;
+  left: .5em;
+  width: 2em;
+  display: table;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Raleway, 'sans-serif';
+  background-color: color(dark-footer);
+  font-size: 1em;
+  padding-bottom: 2em;
+  padding-top: 1em;
+  justify-content: space-between;
+  transition: transform cubic-bezier(0.42, 0, 0.52, 1.46) .6s;
+  transform: scale(.001);
+  &.active{
+    transform: scale(1);
+  }
+  @at-root .footer:hover &{
+    // transform: scale(1);
+  }
+  &__text{
+    transform: rotateZ(-90deg)
+  }
+  
+
+}

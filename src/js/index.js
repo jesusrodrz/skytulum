@@ -94,3 +94,35 @@ const nav = new Menu({
 })
 
 nav.init()
+
+class ScrollToTop {
+  constructor(btnId){
+    this.btn = document.getElementById(btnId)
+  }
+  toTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+  toggleBtn = () => {
+    const position = window.pageYOffset,
+      height = window.innerHeight;  
+    
+    
+    if( position <= height && this.btn.classList.contains('active') ) this.btn.classList.remove('active')
+    if( position >= height && !this.btn.classList.contains('active') ) this.btn.classList.add('active')
+  }
+  init = () => {
+    if (this.btn) {
+      this.btn.addEventListener('click',this.toTop)
+    }
+
+    window.addEventListener('scroll',this.toggleBtn)
+  }
+
+}
+
+const toTopBtn = new ScrollToTop('btnUp')
+toTopBtn.init()
