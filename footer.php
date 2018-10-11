@@ -13,6 +13,7 @@
     </section>
   </main>
   <footer class="footer">
+    <button class="up-btn" id="btnUp"><i class="icon-up"></i> <span class="up-btn__text">Inicio</span>  </button>
     <section class="footer__section notices-ft">
       <h2 class="footer__title notices-ft__title">Noticias</h2>
       <article class="notice-item">
