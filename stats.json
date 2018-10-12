@@ -1,12 +1,12 @@
 {
   "errors": [],
   "warnings": [
-    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  assets/img/interior.jpg (7.87 MiB)\n  assets/img/sky-roof.jpg (1.18 MiB)\n  assets/img/Sky-Tulum-Alberca_4K2.jpg (1.18 MiB)\n  assets/img/Sky-Tulum_4K_2.jpg (934 KiB)\n  assets/img/SKY-K-206_4K.jpg (881 KiB)\n  assets/img/SKY_Detalle-Alberca_4K.jpg (1.69 MiB)\n  assets/img/piñanona.png (343 KiB)\n  assets/img/palm.png (475 KiB)\n  assets/fonts/Scheherazade-Regular.ttf (489 KiB)\n  assets/fonts/Scheherazade-Bold.ttf (535 KiB)",
+    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  assets/img/sky-roof.jpg (1.18 MiB)\n  assets/img/piñanona.png (343 KiB)\n  assets/img/interior.jpg (7.87 MiB)\n  assets/img/Sky-Tulum-Alberca_4K2.jpg (1.18 MiB)\n  assets/img/Sky-Tulum_4K_2.jpg (934 KiB)\n  assets/img/SKY-K-206_4K.jpg (881 KiB)\n  assets/img/SKY_Detalle-Alberca_4K.jpg (1.69 MiB)\n  assets/img/palm.png (475 KiB)\n  assets/fonts/Scheherazade-Bold.ttf (535 KiB)\n  assets/fonts/Scheherazade-Regular.ttf (489 KiB)",
     "webpack performance recommendations: \nYou can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.\nFor more info visit https://webpack.js.org/guides/code-splitting/"
   ],
-  "hash": "a192224eb1056c3f5ffd",
-  "time": 23524,
-  "builtAt": 1539306819014,
+  "hash": "d89d926d93ff0e7b4d29",
+  "time": 50129,
+  "builtAt": 1539334404657,
   "publicPath": "",
   "outputPath": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\dist",
   "assetsByChunkName": {
@@ -21,22 +21,39 @@
   },
   "assets": [
     {
-      "name": "assets/fonts/icomoon.ttf",
-      "size": 2264,
+      "name": "assets/fonts/Scheherazade-Regular.ttf",
+      "size": 500396,
       "chunks": [],
       "chunkNames": [],
-      "emitted": true
-    },
-    {
-      "name": "assets/img/skytulum-logo.png",
-      "size": 17653,
-      "chunks": [],
-      "chunkNames": [],
-      "emitted": true
+      "emitted": true,
+      "isOverSizeLimit": true
     },
     {
       "name": "assets/img/sky-roof.jpg",
       "size": 1237525,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "assets/img/piñanona.png",
+      "size": 351067,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "assets/img/Mia.png",
+      "size": 42179,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "assets/img/interior.jpg",
+      "size": 8252640,
       "chunks": [],
       "chunkNames": [],
       "emitted": true,
@@ -75,21 +92,6 @@
       "isOverSizeLimit": true
     },
     {
-      "name": "assets/img/piñanona.png",
-      "size": 351067,
-      "chunks": [],
-      "chunkNames": [],
-      "emitted": true,
-      "isOverSizeLimit": true
-    },
-    {
-      "name": "assets/img/Mia.png",
-      "size": 42179,
-      "chunks": [],
-      "chunkNames": [],
-      "emitted": true
-    },
-    {
       "name": "assets/img/mapa.png",
       "size": 218870,
       "chunks": [],
@@ -99,14 +101,6 @@
     {
       "name": "assets/img/palm.png",
       "size": 485912,
-      "chunks": [],
-      "chunkNames": [],
-      "emitted": true,
-      "isOverSizeLimit": true
-    },
-    {
-      "name": "assets/fonts/Scheherazade-Regular.ttf",
-      "size": 500396,
       "chunks": [],
       "chunkNames": [],
       "emitted": true,
@@ -128,12 +122,25 @@
       "emitted": true
     },
     {
-      "name": "assets/img/interior.jpg",
-      "size": 8252640,
+      "name": "assets/fonts/icomoon.ttf",
+      "size": 2264,
       "chunks": [],
       "chunkNames": [],
-      "emitted": true,
-      "isOverSizeLimit": true
+      "emitted": true
+    },
+    {
+      "name": "assets/img/skytulum-logo.png",
+      "size": 17653,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "assets/fonts/icomoon.woff",
+      "size": 2340,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
     },
     {
       "name": "assets/fonts/icomoon.svg",
@@ -145,13 +152,6 @@
     {
       "name": "assets/img/icomoon.svg",
       "size": 70,
-      "chunks": [],
-      "chunkNames": [],
-      "emitted": true
-    },
-    {
-      "name": "assets/fonts/icomoon.woff",
-      "size": 2340,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
@@ -187,7 +187,7 @@
     },
     {
       "name": "css/admin.css",
-      "size": 1919,
+      "size": 1906,
       "chunks": [
         1
       ],
@@ -198,7 +198,7 @@
     },
     {
       "name": "js/admin.js",
-      "size": 3317,
+      "size": 4845,
       "chunks": [
         1
       ],
@@ -381,13 +381,13 @@
           "errors": 0,
           "warnings": 0,
           "assets": [
-            "assets/fonts/Scheherazade-Regular.ttf",
             "assets/fonts/Scheherazade-Bold.ttf",
             "assets/fonts/icomoon.eot",
             "assets/fonts/icomoon.ttf",
+            "assets/fonts/Scheherazade-Regular.ttf",
+            "assets/fonts/icomoon.woff",
             "assets/fonts/icomoon.svg",
-            "assets/img/icomoon.svg",
-            "assets/fonts/icomoon.woff"
+            "assets/img/icomoon.svg"
           ],
           "reasons": [
             {
@@ -473,7 +473,7 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 5900,
+      "size": 8728,
       "names": [
         "admin"
       ],
@@ -481,7 +481,7 @@
         "css/admin.css",
         "js/admin.js"
       ],
-      "hash": "80c4093fefdbdf9f0e05",
+      "hash": "e8fec54d2f3bc5cfed7a",
       "siblings": [],
       "parents": [],
       "children": [],
@@ -493,7 +493,7 @@
           "name": "./src/js/admin.js",
           "index": 3,
           "index2": 5,
-          "size": 3943,
+          "size": 6784,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -526,7 +526,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 0,
-          "source": "'use strict';\n\nrequire('../scss/admin.scss');\n\nfunction _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Gallery = function Gallery(gallery, addBtn, figClass) {\n  var _this = this;\n\n  _classCallCheck(this, Gallery);\n\n  this.init = function () {\n    _this.gallery.addEventListener(\"click\", _this.handleClick);\n  };\n\n  this.helper = function (url) {\n    console.log(_this.target);\n    // this.target\n    _this.target.getElementsByTagName('input')[0].value = url;\n    _this.target.getElementsByTagName('img')[0].src = url;\n  };\n\n  this.openMediaSingle = function (element) {\n    _this.target = element;\n    if (_this.wp_media_s) {\n      _this.wp_media_s.open();\n      return;\n    }\n    _this.wp_media_s = wp.media.frames.wp_media_s = wp.media({\n      title: _this.gallery.dataset.titleS,\n      button: {\n        text: _this.gallery.dataset.button\n      }\n    });\n    _this.wp_media_s.on('select', function () {\n\n      var attachment = _this.wp_media_s.state().get('selection').first().toJSON();\n      _this.helper(attachment.url);\n    });\n    _this.wp_media_s.open();\n  };\n\n  this.openMedia = function () {\n    if (_this.wp_media) {\n      _this.wp_media.open();\n      return;\n    }\n    // Sets up the media library frame\n    _this.wp_media = wp.media.frames.wp_media = wp.media({\n      title: _this.gallery.dataset.title,\n      button: {\n        text: _this.gallery.dataset.button\n      },\n      multiple: true\n    });\n\n    _this.wp_media.on('select', function () {\n      var attachments = _this.wp_media.state().get('selection').map(function (e) {\n\n        e.toJSON();\n        var item = {\n          url: e.attributes.url,\n          id: e.id\n        };\n        return item;\n      });\n\n      attachments.forEach(function (item) {\n        _this.addImg(item.url);\n      });\n    });\n\n    _this.wp_media.open();\n  };\n\n  this.handleClick = function (e) {\n    e.preventDefault();\n    var target = e.target;\n    // console.log(target)\n    if (target === _this.addBtn) _this.openMedia();\n\n    if (target.closest('.gallery__close')) {\n\n      _this.remove(target.closest('.gallery__fig'), _this.images);\n    } else if (target.closest('.gallery__fig')) {\n\n      _this.openMediaSingle(target.closest('.gallery__fig'));\n    }\n  };\n\n  this.remove = function (element, items) {\n    _this.gallery.removeChild(element);\n    items.splice(items.indexOf(element), 1);\n    items.forEach(function (e, index) {\n      e.getElementsByTagName('input')[0].name = _this.gallery.dataset.name + '[' + index + ']';\n    });\n  };\n\n  this.addImg = function () {\n    var imgSrc = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'img/src';\n\n    var fig = document.createElement('figure'),\n        img = document.createElement('img'),\n        input = document.createElement('input'),\n        close = document.createElement('button');\n\n    input.type = 'text';\n    input.name = _this.gallery.dataset.name + '[' + _this.images.length + ']';\n    img.src = imgSrc;\n    input.value = imgSrc;\n    fig.classList.add('gallery__fig');\n    img.classList.add('gallery__img');\n    input.classList.add('gallery__input');\n    close.classList.add('gallery__close');\n    close.classList.add('gallery__btn');\n    fig.appendChild(img);\n    fig.appendChild(input);\n    fig.appendChild(close);\n\n    _this.gallery.insertBefore(fig, _this.addBtn);\n    _this.images.push(fig);\n  };\n\n  this.gallery = document.getElementById(gallery);\n  this.addBtn = document.getElementById(addBtn);\n  this.images = [].concat(_toConsumableArray(this.gallery.getElementsByClassName(figClass)));\n};\n\nvar gallery = new Gallery('galleryContainer', 'addBtn', 'gallery__fig');\ngallery.init();\n// alert('aquita')"
+          "source": "'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nrequire('../scss/admin.scss');\n\nfunction _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Gallery = function Gallery(gallery, addBtn, figClass) {\n  var _this = this;\n\n  _classCallCheck(this, Gallery);\n\n  this.init = function () {\n    if (_this.gallery) _this.gallery.addEventListener(\"click\", _this.handleClick);\n  };\n\n  this.helper = function (url) {\n    console.log(_this.target);\n    // this.target\n    _this.target.getElementsByTagName('input')[0].value = url;\n    _this.target.getElementsByTagName('img')[0].src = url;\n  };\n\n  this.openMediaSingle = function (element) {\n    _this.target = element;\n    if (_this.wp_media_s) {\n      _this.wp_media_s.open();\n      return;\n    }\n    _this.wp_media_s = wp.media.frames.wp_media_s = wp.media({\n      title: _this.gallery.dataset.titleS,\n      button: {\n        text: _this.gallery.dataset.button\n      }\n    });\n    _this.wp_media_s.on('select', function () {\n\n      var attachment = _this.wp_media_s.state().get('selection').first().toJSON();\n      _this.helper(attachment.url);\n    });\n    _this.wp_media_s.open();\n  };\n\n  this.openMedia = function () {\n    if (_this.wp_media) {\n      _this.wp_media.open();\n      return;\n    }\n    // Sets up the media library frame\n    _this.wp_media = wp.media.frames.wp_media = wp.media({\n      title: _this.gallery.dataset.title,\n      button: {\n        text: _this.gallery.dataset.button\n      },\n      multiple: true\n    });\n\n    _this.wp_media.on('select', function () {\n      var attachments = _this.wp_media.state().get('selection').map(function (e) {\n\n        e.toJSON();\n        var item = {\n          url: e.attributes.url,\n          id: e.id\n        };\n        return item;\n      });\n\n      attachments.forEach(function (item) {\n        _this.addImg(item.url);\n      });\n    });\n\n    _this.wp_media.open();\n  };\n\n  this.handleClick = function (e) {\n    e.preventDefault();\n    var target = e.target;\n    // console.log(target)\n    if (target === _this.addBtn) _this.openMedia();\n\n    if (target.closest('.gallery__close')) {\n\n      _this.remove(target.closest('.gallery__fig'), _this.images);\n    } else if (target.closest('.gallery__fig')) {\n\n      _this.openMediaSingle(target.closest('.gallery__fig'));\n    }\n  };\n\n  this.remove = function (element, items) {\n    _this.gallery.removeChild(element);\n    items.splice(items.indexOf(element), 1);\n    items.forEach(function (e, index) {\n      e.getElementsByTagName('input')[0].name = _this.gallery.dataset.name + '[' + index + ']';\n    });\n  };\n\n  this.addImg = function () {\n    var imgSrc = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'img/src';\n\n    var fig = document.createElement('figure'),\n        img = document.createElement('img'),\n        input = document.createElement('input'),\n        close = document.createElement('button');\n\n    input.type = 'text';\n    input.name = _this.gallery.dataset.name + '[' + _this.images.length + ']';\n    img.src = imgSrc;\n    input.value = imgSrc;\n    fig.classList.add('gallery__fig');\n    img.classList.add('gallery__img');\n    input.classList.add('gallery__input');\n    close.classList.add('gallery__close');\n    close.classList.add('gallery__btn');\n    fig.appendChild(img);\n    fig.appendChild(input);\n    fig.appendChild(close);\n\n    _this.gallery.insertBefore(fig, _this.addBtn);\n    _this.images.push(fig);\n  };\n\n  this.gallery = gallery;\n  this.addBtn = document.getElementById(addBtn);\n  this.images = [].concat(_toConsumableArray(this.gallery.getElementsByClassName(figClass)));\n};\n\nvar galleryConatiner = document.getElementById('galleryContainer');\nif (galleryConatiner) {\n  var gallery = new Gallery(galleryConatiner, 'addBtn', 'gallery__fig');\n  gallery.init();\n}\n\nvar Image = function Image(figID) {\n  var _this2 = this;\n\n  _classCallCheck(this, Image);\n\n  this.openMediaSingle = function (e) {\n    // console.log(e.target)\n    // this.target = element\n    if (_this2.wp_media_s) {\n      _this2.wp_media_s.open();\n      return;\n    }\n    _this2.wp_media_s = wp.media.frames.wp_media_s = wp.media({\n      title: _this2.fig.dataset.title,\n      button: {\n        text: _this2.fig.dataset.button\n      }\n    });\n    _this2.wp_media_s.on('select', function () {\n\n      var attachment = _this2.wp_media_s.state().get('selection').first().toJSON();\n      _this2.setImage(attachment.url);\n    });\n    _this2.wp_media_s.open();\n  };\n\n  this.setImage = function (url) {\n    // this.inputText.value = srcB\n    // this.image = srcB\n    _this2.fig.getElementsByTagName('input')[0].value = url;\n    if (_this2.fig.getElementsByTagName('img')[0]) {\n\n      _this2.fig.getElementsByTagName('img')[0].src = url;\n    } else {\n      var img = document.createElement('img');\n      img.src = url;\n      img.classList.add('gallery__img');\n      _this2.fig.appendChild(img);\n    }\n  };\n\n  this.init = function () {\n    _this2.fig.addEventListener('click', _this2.openMediaSingle);\n  };\n\n  this.fig = figID;\n  this.inputText = this.fig.getElementsByTagName('input')[0];\n  this.image = this.fig.getElementsByTagName('img')[0];\n}\n\n// handleClick = (e) => {\n\n// }\n;\n\nvar imageField = document.getElementById('imageField');\nif (imageField) {\n\n  var imageFieldset = new Image(imageField);\n\n  imageFieldset.init();\n}\n\nvar List = function () {\n  function List(list, tnoid) {\n    var _this3 = this;\n\n    _classCallCheck(this, List);\n\n    this.handleClick = function (e) {\n      if (e.target === _this3.btn) _this3.add();\n      if (e.target.classList.contains('list__remove')) _this3.remove(e.target.closest('.'));\n    };\n\n    this.list = list;\n    this.btn = document.getElementById(tnoid);\n  }\n\n  _createClass(List, [{\n    key: 'init',\n    value: function init() {\n      this.list.addEventListener('click', this.handleClick);\n    }\n  }]);\n\n  return List;\n}();\n\nvar list = document.getElementById('imageField');\nif (list) {\n\n  var listInstance = new List(list, 'listBtn');\n\n  listInstance.init();\n}"
         },
         {
           "id": 4,
@@ -566,7 +566,7 @@
               "moduleName": "./src/js/admin.js",
               "type": "cjs require",
               "userRequest": "../scss/admin.scss",
-              "loc": "3:0-29"
+              "loc": "5:0-29"
             }
           ],
           "usedExports": true,
@@ -583,7 +583,7 @@
           "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/admin.scss",
           "index": 5,
           "index2": 3,
-          "size": 1918,
+          "size": 1905,
           "built": false,
           "optional": false,
           "prefetched": false,
@@ -708,13 +708,13 @@
       "errors": 0,
       "warnings": 0,
       "assets": [
-        "assets/fonts/Scheherazade-Regular.ttf",
         "assets/fonts/Scheherazade-Bold.ttf",
         "assets/fonts/icomoon.eot",
         "assets/fonts/icomoon.ttf",
+        "assets/fonts/Scheherazade-Regular.ttf",
+        "assets/fonts/icomoon.woff",
         "assets/fonts/icomoon.svg",
-        "assets/img/icomoon.svg",
-        "assets/fonts/icomoon.woff"
+        "assets/img/icomoon.svg"
       ],
       "reasons": [
         {
@@ -788,7 +788,7 @@
       "name": "./src/js/admin.js",
       "index": 3,
       "index2": 5,
-      "size": 3943,
+      "size": 6784,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -821,7 +821,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 0,
-      "source": "'use strict';\n\nrequire('../scss/admin.scss');\n\nfunction _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Gallery = function Gallery(gallery, addBtn, figClass) {\n  var _this = this;\n\n  _classCallCheck(this, Gallery);\n\n  this.init = function () {\n    _this.gallery.addEventListener(\"click\", _this.handleClick);\n  };\n\n  this.helper = function (url) {\n    console.log(_this.target);\n    // this.target\n    _this.target.getElementsByTagName('input')[0].value = url;\n    _this.target.getElementsByTagName('img')[0].src = url;\n  };\n\n  this.openMediaSingle = function (element) {\n    _this.target = element;\n    if (_this.wp_media_s) {\n      _this.wp_media_s.open();\n      return;\n    }\n    _this.wp_media_s = wp.media.frames.wp_media_s = wp.media({\n      title: _this.gallery.dataset.titleS,\n      button: {\n        text: _this.gallery.dataset.button\n      }\n    });\n    _this.wp_media_s.on('select', function () {\n\n      var attachment = _this.wp_media_s.state().get('selection').first().toJSON();\n      _this.helper(attachment.url);\n    });\n    _this.wp_media_s.open();\n  };\n\n  this.openMedia = function () {\n    if (_this.wp_media) {\n      _this.wp_media.open();\n      return;\n    }\n    // Sets up the media library frame\n    _this.wp_media = wp.media.frames.wp_media = wp.media({\n      title: _this.gallery.dataset.title,\n      button: {\n        text: _this.gallery.dataset.button\n      },\n      multiple: true\n    });\n\n    _this.wp_media.on('select', function () {\n      var attachments = _this.wp_media.state().get('selection').map(function (e) {\n\n        e.toJSON();\n        var item = {\n          url: e.attributes.url,\n          id: e.id\n        };\n        return item;\n      });\n\n      attachments.forEach(function (item) {\n        _this.addImg(item.url);\n      });\n    });\n\n    _this.wp_media.open();\n  };\n\n  this.handleClick = function (e) {\n    e.preventDefault();\n    var target = e.target;\n    // console.log(target)\n    if (target === _this.addBtn) _this.openMedia();\n\n    if (target.closest('.gallery__close')) {\n\n      _this.remove(target.closest('.gallery__fig'), _this.images);\n    } else if (target.closest('.gallery__fig')) {\n\n      _this.openMediaSingle(target.closest('.gallery__fig'));\n    }\n  };\n\n  this.remove = function (element, items) {\n    _this.gallery.removeChild(element);\n    items.splice(items.indexOf(element), 1);\n    items.forEach(function (e, index) {\n      e.getElementsByTagName('input')[0].name = _this.gallery.dataset.name + '[' + index + ']';\n    });\n  };\n\n  this.addImg = function () {\n    var imgSrc = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'img/src';\n\n    var fig = document.createElement('figure'),\n        img = document.createElement('img'),\n        input = document.createElement('input'),\n        close = document.createElement('button');\n\n    input.type = 'text';\n    input.name = _this.gallery.dataset.name + '[' + _this.images.length + ']';\n    img.src = imgSrc;\n    input.value = imgSrc;\n    fig.classList.add('gallery__fig');\n    img.classList.add('gallery__img');\n    input.classList.add('gallery__input');\n    close.classList.add('gallery__close');\n    close.classList.add('gallery__btn');\n    fig.appendChild(img);\n    fig.appendChild(input);\n    fig.appendChild(close);\n\n    _this.gallery.insertBefore(fig, _this.addBtn);\n    _this.images.push(fig);\n  };\n\n  this.gallery = document.getElementById(gallery);\n  this.addBtn = document.getElementById(addBtn);\n  this.images = [].concat(_toConsumableArray(this.gallery.getElementsByClassName(figClass)));\n};\n\nvar gallery = new Gallery('galleryContainer', 'addBtn', 'gallery__fig');\ngallery.init();\n// alert('aquita')"
+      "source": "'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nrequire('../scss/admin.scss');\n\nfunction _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Gallery = function Gallery(gallery, addBtn, figClass) {\n  var _this = this;\n\n  _classCallCheck(this, Gallery);\n\n  this.init = function () {\n    if (_this.gallery) _this.gallery.addEventListener(\"click\", _this.handleClick);\n  };\n\n  this.helper = function (url) {\n    console.log(_this.target);\n    // this.target\n    _this.target.getElementsByTagName('input')[0].value = url;\n    _this.target.getElementsByTagName('img')[0].src = url;\n  };\n\n  this.openMediaSingle = function (element) {\n    _this.target = element;\n    if (_this.wp_media_s) {\n      _this.wp_media_s.open();\n      return;\n    }\n    _this.wp_media_s = wp.media.frames.wp_media_s = wp.media({\n      title: _this.gallery.dataset.titleS,\n      button: {\n        text: _this.gallery.dataset.button\n      }\n    });\n    _this.wp_media_s.on('select', function () {\n\n      var attachment = _this.wp_media_s.state().get('selection').first().toJSON();\n      _this.helper(attachment.url);\n    });\n    _this.wp_media_s.open();\n  };\n\n  this.openMedia = function () {\n    if (_this.wp_media) {\n      _this.wp_media.open();\n      return;\n    }\n    // Sets up the media library frame\n    _this.wp_media = wp.media.frames.wp_media = wp.media({\n      title: _this.gallery.dataset.title,\n      button: {\n        text: _this.gallery.dataset.button\n      },\n      multiple: true\n    });\n\n    _this.wp_media.on('select', function () {\n      var attachments = _this.wp_media.state().get('selection').map(function (e) {\n\n        e.toJSON();\n        var item = {\n          url: e.attributes.url,\n          id: e.id\n        };\n        return item;\n      });\n\n      attachments.forEach(function (item) {\n        _this.addImg(item.url);\n      });\n    });\n\n    _this.wp_media.open();\n  };\n\n  this.handleClick = function (e) {\n    e.preventDefault();\n    var target = e.target;\n    // console.log(target)\n    if (target === _this.addBtn) _this.openMedia();\n\n    if (target.closest('.gallery__close')) {\n\n      _this.remove(target.closest('.gallery__fig'), _this.images);\n    } else if (target.closest('.gallery__fig')) {\n\n      _this.openMediaSingle(target.closest('.gallery__fig'));\n    }\n  };\n\n  this.remove = function (element, items) {\n    _this.gallery.removeChild(element);\n    items.splice(items.indexOf(element), 1);\n    items.forEach(function (e, index) {\n      e.getElementsByTagName('input')[0].name = _this.gallery.dataset.name + '[' + index + ']';\n    });\n  };\n\n  this.addImg = function () {\n    var imgSrc = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'img/src';\n\n    var fig = document.createElement('figure'),\n        img = document.createElement('img'),\n        input = document.createElement('input'),\n        close = document.createElement('button');\n\n    input.type = 'text';\n    input.name = _this.gallery.dataset.name + '[' + _this.images.length + ']';\n    img.src = imgSrc;\n    input.value = imgSrc;\n    fig.classList.add('gallery__fig');\n    img.classList.add('gallery__img');\n    input.classList.add('gallery__input');\n    close.classList.add('gallery__close');\n    close.classList.add('gallery__btn');\n    fig.appendChild(img);\n    fig.appendChild(input);\n    fig.appendChild(close);\n\n    _this.gallery.insertBefore(fig, _this.addBtn);\n    _this.images.push(fig);\n  };\n\n  this.gallery = gallery;\n  this.addBtn = document.getElementById(addBtn);\n  this.images = [].concat(_toConsumableArray(this.gallery.getElementsByClassName(figClass)));\n};\n\nvar galleryConatiner = document.getElementById('galleryContainer');\nif (galleryConatiner) {\n  var gallery = new Gallery(galleryConatiner, 'addBtn', 'gallery__fig');\n  gallery.init();\n}\n\nvar Image = function Image(figID) {\n  var _this2 = this;\n\n  _classCallCheck(this, Image);\n\n  this.openMediaSingle = function (e) {\n    // console.log(e.target)\n    // this.target = element\n    if (_this2.wp_media_s) {\n      _this2.wp_media_s.open();\n      return;\n    }\n    _this2.wp_media_s = wp.media.frames.wp_media_s = wp.media({\n      title: _this2.fig.dataset.title,\n      button: {\n        text: _this2.fig.dataset.button\n      }\n    });\n    _this2.wp_media_s.on('select', function () {\n\n      var attachment = _this2.wp_media_s.state().get('selection').first().toJSON();\n      _this2.setImage(attachment.url);\n    });\n    _this2.wp_media_s.open();\n  };\n\n  this.setImage = function (url) {\n    // this.inputText.value = srcB\n    // this.image = srcB\n    _this2.fig.getElementsByTagName('input')[0].value = url;\n    if (_this2.fig.getElementsByTagName('img')[0]) {\n\n      _this2.fig.getElementsByTagName('img')[0].src = url;\n    } else {\n      var img = document.createElement('img');\n      img.src = url;\n      img.classList.add('gallery__img');\n      _this2.fig.appendChild(img);\n    }\n  };\n\n  this.init = function () {\n    _this2.fig.addEventListener('click', _this2.openMediaSingle);\n  };\n\n  this.fig = figID;\n  this.inputText = this.fig.getElementsByTagName('input')[0];\n  this.image = this.fig.getElementsByTagName('img')[0];\n}\n\n// handleClick = (e) => {\n\n// }\n;\n\nvar imageField = document.getElementById('imageField');\nif (imageField) {\n\n  var imageFieldset = new Image(imageField);\n\n  imageFieldset.init();\n}\n\nvar List = function () {\n  function List(list, tnoid) {\n    var _this3 = this;\n\n    _classCallCheck(this, List);\n\n    this.handleClick = function (e) {\n      if (e.target === _this3.btn) _this3.add();\n      if (e.target.classList.contains('list__remove')) _this3.remove(e.target.closest('.'));\n    };\n\n    this.list = list;\n    this.btn = document.getElementById(tnoid);\n  }\n\n  _createClass(List, [{\n    key: 'init',\n    value: function init() {\n      this.list.addEventListener('click', this.handleClick);\n    }\n  }]);\n\n  return List;\n}();\n\nvar list = document.getElementById('imageField');\nif (list) {\n\n  var listInstance = new List(list, 'listBtn');\n\n  listInstance.init();\n}"
     },
     {
       "id": 4,
@@ -861,7 +861,7 @@
           "moduleName": "./src/js/admin.js",
           "type": "cjs require",
           "userRequest": "../scss/admin.scss",
-          "loc": "3:0-29"
+          "loc": "5:0-29"
         }
       ],
       "usedExports": true,
@@ -878,7 +878,7 @@
       "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/admin.scss",
       "index": 5,
       "index2": 3,
-      "size": 1918,
+      "size": 1905,
       "built": false,
       "optional": false,
       "prefetched": false,
