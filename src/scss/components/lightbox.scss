@@ -22,24 +22,53 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    font-size: 1.5em;
-    --offset: 1em;
+    --offset: .5em;
+    font-size: 1em;
+    transition: all ease-in-out .3s;
+    @include media(md){
+      --offset: 1em;
+      font-size: 1.5em;
+
+    }
     cursor: pointer;
   }
   &__next,&__prev{
     background-color: color(primary);
-    top: 50%;
-    transform: translateY(-50%);
     height: 2em;
     width: 2em;
     border-radius: 50%;
-
+    bottom: var(--offset);
+    
+    @include media(md){
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__next:hover,&__prev:hover{
+    background-color: lighten( color(primary),10);
+  }
+  &__next:active,&__prev:active{
+    transform: scale(.9);
+    @include media(md){
+      transform: translateY(-50%) scale(.9);
+    }
+  }
+  &__close:active{
+    transform: scale(.9);
   }
   &__next{
-    right: var(--offset);
+    right: 35%;
+    // transform: translateX( calc( 100%  ) );
+    @include media(md){
+      right: var(--offset);
+    }
   }
   &__prev{
-    left: var(--offset);
+    left: 35%;
+    // transform: translateX( calc( -100%  ) );
+    @include media(md){
+      left: var(--offset);
+    }
   }
   &__close{
     top: var(--offset);
@@ -53,6 +82,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    object-fit: contain;
     transform: translate(-50%,-50%);
     transition: opacity ease-in-out .5s;
     &.active{

@@ -230,6 +230,7 @@ class Lightbox {
     if ( this.btnNext.contains( target ) )  this.next()
     if ( this.btnPrev.contains( target ) )  this.prev()
     if ( this.btnClose.contains( target ) )  this.close()
+    if ( this.modal === target )  this.close()
   }
   init = () => {
     if (this.lightbox) this.lightbox.addEventListener('click', this.handleClick)
