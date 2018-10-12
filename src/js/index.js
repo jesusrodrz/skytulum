@@ -1,4 +1,5 @@
 import '../scss/style.scss'
+import 'particles.js'
 
 class Menu {
   constructor (options) {
@@ -250,11 +251,6 @@ class Lightbox2 {
     this.modal = document.createElement('div')
     this.modal.classList.add('lightbox')
     this.btnNext = document.createElement('button')
-    // this.btnNext.classList.add('lightbox__next')
-    // this.btnNext.innerHTML = `<i class="icon-arrow-right"></i>`
-    // this.btnPrev = document.createElement('button')
-    // this.btnPrev.classList.add('lightbox__prev')
-    // this.btnPrev.innerHTML = `<i class="icon-arrow-left"></i>`
     this.btnClose = document.createElement('button')
     this.btnClose.innerHTML = `&times;`
     this.btnClose.classList.add('lightbox__close')
@@ -303,3 +299,8 @@ if (specs) {
   const specsBox = new Lightbox2(specs)
   specsBox.init()
 }
+
+const particlesJson = document.getElementById('particles').dataset.jsonsrc
+particlesJS.load('particles', particlesJson, function() {
+  console.log('particles ready')
+})

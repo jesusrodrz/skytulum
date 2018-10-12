@@ -1,18 +1,16 @@
 .contact{
   background-color: color(primary);
-  // margin: 0 1em;
   width: 100%;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   grid-area: contact;
-  // &.
   background: linear-gradient(to right, #357a6d 0%,#429994 100%);
   min-height: auto;
 
-
   &__title{
+
     width: 100%;
     text-align: center;
     color:white;
@@ -63,12 +61,6 @@
     }
   }
   &__btn{
-    // margin: .8em 0;
-    // font-family: 'Scheherazade', serif;
-    // font-size: 1.5em;
-    // letter-spacing: .3em;
-    // margin-top: .8em;
-    // margin-bottom: .8em;
     &:hover{
       --theme-color: rgba(#fff,.7);
     }
@@ -84,7 +76,7 @@
   }
   &__img{
     @include media(lg,max){
-      transform: translate(25%,30%) scale(.9);
+      transform: translate(49%, 44%) scale(0.5);
     }
     @include media(md,max){
       display: none;
@@ -94,7 +86,7 @@
     bottom: 0;
     margin: 0;
     transform-origin: top left;
-    transform: translate(15%,20%)
+    transform: translate(40%,40%) scale(.6);
   }
 }
 

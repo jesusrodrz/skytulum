@@ -1,6 +1,7 @@
 .tulum{
   position:relative;
   padding-bottom: 50vh;
+  z-index: 20;
   margin-top: 2em;
   @include media(md){
     padding-bottom: 20vh;
@@ -23,14 +24,17 @@
   }
   &__palm{
     display: block;
-    z-index: -1;
-    width: 60%;
+    z-index: 10;
+    // width: 60%;
     position: absolute;
-    bottom: 0;
+    bottom: 65%;
     left: 0;
-    transform: translateX(-25%);
+    width: 50%;
+    // transform: translateX(-25%);
     grid-area: palm;
     @include media(md){
+      bottom: -4%;
+      left: -8%;
       width: 40%;
     }
   }

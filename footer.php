@@ -16,8 +16,11 @@
             <button class="btn-white" type="submit">Enviar</button>
           </form>
         </div>
-      </article><img class="section-contact__img" src="<?php echo get_stylesheet_directory_uri();?>/dist/assets/img/piñanona.png" alt="alt">
+      </article><img class="section-contact__img" src="<?php get_asset('assets/img/moon.png')?>" alt="alt">
     </section>
+    <div class="particles" id="particles" data-jsonsrc="<?php get_asset('assets/particlesjs-config.json')?>">
+        <div class="particles__bg"></div>
+      </div>
   </main>
   <footer class="footer">
     <button class="up-btn" id="btnUp"><i class="icon-up"></i> <span class="up-btn__text">Inicio</span>  </button>

@@ -22,7 +22,7 @@ get_header();
 
       ?> 
 <section class="hero section">
-  <h1 class="hero__title title-1 bg-square-1"><?php echo $title;?></h1><img class="hero__img" src="<?php echo $img;?>" alt="interior apartamento">
+  <h1 class="hero__title title-1 bg-square-1"><?php echo $title;?></h1><img class="hero__img" src="<?php echo $img;?>" alt="interior apartamento"><img class="hero__flor" src="<?php get_asset('assets/img/flordevida.png')?>" alt="flor de la vida">
 </section>
 <?php 
   endwhile;

@@ -22,12 +22,13 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
 ?>
   <section class="hero section">
     <h1 class="hero__title title-1 bg-square-1"><?php echo $title;?></h1><img class="hero__img" src="<?php echo $img;?>" alt="interior apartamento">
+    <img class="hero__flor" src="<?php get_asset('assets/img/flordevida.png')?>" alt="flor de la vida">
   </section>
   <section class="tulum">
     <h2 class="title-2 t-uppercase tulum__title">Tulum</h2>
     <div class="tulum__text">
       <?php the_content(); ?>
-    </div><img class="tulum__map" src="<?php get_asset('assets/img/mapa.png'); ?>" alt=""><img class="tulum__palm" src="<?php get_asset('assets/img/palm.png'); ?>" alt="">
+    </div><img class="tulum__map" src="<?php get_asset('assets/img/mapa.png'); ?>" alt=""><img class="tulum__palm" src="<?php get_asset('assets/img/circulo-rosa.png'); ?>" alt="">
   </section>
 <?php 
 endwhile;
