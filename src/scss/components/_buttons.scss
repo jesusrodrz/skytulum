@@ -83,14 +83,14 @@
   }
 
   cursor: pointer;
-  height: 6em;
+  
   outline: none;
   z-index: 2000;
   border: none;
   position: fixed;
   color:white;
   bottom: 10%;
-  left: .5em;
+  right: .5em;
   width: 2em;
   display: table;
   margin:0;
@@ -100,18 +100,28 @@
   font-family: Raleway, 'sans-serif';
   background-color: color(dark-footer);
   font-size: 1em;
-  padding-bottom: 2em;
-  padding-top: 1em;
+  padding-bottom: .5em;
+  padding-top: .5em;
   justify-content: space-between;
   transition: transform cubic-bezier(0.42, 0, 0.52, 1.46) .6s;
   transform: scale(.001);
   &.active{
     transform: scale(1);
   }
+
+  @include media(md){
+    left: .5em;
+    height: 6em;
+    padding-bottom: 2em;
+    padding-top: 1em;
+  }
   @at-root .footer:hover &{
     // transform: scale(1);
   }
   &__text{
+    @include media(md,max){
+      display: none
+    }
     transform: rotateZ(-90deg)
   }
   
