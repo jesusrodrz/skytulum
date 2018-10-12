@@ -187,7 +187,7 @@
     //custom-field must be a array
     'custom-fields'  =>   array(
       $custom_fields['hero'],
-      $custom_fields['text'],
+      // $custom_fields['text'],
     ) 
   );
   $custom_pages['modelos'] = array(
