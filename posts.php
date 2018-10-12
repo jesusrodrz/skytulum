@@ -14,8 +14,8 @@ get_header();
   <figure class="perspective__fig"><img class="perspective__img" src="<?php get_asset('assets/img/sky-roof.jpg'); ?>"></figure>
 </section>
 <section class="post">
-  <button class="post__btn--next"></button>
-  <button class="post__btn--prev"></button>
+  <a href="#" class="post__btn--next"><i class="icon-arrow-right"></i></ a>
+  <a href="#" class="post__btn--prev"><i class="icon-arrow-left"></i></a>
   <div class="post__text">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum libero distinctio optio, voluptates adipisci delectus reiciendis quo sunt cum inventore, enim, consequatur praesentium quis odio voluptas. Distinctio, quos doloribus?Fugiat saepe, fuga reiciendis molestiae quod sapiente cupiditate nesciunt odio consequuntur, earum voluptates non eveniet dolores vero possimus fugit pariatur dicta quia dolorem. Recusandae consequatur temporibus odio dolor. Quaerat, non?Dolorum exercitationem eum accusantium assumenda libero, voluptatibus ea aliquid amet tenetur porro, dolore obcaecati quasi, expedita inventore cupiditate nulla ipsum repellat voluptates atque velit sequi vel! Asperiores voluptas eaque earum.Libero similique incidunt qui numquam? Incidunt, est eligendi. Accusamus error itaque eos voluptas, labore obcaecati sint distinctio magnam, voluptatum facere, illum nostrum odit laborum quia! Sit necessitatibus nam excepturi reprehenderit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum libero distinctio optio, voluptates adipisci delectus reiciendis quo sunt cum inventore, enim, consequatur praesentium quis odio voluptas.</p>
   </div>

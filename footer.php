@@ -1,5 +1,12 @@
 
-    <section class="section section-contact visible">
+    <?php 
+      if (is_page_template('home.php') || is_page_template('models.php') ) {
+        $visible = 'visible';
+      } else {
+        $visible = '';
+      }
+    ?>
+    <section class="section section-contact <?php echo $visible;?>">
       <article class="contact" id="contact">
         <div class="contact__container">
           <h3 class="contact__title t-uppercase"><?php echo _e( 'Solicitar Información', 'sky-tulum' );?></h3>

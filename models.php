@@ -8,9 +8,66 @@
 get_header();
 ?>
 <section class="hero section">
-  <h1 class="hero__title title-1 bg-square-1 t-uppercase">Modelos</h1><img class="hero__img" src="<?php get_asset('assets/img/interior.jpg'); ?>" alt="interior apartamento">
+  <h1 class="hero__title title-1 bg-square-1 t-uppercase">Departamentos</h1><img class="hero__img" src="<?php get_asset('assets/img/interior.jpg'); ?>" alt="interior apartamento">
 </section>
 <section class="section-models models">
+<?php $loop = new WP_Query( array( 'post_type' => 'models', 'posts_per_page' => -1 ) ); ?>
+<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<?php 
+  $post_id = get_the_ID();
+
+  $post_meta = get_post_meta( $post_id,  'models_custom_field', true );
+  // isset($post_meta['gallery'])
+?> 
+<?php 
+// if ( isset( $post_meta['area'] ) ) echo $post_meta['area']); 
+?>
+  <article class="models__item">
+    <h2 class="models__title section__title title-2 bg-square-center t-uppercase"> <?php the_title();?></h2>
+    <div class="models__description">
+      <p class="models__text"> <?php 
+        if (isset($post_meta['area'])) echo $post_meta['area']; 
+      ?></p>
+      <ul class="models__list">
+        <?php	
+          if (isset($post_meta['list'])) {
+            // echo 
+            $list_items = explode('.',$post_meta['list']);
+            foreach ($list_items as $index => $item):
+            ?>
+              <li class="models__list-item"><?php  echo $item; ?></li>
+            <?php
+            endforeach;
+          }      
+        ?>
+      </ul>
+    </div>
+    <figure class="models__fig">
+      <img class="models__img" src="<?php 
+        if (isset($post_meta['image'])) echo $post_meta['image']; 
+      ?>" alt=""/>
+      <?php 
+      if (isset($post_meta['sell'])) echo '<span class="models__sold">Vendido</span>'; 
+      ?>
+    </figure>
+  </article>
+<?php endwhile; wp_reset_query(); ?>
+</section>
+<?php 
+    // if ( have_posts() ) : 
+    //   while ( have_posts() ) : the_post();
+    //   $post_id = get_the_ID();
+      
+    //       $post_meta = get_post_meta( $post->ID,  'modelos_custom_field', true );
+
+    //       echo $post_meta['list'];
+            
+    //   endwhile;
+    // endif;
+    
+    ?>
+
+<!-- <section class="section-models models">
   <article class="models__item">
     <h2 class="models__title section__title title-2 bg-square-center t-uppercase">Estudio</h2>
     <div class="models__description">
@@ -37,7 +94,7 @@ get_header();
     </div>
     <figure class="models__fig"> <img class="models__img" src="<?php get_asset('assets/img/sky-roof.jpg'); ?>" alt=""/><span class="models__sold">Vendido</span></figure>
   </article>
-</section>
+</section> -->
 
 <?php 
 get_footer();

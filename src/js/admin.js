@@ -3,12 +3,12 @@ import '../scss/admin.scss'
 
 class Gallery {
   constructor (gallery,addBtn,figClass) {
-    this.gallery = document.getElementById(gallery)
+    this.gallery = gallery
     this.addBtn = document.getElementById(addBtn)
     this.images = [...this.gallery.getElementsByClassName(figClass)];
   }
-  init = ()=>{
-    this.gallery.addEventListener("click", this.handleClick)
+  init = () => {
+    if(this.gallery) this.gallery.addEventListener("click", this.handleClick)
   }
 
   helper = url => {
@@ -120,6 +120,90 @@ class Gallery {
   }
 }
 
-const gallery = new Gallery ( 'galleryContainer', 'addBtn','gallery__fig' )
-gallery.init()
-// alert('aquita')
+const galleryConatiner = document.getElementById('galleryContainer')
+if (galleryConatiner) {
+  const gallery = new Gallery(galleryConatiner, 'addBtn', 'gallery__fig')
+  gallery.init()
+}
+
+
+class Image {
+  constructor(figID){
+    this.fig = figID
+    this.inputText = this.fig.getElementsByTagName('input')[0]
+    this.image = this.fig.getElementsByTagName('img')[0]
+  }
+
+  openMediaSingle = (e) => {
+    // console.log(e.target)
+    // this.target = element
+    if (this.wp_media_s) {
+      this.wp_media_s.open();
+      return;
+    }
+    this.wp_media_s = wp.media.frames.wp_media_s = wp.media({
+      title: this.fig.dataset.title,
+      button: {
+        text: this.fig.dataset.button
+      },
+    })
+    this.wp_media_s.on('select', () => {
+      
+      const attachment = this.wp_media_s.state().get('selection').first().toJSON();
+      this.setImage(attachment.url)
+    })
+    this.wp_media_s.open();
+  }
+
+  setImage = (url) => {
+    // this.inputText.value = srcB
+    // this.image = srcB
+    this.fig.getElementsByTagName('input')[0].value = url
+    if (this.fig.getElementsByTagName('img')[0]) { 
+
+      this.fig.getElementsByTagName('img')[0].src = url
+    } else {
+      const img = document.createElement('img')
+      img.src = url
+      img.classList.add('gallery__img')
+       this.fig.appendChild(img)
+    }
+    
+  }
+
+  // handleClick = (e) => {
+    
+  // }
+  init = () => {
+    this.fig.addEventListener('click', this.openMediaSingle) 
+  }
+}
+const imageField = document.getElementById('imageField')
+if (imageField) {
+
+  const imageFieldset = new Image(imageField)
+  
+  imageFieldset.init()
+}
+
+class List {
+  constructor (list,tnoid) {
+    this.list = list
+    this.btn = document.getElementById(tnoid)    
+  }
+  handleClick = (e) => {
+    if (e.target === this.btn) this.add()
+    if (e.target.classList.contains('list__remove')) this.remove(e.target.closest('.'))
+  }
+  
+  init() {
+    this.list.addEventListener('click',this.handleClick)
+  }
+}
+const list = document.getElementById('imageField')
+if (list) {
+
+  const listInstance = new List(list,'listBtn')
+  
+  listInstance.init()
+}

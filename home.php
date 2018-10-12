@@ -24,18 +24,23 @@ get_header();
           $post_meta = get_post_meta( $post->ID,  'home_custom_field', true );
 
           if (is_array($post_meta) && isset($post_meta['gallery'])):
+            $gallery_items = $post_meta['gallery'];
+            $gallery_filter =  array_splice($gallery_items, -5);
+            $gallery_str = implode(",", $gallery_filter);
+
             ?>
-            <section class="section-gallery gallery">
+            <section class="section-gallery gallery" id="galleryTulum" data-images="<?php echo esc_attr( $gallery_str );?>">
             <h2 class="gallery__title section__title title-2 bg-square-center t-uppercase"><?php esc_html_e('Sky Tulum','sky-tulum'); ?></h2>
+
             <?php	
-              $gallery_items = $post_meta['gallery'];
+              
               foreach ($gallery_items as $index => $img):
               ?>
                 <figure class="gallery__item"><img class="gallery__img" src="<?php echo esc_attr( $img );?>" alt="sky tulum techo"></figure>
               <?php
-            endforeach;
+              endforeach;
             ?>
-              <a class="gallery__btn btn" href="#"><?php esc_html_e('Ver Galería','sky-tulum'); ?></a>
+              <button class="gallery__btn btn" id="galleryBtn"><?php esc_html_e('Ver Galería','sky-tulum'); ?></button>
               </section>
             <?php
           endif;
@@ -44,9 +49,5 @@ get_header();
     ?>
     <p>Not desc</p>
     <?php endif; ?>
-  
-<?php
- ?>
-
 <?php 
 get_footer();
