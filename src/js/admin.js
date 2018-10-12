@@ -185,6 +185,13 @@ if (imageField) {
   
   imageFieldset.init()
 }
+const heroField = document.getElementById('heroField')
+if (heroField) {
+
+  const heroFieldset = new Image(heroField)
+  
+  heroFieldset.init()
+}
 
 class List {
   constructor (list,tnoid) {

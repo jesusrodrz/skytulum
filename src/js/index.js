@@ -239,3 +239,67 @@ class Lightbox {
 
 const lightbox = new Lightbox('galleryTulum','galleryBtn')
 lightbox.init()
+
+class Lightbox2 {
+  constructor (lightbox) {
+    this.lightbox = lightbox;
+    this.btns = [...this.lightbox.getElementsByClassName('table-level__btn')]
+    this.body = document.body
+  }
+  create = () => {
+    this.modal = document.createElement('div')
+    this.modal.classList.add('lightbox')
+    this.btnNext = document.createElement('button')
+    // this.btnNext.classList.add('lightbox__next')
+    // this.btnNext.innerHTML = `<i class="icon-arrow-right"></i>`
+    // this.btnPrev = document.createElement('button')
+    // this.btnPrev.classList.add('lightbox__prev')
+    // this.btnPrev.innerHTML = `<i class="icon-arrow-left"></i>`
+    this.btnClose = document.createElement('button')
+    this.btnClose.innerHTML = `&times;`
+    this.btnClose.classList.add('lightbox__close')
+    // this.modal.append(this.btnNext)
+    // this.modal.append(this.btnPrev)
+    this.modal.append(this.btnClose)
+    this.lightbox.append(this.modal)
+  }
+  open = (index) => {
+    if (!this.modal) this.create()
+    // this.images = this.getImages()
+    this.body.classList.add('overflow-hidden')
+    this.modal.classList.add('active')
+
+    if (!this.modal.getElementsByTagName('img')[0]) {
+      this.img = document.createElement('img')
+      this.img.classList.add('lightbox__img')
+      this.img.classList.add('active')
+      this.img.src = this.btns[index].dataset.src
+      this.modal.appendChild(this.img)
+      return
+    }
+    this.img.src = this.btns[index].dataset.src
+    // if (target === null) {
+    //   this.images[0].classList.add('active')
+    //   this.curretImage = this.images[0]
+    //   this.modal.append(this.curretImage)
+    // }
+  }
+  close = () => {
+    this.body.classList.remove('overflow-hidden')
+    this.modal.classList.remove('active')
+  }
+  handleClick = (e) => {
+    const btn = e.target.closest('.table-level__btn')
+    if (this.btns.includes(btn)) this.open(this.btns.indexOf(btn))
+    if ( this.btnClose.contains( e.target ) )  this.close()
+  }
+  init = () => {
+    this.lightbox.addEventListener('click', this.handleClick)
+  }
+}
+
+const specs = document.getElementById('specsLightbox')
+if (specs) {
+  const specsBox = new Lightbox2(specs)
+  specsBox.init()
+}

@@ -7,13 +7,22 @@
 
 get_header();
 ?>
-<section class="hero section">
-  <h1 class="hero__title title-1 bg-square-1 t-uppercase">Proyecto</h1><img class="hero__img" src="<?php get_asset('assets/img/interior.jpg'); ?>" alt="interior apartamento">
-</section>
 <?php 
 if ( have_posts() ) : 
-while ( have_posts() ) : the_post(); 
+while ( have_posts() ) : the_post();
+    $post_meta = get_post_meta( $post->ID,  'proyecto_custom_field', true ); 
+    if (isset($post_meta['hero'])) {
+      $title = $post_meta['hero']['title'];
+      $img = $post_meta['hero']['img'];
+    } else {
+      $title = the_title();
+      $img = get_stylesheet_directory_uri() . '/dist/assets/img/interior.jpg';
+    }
+
 ?>
+  <section class="hero section">
+    <h1 class="hero__title title-1 bg-square-1"><?php echo $title;?></h1><img class="hero__img" src="<?php echo $img;?>" alt="interior apartamento">
+  </section>
   <section class="section-project project">
         
     <h2 class="project__title section__title title-2 bg-square-center t-uppercase">Sky Tulum</h2>
@@ -24,7 +33,7 @@ while ( have_posts() ) : the_post();
 endwhile;
 endif
 ?>
-<section class="section-specs specs">
+<section class="section-specs specs" id="specsLightbox">
   <h2 class="specs__title section__title title-2 bg-square-center t-uppercase">Especificaciones</h2>
   
   <?php

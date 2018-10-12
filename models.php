@@ -7,9 +7,27 @@
 
 get_header();
 ?>
+<?php 
+    if ( have_posts() ) : 
+      while ( have_posts() ) : the_post();
+      $post_id = get_the_ID();
+      $post_meta = get_post_meta( $post->ID,  'modelos_custom_field', true ); 
+        if (isset($post_meta['hero'])) {
+          $title = $post_meta['hero']['title'];
+          $img = $post_meta['hero']['img'];
+        } else {
+          $title = the_title();
+          $img = get_stylesheet_directory_uri() . '/dist/assets/img/interior.jpg';
+        }
+
+      ?> 
 <section class="hero section">
-  <h1 class="hero__title title-1 bg-square-1 t-uppercase">Departamentos</h1><img class="hero__img" src="<?php get_asset('assets/img/interior.jpg'); ?>" alt="interior apartamento">
+  <h1 class="hero__title title-1 bg-square-1"><?php echo $title;?></h1><img class="hero__img" src="<?php echo $img;?>" alt="interior apartamento">
 </section>
+<?php 
+  endwhile;
+  endif;
+?>
 <section class="section-models models">
 <?php $loop = new WP_Query( array( 'post_type' => 'models', 'posts_per_page' => -1 ) ); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>

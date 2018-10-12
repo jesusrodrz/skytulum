@@ -7,21 +7,33 @@
 
 get_header();
 ?>
-  <section class="hero section">
+  <!-- <section class="hero section">
     <h1 class="hero__title title-1 bg-square-1">Un increible proyecto en medio de la selva</h1><img class="hero__img" src="<?php echo get_stylesheet_directory_uri();?>/dist/assets/img/interior.jpg" alt="interior apartamento">
-  </section>
+  </section> -->
   <?php 
     if ( have_posts() ) : 
       while ( have_posts() ) : the_post();
       $post_id = get_the_ID();
-      ?>
+      $post_meta = get_post_meta( $post->ID,  'home_custom_field', true ); 
+        if (isset($post_meta['hero'])) {
+          $title = $post_meta['hero']['title'];
+          $img = $post_meta['hero']['img'];
+        } else {
+          $title = the_title();
+          $img = get_stylesheet_directory_uri() . '/dist/assets/img/interior.jpg';
+        }
+
+      ?>  
+        <section class="hero section">
+          <h1 class="hero__title title-1 bg-square-1"><?php echo $title;?></h1><img class="hero__img" src="<?php echo $img;?>" alt="interior apartamento">
+        </section>
         <section class="section-description description">
           <h2 class="description__title title-2 t-uppercase"><?php esc_html_e('Descripción del Proyecto','sky-tulum'); ?></h2>
           <div class="description__text"><?php the_content();  ?></div>
         </section>
         
         <?php 
-          $post_meta = get_post_meta( $post->ID,  'home_custom_field', true );
+          // $post_meta = get_post_meta( $post->ID,  'home_custom_field', true );
 
           if (is_array($post_meta) && isset($post_meta['gallery'])):
             $gallery_items = $post_meta['gallery'];

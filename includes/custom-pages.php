@@ -129,6 +129,36 @@
         <br>
       <?php
     },
+    
+    'hero' => function ($meta, $meta_id){
+      ?>
+        <div class="custom-field" >
+          <fieldset>
+            <p><?php esc_html_e( 'Sección Banner ', 'sky-tulum' );?></p>
+            <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[hero]' );?>"><?php esc_html_e( 'banner img', 'sky-tulum' );?></label>
+            <div>
+              <figure class="gallery__fig" id="heroField" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
+                <input class="gallery__input" type="text" value="<?php if (is_array($meta) && isset($meta['hero']['img'])){ echo esc_attr($meta['hero']['img']);} ?>" name="<?php echo esc_attr($meta_id . '[hero][img]' );?>" id="<?php echo esc_attr($meta_id . '[hero][img]' );?>">
+                <?php if (is_array($meta) && isset($meta['hero']['img'])){ 
+                  ?>
+                  <img width="100" class="gallery__img" src="<?php echo esc_attr($meta['hero']['img']); ?>"  >
+                  <?php 
+                  } 
+                ?>
+                </figure>
+              <div>
+                <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[hero]' );?>"><?php esc_html_e( 'Titulo', 'sky-tulum' );?></label>
+                <div>
+  
+                  <input type="text" name="<?php echo esc_attr($meta_id . '[hero][title]' );?>" id="<?php echo esc_attr($meta_id . '[hero][title]' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['hero']['title'])){ echo esc_attr($meta['hero']['title']);} ?>">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <br>
+      <?php
+    },
     'list' => function ($meta, $meta_id){
       ?>
         <div class="custom-field list" >
@@ -147,25 +177,35 @@
     'name'           =>   __('home','sky-tulum'),
     'template'       =>   'home.php',
     'custom-fields'  =>   array(
-      $custom_fields['text'],
+      $custom_fields['hero'],
       $custom_fields['gallery']
     )
   );
   $custom_pages['proyecto'] = array(
     'name'           =>   __('proyecto','sky-tulum'),
-    'template'       =>   'proyecto.php',
+    'template'       =>   'proyect.php',
     //custom-field must be a array
     'custom-fields'  =>   array(
+      $custom_fields['hero'],
       $custom_fields['text'],
     ) 
   );
-  $custom_pages['proyecto'] = array(
+  $custom_pages['modelos'] = array(
     'name'           =>   __('modelos','sky-tulum'),
     'template'       =>   'models.php',
     //custom-field must be a array
     'custom-fields'  =>   array(
-      $custom_fields['image'],
-      $custom_fields['list'],
+      $custom_fields['hero'],
+      // $custom_fields['image'],
+      // $custom_fields['list'],
+    ) 
+  );
+  $custom_pages['tulum'] = array(
+    'name'           =>   __('tulum','sky-tulum'),
+    'template'       =>   'tulum.php',
+    //custom-field must be a array
+    'custom-fields'  =>   array(
+      $custom_fields['hero']
     ) 
   );
 
