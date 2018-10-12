@@ -29,7 +29,7 @@ get_header();
   endif;
 ?>
 <section class="section-models models">
-<?php $loop = new WP_Query( array( 'post_type' => 'models', 'posts_per_page' => -1 ) ); ?>
+<?php $loop = new WP_Query( array( 'post_type' => 'models', 'posts_per_page' => -1, 'order' => 'ASC' ) ); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 <?php 
   $post_id = get_the_ID();
