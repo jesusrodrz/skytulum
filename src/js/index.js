@@ -42,7 +42,7 @@ class Menu {
   closeContact = () => {
     this.body.classList.remove('overflow-hidden')
     this.modal.classList.remove('active')
-    this.modal.classList.toggle('nav')
+    if(his.modal.classList.contains('nav')) this.modal.classList.remove('nav')
   }
   openContact = (isNav) => {
 
