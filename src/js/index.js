@@ -230,7 +230,8 @@ class Lightbox {
     this.modal.append(this.btnNext)
     this.modal.append(this.btnPrev)
     this.modal.append(this.btnClose)
-    this.lightbox.append(this.modal)
+    this.body.append(this.modal)
+    this.modal.addEventListener('click', this.handleClick)
   }
   handleClick = (e) => {
     const target = e.target
@@ -265,7 +266,9 @@ class Lightbox2 {
     // this.modal.append(this.btnNext)
     // this.modal.append(this.btnPrev)
     this.modal.append(this.btnClose)
-    this.lightbox.append(this.modal)
+    this.body.append(this.modal)
+    this.modal.addEventListener('click', this.handleClick)
+
   }
   open = (index) => {
     if (!this.modal) this.create()
