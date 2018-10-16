@@ -8,9 +8,11 @@
 get_header();
 ?>
 <?php 
+$meta = "";
 if ( have_posts() ) : 
 while ( have_posts() ) : the_post();
     $post_meta = get_post_meta( $post->ID,  'proyecto_custom_field', true ); 
+    $meta = $post_meta;
     if (isset($post_meta['hero'])) {
       $title = $post_meta['hero']['title'];
       $img = $post_meta['hero']['img'];
@@ -97,130 +99,61 @@ endif
     
     // endforeach;
   ?>
-  <!-- <article class="level">
-    <h3 class="level__title section__title title-2 bg-center font-1-6">Nivel 1</h3>
-    <table class="table-level level__table">
-      <thead>
-        <tr>
-          <th class="table-level__col">Unidad</th>
-          <th class="table-level__col">Tipo</th>
-          <th class="table-level__col">Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="table-level__row">
-          <th class="table-level__col">S-101</th>
-          <th class="table-level__col">Studio-lock Off Swim Up</th>
-          <th class="table-level__col">71.92 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-        <tr class="table-level__row">
-          <th class="table-level__col">S-102</th>
-          <th class="table-level__col">Studio-lock Off Swim Up</th>
-          <th class="table-level__col">71.92 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-        <tr class="table-level__row">
-          <th class="table-level__col">S-103</th>
-          <th class="table-level__col">Studio-lock Off Swim Up</th>
-          <th class="table-level__col">73.18 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-        <tr class="table-level__row">
-          <th class="table-level__col">S-104</th>
-          <th class="table-level__col">Studio-lock Off Swim Up</th>
-          <th class="table-level__col">73.18 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-        <tr class="table-level__row">
-          <th class="table-level__col">S-105</th>
-          <th class="table-level__col">Studio-lock Off Swim Up</th>
-          <th class="table-level__col">73.18 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-        <tr class="table-level__row">
-          <th class="table-level__col">S-106</th>
-          <th class="table-level__col">Studio-lock Off Swim Up</th>
-          <th class="table-level__col">73.18 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-      </tbody>
-    </table>
-  </article>
-  <article class="level">
-    <h3 class="level__title section__title title-2 bg-center font-1-6">Nivel 2</h3>
-    <table class="table-level level__table">
-      <thead>
-        <tr>
-          <th class="table-level__col">Unidad</th>
-          <th class="table-level__col">Tipo</th>
-          <th class="table-level__col">Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="table-level__row">
-          <th class="table-level__col">k-201</th>
-          <th class="table-level__col">1 Habitación 1 Jacuzzi</th>
-          <th class="table-level__col">59.0 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-        <tr class="table-level__row">
-          <th class="table-level__col">k-202</th>
-          <th class="table-level__col">2 habitaciones Lock Off Jacuzzi</th>
-          <th class="table-level__col">84.5 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-        <tr class="table-level__row">
-          <th class="table-level__col">k-203</th>
-          <th class="table-level__col">1 Habitación 1 Jacuzzi</th>
-          <th class="table-level__col">59.6 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-        <tr class="table-level__row">
-          <th class="table-level__col">k-204</th>
-          <th class="table-level__col">1 Habitación 1 Jacuzzi</th>
-          <th class="table-level__col">59.6 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-        <tr class="table-level__row">
-          <th class="table-level__col">k-205</th>
-          <th class="table-level__col">1 Habitación 1 Jacuzzi</th>
-          <th class="table-level__col">59.6 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-        <tr class="table-level__row">
-          <th class="table-level__col">k-206</th>
-          <th class="table-level__col">1 Habitación 1 Jacuzzi</th>
-          <th class="table-level__col">59.6 m2</th>
-          <th class="table-level__col table-level__col--btn">
-            <button class="t-uppercase table-level__btn" data-src="src/img/image">ver</button>
-          </th>
-        </tr>
-      </tbody>
-    </table>
-  </article> -->
+
 </section>
+<section class="amenities">
+        <h2 class="amenities__title section__title title-2 bg-square-center t-uppercase">Amenidades</h2>
+        <ul class="amenities__list">
+          <li class="amenities__list-item">Sky Pool</li>
+          <li class="amenities__list-item">Carril de Nado</li>
+          <li class="amenities__list-item">Alberca </li>
+          <li class="amenities__list-item">Jacuzzi de Acrilico</li>
+        </ul>
+        <ul class="amenities__list">
+          <li class="amenities__list-item">Gym</li>
+          <li class="amenities__list-item">Yoga Zone</li>
+          <li class="amenities__list-item">Área de lectura</li>
+          <li class="amenities__list-item">Cinema al aire libre</li>
+        </ul>
+        <ul class="amenities__list">
+          <li class="amenities__list-item">Cinema al aire libre</li>
+          <li class="amenities__list-item">BBQ Brill</li>
+          <li class="amenities__list-item">Bar</li>
+        </ul>
+        <ul class="amenities__list">
+          <li class="amenities__list-item">Snack Bar</li>
+          <li class="amenities__list-item">Lavandería</li>
+          <li class="amenities__list-item">Concerge</li>
+        </ul>
+<?php 
+// if ( have_posts() ) : 
+// while ( have_posts() ) : the_post();
+//     $post_meta = get_post_meta( $post->ID,  'proyecto_custom_field', true ); 
+    
+
+?> 
+<?php
+if (isset($meta['images'])) {
+  $gallery_items = $meta['images'];
+  foreach ($gallery_items as $index => $img):
+  ?>
+    
+    <figure class="amenities__fig">
+      <?php 
+        if($index > 2):
+          ?>
+            <figcaption class="amenities__cap t-uppercase">Tulum</figcaption>
+          <?php
+        endif;
+      ?>
+      <img class="amenities__img" src="<?php echo esc_attr( $img );?>" alt="skytulum">
+    </figure>
+  <?php
+  endforeach;
+}
+?>
+?>
+      </section>
+      
 <?php 
 get_footer();

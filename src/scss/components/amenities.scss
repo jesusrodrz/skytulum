@@ -1,0 +1,152 @@
+.amenities{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2em;
+  &__list{
+    align-self: flex-start;
+    list-style: none;
+    margin: 0;
+  }
+  &__fig{
+    perspective: 100vw;
+    perspective-origin: 50% 50%;
+
+  }
+  @include media(md,max){
+    &__list-item:nth-of-type( n + 3 ){
+      margin-top: .8em;
+    }
+    &__fig{
+     display: none;
+     margin: 10% 0;
+  
+    }
+    &__fig:nth-of-type(1){
+     display: block;
+  
+    }
+    &__fig:nth-of-type(4){
+      display: block;
+    }
+    &__fig:nth-of-type(1) &__img{
+      transform: rotateY(30deg) rotateX(15deg) scale(.8);
+      box-shadow: 8px 8px 15px rgb(195, 195, 195); 
+    }
+    &__fig:nth-of-type(1):hover &__img, &__fig:nth-of-type(1).active &__img{
+      transform: rotateY(12deg) rotateX(7deg) scale(1);
+      
+    }
+    &__fig:nth-of-type(4) &__img{
+      transform: rotateY(-30deg) rotateX(15deg) scale(.8);
+      box-shadow: -8px 8px 15px rgb(195, 195, 195); 
+    }
+    &__fig:nth-of-type(4):hover &__img, &__fig:nth-of-type(4).active &__img{
+      transform: rotateY(-12deg) rotateX(7deg) scale(1);
+    }
+    &__fig:nth-of-type(4) &__cap{
+      transform: rotateY(-30deg) rotateX(15deg) scale(.8) translateX(-10%);
+    }
+    &__fig:nth-of-type(4):hover &__cap, &__fig:nth-of-type(4).active &__cap{
+      transform: rotateY(0deg) rotateX(0deg) scale(1);
+      border: solid 1px color(primary);
+      background-color: color(primary, trans80);
+      color: color(primary);
+    }
+  }
+  @include media(md){
+    display: grid;
+    grid-template-columns: 1em repeat(12,1fr) 1em;
+    grid-template-rows:repeat(5,auto);
+    grid-gap: $gap * 2;
+    grid-template-areas: 
+      ".    .    .    .    .    .    .     title title  title  title title  title  ." 
+      "img1 img1 img1 img1 img1 img1 img1  list1 list1  list1  list2 list2  list2  list2 " 
+      ".    img2 img2 img2 img2 .    img3  img3  img3   img3   img3   img3  img3   img3" 
+      ".    img2 img2 img2 img2 .    list3 list3 list3  list3  list4 list4 list4 list4" 
+      ".    img4 img4 img4 img4 img4 img4  img4  img4   img4   img4  img4   img4  ."
+    ;
+    &__title{
+      // align-self: start;
+      justify-self: start;
+      align-self: end;
+      grid-area: title
+    }
+    &__fig{
+      // width: 100%;
+      // height: 100%;
+    }
+    &__img{
+      // width: 100%;
+      // height: 100%;
+      // object-fit: cover;
+    }
+    &__fig:nth-of-type(1){
+      grid-area: img1
+    }
+    &__fig:nth-of-type(2){
+      grid-area: img2;
+      width: 100%;
+      height: 100%;
+    }
+    &__fig:nth-of-type(2) &__img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__fig:nth-of-type(3){
+      grid-area: img3;
+      transform: translateX(-.5em)
+    }
+    &__fig:nth-of-type(4){
+      grid-area: img4
+    }
+
+    &__list{
+      font-size:  1.3em;
+    }
+    &__list:nth-of-type(1){
+      grid-area: list1;
+      align-self: center;
+    }
+    &__list:nth-of-type(2){
+      grid-area: list2;
+      align-self: center;
+    }
+    &__list:nth-of-type(3){
+      grid-area: list3;
+      margin: 2em 0; 
+    }
+    &__list:nth-of-type(4){
+      grid-area: list4;
+      margin: 2em 0; 
+    }
+  }
+  &__fig:nth-of-type(4){
+    position: relative;
+  }
+  &__cap{
+    position: absolute;
+    color: white;
+    padding: 1em;
+    font-size: 1.2em;
+    border: solid 1px white;
+    transition: all ease-in-out .6s;
+    right: 1.5em;
+    bottom: 10%;
+    z-index: 100;
+    font-family: Raleway;
+    &:hover{
+      border: solid 1px color(primary);
+      background-color: color(primary, trans80);
+      color: color(primary);
+
+    }
+  }
+  &__img{
+    width: 100%;
+    transition: transform .6s ease-in-out ;
+    box-shadow: 8px 8px 15px rgb(195, 195, 195); 
+  }
+}

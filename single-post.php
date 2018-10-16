@@ -1,29 +1,13 @@
 <?php
-/**
- * Template Name: Noticias
- * @since 1.0
- * @version 1.0
+/*
+ * Template Name: Post notice
+ * Template Post Type: post
  */
 
 get_header();
-$args = array(
-  'posts_per_page' => 1,
-  'offset' => 0,
-  'cat' => $cat->cat_ID,
-  'orderby' => 'ID',
-  'order' => 'DESC',
-  'post_type' => 'post',
-  'post_status' => 'publish',
-  'suppress_filters' => true 
-);
+// Start the loop.
+while ( have_posts() ) : the_post();
 
-$posts = new WP_Query($args);
-
-?>
-<?php
-if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post();
-$post_id = get_the_ID();
-// $post_meta = get_post_meta( $post->ID,  'specs_custom_field', true );
   $next_post= get_adjacent_post( true, '', false );
   $prev_post= get_adjacent_post( true, '', true );
 ?>
@@ -34,7 +18,7 @@ $post_id = get_the_ID();
   <figure class="perspective__fig"><img class="perspective__img" src="<?php the_post_thumbnail_url(); ?>"></figure>
 </section>
 <section class="post">
-  <!-- <a href="#" class="post__btn--next"><i class="icon-arrow-right"></i></a> -->
+  <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="post__btn--next"><i class="icon-arrow-right"></i></a>
   <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a>
   <div class="post__text">
     <p><?php the_content(); ?></p>
@@ -42,7 +26,6 @@ $post_id = get_the_ID();
 </section>
 <?php 
 endwhile;
-endif
 ?>
 <section class="posts" id="posts">
   <?php 
@@ -75,5 +58,5 @@ endwhile;
 endif
 ?>
 </section>
-<?php 
-get_footer();
+<?php
+get_footer(); ?>

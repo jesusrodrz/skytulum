@@ -185,6 +185,15 @@ if (imageField) {
   
   imageFieldset.init()
 }
+const imagesFields = [...document.getElementsByClassName('images-field')]
+if (imagesFields) {
+  imagesFields.forEach( item => {
+    const image = new Image(item)
+  
+    image.init()
+  })
+}
+
 const heroField = document.getElementById('heroField')
 if (heroField) {
 

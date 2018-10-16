@@ -10,11 +10,14 @@
       <article class="contact" id="contact">
         <div class="contact__container">
           <h3 class="contact__title t-uppercase"><?php echo _e( 'Solicitar Información', 'sky-tulum' );?></h3>
-          <form class="contact__form" action="">
+          <?php 
+          echo do_shortcode( '[contact-form-7 id="64" id="110" class="contact__form" title="Solicitar información"]' ); 
+          ?>
+          <!-- <form class="contact__form" action="">
             <input class="contact__input" type="text" name="name" placeholder="<?php echo _e( 'Nombre Completo', 'sky-tulum' );?>">
             <input class="contact__input" type="email" name="email" placeholder="<?php echo _e( 'Correo Electrónico', 'sky-tulum' );?>">
             <button class="btn-white" type="submit">Enviar</button>
-          </form>
+          </form> -->
         </div>
       </article><img class="section-contact__img" src="<?php get_asset('assets/img/moon.png')?>" alt="alt">
     </section>

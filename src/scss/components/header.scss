@@ -3,13 +3,19 @@
     --header-height: 100px;
   }
 }
+.main-content,.footer{
+  transform: translateY(calc(var(--header-height)));
+}
 .main-header{
   height: var(--header-height);
+  // transform: translateY(calc(- var(--header-height)));
   display: flex;
   padding: .4em ;
   background-color: color(background);
+  position: fixed;
+  z-index: 5000;
   @include media(md){
-    position: relative;
+    position: fixed;
     padding: 1em ;
   }
   @include media(1200px){

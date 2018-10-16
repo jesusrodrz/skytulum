@@ -108,10 +108,18 @@ class ScrollToTop {
   toggleBtn = () => {
     const position = window.pageYOffset,
       height = window.innerHeight;  
-    
+    console.log('h: '+height, 'p: '+ position)
     
     if( position <= height && this.btn.classList.contains('active') ) this.btn.classList.remove('active')
-    if( position >= height && !this.btn.classList.contains('active') ) this.btn.classList.add('active')
+    if (position >= height && !this.btn.classList.contains('active')) this.btn.classList.add('active')
+    if (position <= height) {
+      
+    }
+    if (position >= height) {
+      
+    }
+    // if (position >= height ) this.btn.classList.add('active')
+    
   }
   init = () => {
     if (this.btn) {
@@ -304,3 +312,8 @@ const particlesJson = document.getElementById('particles').dataset.jsonsrc
 particlesJS.load('particles', particlesJson, function() {
   console.log('particles ready')
 })
+
+const posts = document.getElementById("posts")
+if (posts) {
+  
+}
