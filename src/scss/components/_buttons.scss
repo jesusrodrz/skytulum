@@ -23,12 +23,13 @@
     color: white;
   }
 }
-.btn-white{
+.btn-white, .wpcf7-submit{
   --theme-color: white;
   font-family: 'Scheherazade', serif;
 	// font-size: 1em;
 	letter-spacing: .3em;
   &:hover{
+    border: solid 1px white;
     background-color: rgba(#fff,.1);
   }
 }
