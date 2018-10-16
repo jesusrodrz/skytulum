@@ -4,9 +4,9 @@
     "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  assets/img/sky-roof.jpg (1.18 MiB)\n  assets/img/interior.jpg (7.87 MiB)\n  assets/img/Sky-Tulum-Alberca_4K2.jpg (1.18 MiB)\n  assets/img/Sky-Tulum_4K_2.jpg (934 KiB)\n  assets/img/SKY-K-206_4K.jpg (881 KiB)\n  assets/img/SKY_Detalle-Alberca_4K.jpg (1.69 MiB)\n  assets/fonts/Scheherazade-Bold.ttf (535 KiB)\n  assets/fonts/Scheherazade-Regular.ttf (489 KiB)",
     "webpack performance recommendations: \nYou can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.\nFor more info visit https://webpack.js.org/guides/code-splitting/"
   ],
-  "hash": "313206348feb5f2ad1ed",
-  "time": 70784,
-  "builtAt": 1539676971936,
+  "hash": "fd74875bde3707d5a4dc",
+  "time": 37746,
+  "builtAt": 1539677650179,
   "publicPath": "",
   "outputPath": "C:\\wampx\\www\\wordpress\\wp-content\\themes\\skytulum\\dist",
   "assetsByChunkName": {
@@ -36,14 +36,6 @@
       "isOverSizeLimit": true
     },
     {
-      "name": "assets/img/interior.jpg",
-      "size": 8252640,
-      "chunks": [],
-      "chunkNames": [],
-      "emitted": true,
-      "isOverSizeLimit": true
-    },
-    {
       "name": "assets/img/moon.png",
       "size": 84758,
       "chunks": [],
@@ -56,6 +48,14 @@
       "chunks": [],
       "chunkNames": [],
       "emitted": true
+    },
+    {
+      "name": "assets/img/interior.jpg",
+      "size": 8252640,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true,
+      "isOverSizeLimit": true
     },
     {
       "name": "assets/img/mapa.png",
@@ -111,27 +111,6 @@
       "isOverSizeLimit": true
     },
     {
-      "name": "assets/fonts/icomoon.eot",
-      "size": 2428,
-      "chunks": [],
-      "chunkNames": [],
-      "emitted": true
-    },
-    {
-      "name": "assets/fonts/icomoon.ttf",
-      "size": 2264,
-      "chunks": [],
-      "chunkNames": [],
-      "emitted": true
-    },
-    {
-      "name": "assets/img/skytulum-logo.png",
-      "size": 17653,
-      "chunks": [],
-      "chunkNames": [],
-      "emitted": true
-    },
-    {
       "name": "assets/fonts/Scheherazade-Bold.ttf",
       "size": 547772,
       "chunks": [],
@@ -146,6 +125,27 @@
       "chunkNames": [],
       "emitted": true,
       "isOverSizeLimit": true
+    },
+    {
+      "name": "assets/img/skytulum-logo.png",
+      "size": 17653,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "assets/fonts/icomoon.eot",
+      "size": 2428,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "assets/fonts/icomoon.ttf",
+      "size": 2264,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
     },
     {
       "name": "assets/fonts/icomoon.svg",
@@ -170,7 +170,7 @@
     },
     {
       "name": "css/index.css",
-      "size": 34412,
+      "size": 34480,
       "chunks": [
         0
       ],
@@ -303,7 +303,7 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 88505,
+      "size": 88573,
       "names": [
         "index"
       ],
@@ -311,7 +311,7 @@
         "css/index.css",
         "js/index.js"
       ],
-      "hash": "b79eb359d29880d52f4b",
+      "hash": "fac4fb84791a26419dd2",
       "siblings": [],
       "parents": [],
       "children": [],
@@ -386,11 +386,11 @@
           "errors": 0,
           "warnings": 0,
           "assets": [
-            "assets/fonts/icomoon.eot",
-            "assets/fonts/icomoon.ttf",
-            "assets/fonts/icomoon.woff",
             "assets/fonts/Scheherazade-Bold.ttf",
             "assets/fonts/Scheherazade-Regular.ttf",
+            "assets/fonts/icomoon.woff",
+            "assets/fonts/icomoon.eot",
+            "assets/fonts/icomoon.ttf",
             "assets/fonts/icomoon.svg",
             "assets/img/icomoon.svg"
           ],
@@ -419,7 +419,7 @@
           "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/style.scss",
           "index": 2,
           "index2": 0,
-          "size": 34411,
+          "size": 34479,
           "built": false,
           "optional": false,
           "prefetched": false,
@@ -760,11 +760,11 @@
       "errors": 0,
       "warnings": 0,
       "assets": [
-        "assets/fonts/icomoon.eot",
-        "assets/fonts/icomoon.ttf",
-        "assets/fonts/icomoon.woff",
         "assets/fonts/Scheherazade-Bold.ttf",
         "assets/fonts/Scheherazade-Regular.ttf",
+        "assets/fonts/icomoon.woff",
+        "assets/fonts/icomoon.eot",
+        "assets/fonts/icomoon.ttf",
         "assets/fonts/icomoon.svg",
         "assets/img/icomoon.svg"
       ],
@@ -793,7 +793,7 @@
       "name": "css ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--5-2!./src/scss/style.scss",
       "index": 2,
       "index2": 0,
-      "size": 34411,
+      "size": 34479,
       "built": false,
       "optional": false,
       "prefetched": false,
