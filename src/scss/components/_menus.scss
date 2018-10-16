@@ -45,7 +45,7 @@
     }
     &.active,&:hover{
       @extend %bg-square;
-      --theme-color:#{color(primary)};
+      --theme-color:#{color(primary,trans20)};
       color: color(black)
     }
   }
