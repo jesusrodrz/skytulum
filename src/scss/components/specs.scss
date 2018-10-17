@@ -10,6 +10,7 @@
   @include media(md){
     display: grid;
     grid-template-columns: 20% 1fr  20%;
+    grid-template-columns: 2fr repeat(8,1fr) 2fr;
     grid-template-rows: repeat(2,auto);
     grid-template-areas: "title .     ." 
                          ".     table ."

@@ -184,18 +184,7 @@
         <div class="custom-field" >
           <fieldset>
             <p><?php esc_html_e( 'Sección Banner ', 'sky-tulum' );?></p>
-            <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[hero]' );?>"><?php esc_html_e( 'banner img', 'sky-tulum' );?></label>
-            <div>
-              <!-- <figure class="gallery__fig" id="heroField" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
-                <input class="gallery__input" type="text" value="<?php if (is_array($meta) && isset($meta['hero']['img'])){ echo esc_attr($meta['hero']['img']);} ?>" name="<?php echo esc_attr($meta_id . '[hero][img]' );?>" id="<?php echo esc_attr($meta_id . '[hero][img]' );?>">
-                <?php if (is_array($meta) && isset($meta['hero']['img'])){ 
-                  ?>
-                  <img width="100" class="gallery__img" src="<?php echo esc_attr($meta['hero']['img']); ?>"  >
-                  <?php 
-                  } 
-                ?>
-                </figure> -->
-              <div>
+            
                 <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[hero]' );?>"><?php esc_html_e( 'Titulo', 'sky-tulum' );?></label>
                 <div>
   
@@ -203,6 +192,7 @@
                 </div>
               </div>
               <div>
+              <br>
                 <legend><?php esc_html_e( 'Slider de imagenes', 'sky-tulum' );?></legend>
                 <div class="gallery__container"  id="sliderContainer" data-title-s="<?php esc_html_e( 'Seleciona una imagen para reemplazar', 'sky-tulum' );?>"  data-button="<?php esc_html_e( 'Seleccionar', 'sky-tulum' );?>" data-title="<?php esc_html_e( 'Seleciona una o multiples imágenes', 'sky-tulum' );?>" data-name="<?php echo esc_attr( $meta_id . '[hero][gallery]' );?>" >
                   <!-- <button id="addBtn" ></button> -->

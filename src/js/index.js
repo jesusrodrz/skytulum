@@ -344,7 +344,7 @@ class Slider {
   imgIndex = () => this.images.indexOf(this.curretImage) 
 
   init = () => {
-    const sliderInterval  = setInterval(this.next,5500)
+    if (this.images.length > 0) setInterval(this.next,5500)
   }
 }
 const sliderContainer = document.getElementById('slider')
