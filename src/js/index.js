@@ -320,3 +320,35 @@ const posts = document.getElementById("posts")
 if (posts) {
   
 }
+
+class Slider {
+  constructor (container,itemClass) {
+    this.slider = container
+    this.images = [...this.slider.getElementsByClassName(itemClass)];
+    this.curretImage = this.images[0]
+  }
+
+  next = () => {
+    const index = this.imgIndex(),
+      newImage = (index < this.images.length - 1) ? this.images[index + 1] : this.images[0]
+    this.change(newImage, this.curretImage)
+    
+  }
+
+  change = (newImage,oldImage) => {
+    this.curretImage = newImage
+    oldImage.classList.remove('active')
+    newImage.classList.add('active')
+  }
+
+  imgIndex = () => this.images.indexOf(this.curretImage) 
+
+  init = () => {
+    const sliderInterval  = setInterval(this.next,5500)
+  }
+}
+const sliderContainer = document.getElementById('slider')
+if (sliderContainer) {
+  const slider = new Slider(sliderContainer,'hero__img')
+  slider.init()
+}
