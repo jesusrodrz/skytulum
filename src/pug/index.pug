@@ -2,9 +2,14 @@ extends templates/template.pug
 block vars
   - let contactVisible = true;
 block main
-  section.hero.section
+  section.hero.section#slider
     h1.hero__title.title-1.bg-square-1 Un increible proyecto en medio de la selva
-    img.hero__img(src=img('interior'), alt="interior apartamento")
+    img.hero__img.active(src=img('interior'), alt="interior apartamento")
+    img.hero__img(src=img('sky-roof'), alt="sky tulum techo")
+    img.hero__img(src=img('Sky-Tulum-Alberca_4K2'), alt="sky tulum techo")
+    img.hero__img(src=img('Sky-Tulum_4K_2'), alt="sky tulum techo")
+    img.hero__img(src=img('SKY-K-206_4K'), alt="sky tulum techo")
+    img.hero__img(src=img('SKY_Detalle-Alberca_4K'), alt="sky tulum techo")
     img.hero__flor(src=img('flordevida','png'), alt="interior apartamento")
   section.section-description.description
     h2.description__title.title-2.t-uppercase Descripción del Proyecto

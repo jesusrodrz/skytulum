@@ -29,6 +29,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity ease-in-out 2s;
+    &.active{
+      opacity: 1;
+    }
   }
   &__flor{
     position: absolute;

@@ -38,7 +38,10 @@
   border-spacing: 0;
   width: 100%;
   &__row:nth-of-type(odd){
-    background-color:  color(primary,trans80)
+    background-color:  color(primary,trans80);
+    background-color:  #f0f1ff;
+    background-color:  #e6e7fe;
+
   }
   &__col{
     padding: .5em 1em;
