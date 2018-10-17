@@ -125,6 +125,11 @@ if (galleryConatiner) {
   const gallery = new Gallery(galleryConatiner, 'addBtn', 'gallery__fig')
   gallery.init()
 }
+const sliderConatiner = document.getElementById('sliderContainer')
+if (sliderConatiner) {
+  const sliderGallery = new Gallery(sliderConatiner, 'sliderAddBtn', 'gallery__fig')
+  sliderGallery.init()
+}
 
 
 class Image {

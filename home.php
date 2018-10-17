@@ -17,17 +17,28 @@ get_header();
       $post_meta = get_post_meta( $post->ID,  'home_custom_field', true ); 
         if (isset($post_meta['hero'])) {
           $title = $post_meta['hero']['title'];
-          $img = $post_meta['hero']['img'];
+          $imgs = $post_meta['hero']['gallery'];
         } else {
           $title = the_title();
           $img = get_stylesheet_directory_uri() . '/dist/assets/img/interior.jpg';
         }
 
       ?>  
-        <section class="hero section">
-          <h1 class="hero__title title-1 bg-square-1"><?php echo $title;?></h1><img class="hero__img" src="<?php echo $img;?>" alt="interior apartamento">
+        <section class="hero section" id="slider">
+          <h1 class="hero__title title-1 bg-square-1"><?php echo $title;?></h1>
+          <?php	
+              if(is_array($imgs) &&  isset($post_meta['hero']['gallery']) ) {
+              
+                foreach ($imgs as $index => $img):
+                ?>
+                  <img class="hero__img <?php echo ($index == 0) ? 'active' : '';?>" src="<?php echo $img;?>" alt="interior apartamento">
+                <?php
+                endforeach;
+              }
+            ?>
+          
           <img class="hero__flor" src="<?php get_asset('assets/img/flordevida.png')?>" alt="flor de la vida">
-        </section>
+        </section> 
         <section class="section-description description">
           <h2 class="description__title title-2 t-uppercase"><?php esc_html_e('Descripción del Proyecto','sky-tulum'); ?></h2>
           <div class="description__text"><?php the_content();  ?></div>
