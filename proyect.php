@@ -12,6 +12,7 @@ $meta = "";
 if ( have_posts() ) : 
 while ( have_posts() ) : the_post();
 $post_meta = get_post_meta( $post->ID,  'proyecto_custom_field', true ); 
+$meta = $post_meta;
 if (isset($post_meta['hero'])) {
   $title = $post_meta['hero']['title'];
   $imgs = $post_meta['hero']['gallery'];
