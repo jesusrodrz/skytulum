@@ -23,7 +23,7 @@ if (isset($post_meta['hero'])) {
 
 ?>  
 <section class="hero section" id="slider"> 
-  <h1 class="hero__title title-1 bg-square-1"><?php echo $title;?></h1>
+  <h1 class="hero__title title-1 bg-square-2"><?php echo $title;?></h1>
   <?php	
       if(is_array($imgs) &&  isset($post_meta['hero']['gallery']) ) {
       

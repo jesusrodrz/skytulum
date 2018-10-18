@@ -21,7 +21,7 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
 
       ?>  
         <section class="hero section" id="slider">
-          <h1 class="hero__title title-1 bg-square-1"><?php echo $title;?></h1>
+          <h1 class="hero__title title-1 bg-square-2"><?php echo $title;?></h1>
           <?php	
               if(is_array($imgs) &&  isset($post_meta['hero']['gallery']) ) {
               

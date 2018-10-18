@@ -11,7 +11,7 @@
   &__title{
     // background-color: rebeccapurple;
     // @extend %bg-square-centered;
-    width: 60%;
+    max-width: 60%;
     position: absolute;
     bottom: 20%;
     left: 10%;
@@ -19,7 +19,7 @@
     color:#fff;
     --theme-color: #{color(primary,trans20)};
     @include media(md){
-      width: 50%;
+      max-width: 50%;
     }
 
   }
