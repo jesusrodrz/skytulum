@@ -48,6 +48,6 @@
   @extend .bg-square-1;
   &::before{
     content: '';
-    transform: translateY(50%) scale(1.3, 0.65);
+    transform: scale(1.3, 0.65) translateY(50%) ;
   }
 }
