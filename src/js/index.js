@@ -352,3 +352,17 @@ if (sliderContainer) {
   const slider = new Slider(sliderContainer,'hero__img')
   slider.init()
 }
+
+function initMap() {
+  const mapContainer = document.getElementById('map')
+  console.log('Map init')
+
+  if (mapContainer) {
+    
+    const map = new google.maps.Map(mapContainer, {
+      center: {lat: 20.199254, lng: -87.477989},
+      zoom: 15
+    })
+    console.log('Map ready')
+  }
+}

@@ -39,7 +39,10 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
     <h2 class="title-2 t-uppercase tulum__title">Tulum</h2>
     <div class="tulum__text">
       <?php the_content(); ?>
-    </div><img class="tulum__map" src="<?php get_asset('assets/img/mapa.png'); ?>" alt=""><img class="tulum__palm" src="<?php get_asset('assets/img/circulo-rosa.png'); ?>" alt="">
+    </div>
+    <div class="tulum__map" id="map"></div>
+    <!-- <img class="tulum__map" src="<?php get_asset('assets/img/mapa.png'); ?>" alt=""> -->
+    <img class="tulum__palm" src="<?php get_asset('assets/img/circulo-rosa.png'); ?>" alt="">
   </section>
 <?php 
 endwhile;
