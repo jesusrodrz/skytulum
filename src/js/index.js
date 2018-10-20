@@ -108,7 +108,6 @@ class ScrollToTop {
   toggleBtn = () => {
     const position = window.pageYOffset,
       height = window.innerHeight;  
-    console.log('h: '+height, 'p: '+ position)
     
     if( position <= height && this.btn.classList.contains('active') ) this.btn.classList.remove('active')
     if (position >= height && !this.btn.classList.contains('active')) this.btn.classList.add('active')
@@ -353,7 +352,7 @@ if (sliderContainer) {
   slider.init()
 }
 
-function initMap() {
+const initMap = () => {
   const mapContainer = document.getElementById('map')
   console.log('Map init')
 
@@ -366,3 +365,5 @@ function initMap() {
     console.log('Map ready')
   }
 }
+
+// initMap()

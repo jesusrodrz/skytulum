@@ -31,7 +31,21 @@ module.exports = {
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
-        parallel: true
+        parallel: true,
+        // compress: {
+        //   unused: false,
+        //   keep_fnames: true,
+        //   warnings: true
+        // },
+        uglifyOptions : {
+          compress: {
+            unused: false,
+            keep_fnames: true,
+            warnings: true
+          }
+        }
+        // uglifyOptions: {
+        // }
         // sourceMap: true // set to true if you want JS source maps
       })
       // ,
