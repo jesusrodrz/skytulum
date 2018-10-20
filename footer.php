@@ -81,6 +81,8 @@
   </footer>
   <?php wp_footer(); ?>
   <!-- GOOGLE MAPS START -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtS5WYRyer1rZS0ctPOLVlN0Xny1XJ7YE&callback=initMap"
+    async defer></script>
     <script>
         function initMap() {
           const mapContainer = document.getElementById('map')
