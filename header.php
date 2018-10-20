@@ -8,21 +8,7 @@
     <!-- GOOGLE MAPS START -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtS5WYRyer1rZS0ctPOLVlN0Xny1XJ7YE&callback=initMap"
     async defer></script>
-    <script>
-      const initMap = () => {
-        const mapContainer = document.getElementById('map')
-        console.log('Map init')
-
-        if (mapContainer) {
-          
-          const map = new google.maps.Map(mapContainer, {
-            center: {lat: 20.199254, lng: -87.477989},
-            zoom: 15
-          })
-          console.log('Map ready')
-        }
-      }
-    </script>
+    
     <!-- GOOGLE MAPS END -->
     <title>
       <?php 
