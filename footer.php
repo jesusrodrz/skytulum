@@ -11,15 +11,8 @@
         <div class="contact__container">
           <h3 class="contact__title t-uppercase"><?php echo _e( 'Solicitar Información', 'sky-tulum' );?></h3>
           <?php 
-          // echo do_shortcode( '[contact-form-7 id="64" id="110" class="contact__form" title="Solicitar información"]' ); 
           echo do_shortcode( '[contact-form-7 id="64" id="110" title="Solicitar información"]' ); 
-          // echo do_shortcode( '[contact-form-7 id="64" title="Solicitar información"]' ); 
           ?>
-          <!-- <form class="contact__form" action="">
-            <input class="contact__input" type="text" name="name" placeholder="<?php echo _e( 'Nombre Completo', 'sky-tulum' );?>">
-            <input class="contact__input" type="email" name="email" placeholder="<?php echo _e( 'Correo Electrónico', 'sky-tulum' );?>">
-            <button class="btn-white" type="submit">Enviar</button>
-          </form> -->
         </div>
       </article><img class="section-contact__img" src="<?php get_asset('assets/img/moon.png')?>" alt="alt">
     </section>
@@ -27,13 +20,12 @@
         <div class="particles__bg"></div>
       </div>
   </main>
-  <?php  if ( $GLOBALS[ 'nextLink' ]!=  '' ): ?>
-    <a href="<?php echo $GLOBALS[ 'nextLink' ]; ?>" class="post__btn--next"><i class="icon-arrow-right"></i></a>
+    <?php  if ( $GLOBALS[ 'nextLink' ]!=  '' ): ?>
+      <a href="<?php echo $GLOBALS[ 'nextLink' ]; ?>" class="post__btn--next"><i class="icon-arrow-right"></i></a>
     <?php  endif; ?>
     <?php  if ( $GLOBALS[ 'prevLink' ] !=  '' ): ?>
-    <a href="<?php echo $GLOBALS[ 'prevLink' ]; ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a>
-      
-  <?php  endif; ?>
+      <a href="<?php echo $GLOBALS[ 'prevLink' ]; ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a>
+    <?php  endif; ?>
   <footer class="footer">
     <button class="up-btn" id="btnUp"><i class="icon-up"></i> <span class="up-btn__text">Inicio</span>  </button>
     <section class="footer__section notices-ft">

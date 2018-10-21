@@ -10,7 +10,7 @@
   @include media(md){
     display: grid;
     grid-template-columns: 20% 1fr  20%;
-    grid-template-columns: 2fr repeat(8,1fr) 2fr;
+    grid-template-columns: 2fr 8fr 2fr;
     grid-template-rows: repeat(2,auto);
     grid-template-areas: "title .     ." 
                          ".     table ."
@@ -31,7 +31,30 @@
       left: 0;
     }
   }
-
+  &__fig{
+    position: relative;
+    grid-column: 1 / span 3;
+    height: 80vh;
+    width: 100%;
+  } 
+  &__area{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    color: #fff;
+    background-color: color(primary, trans20);
+    top: 3em;
+    left: calc( 60% );
+  }
+  &__img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
 }
 
 .table-level{

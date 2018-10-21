@@ -3,10 +3,10 @@
   display: grid;
   grid-template-rows: repeat(3,auto);
   grid-template-areas: "title" "img"  "description";
-  margin: 10% 0;
+  margin: 10% 1em;
   @include media(md){
     grid-template-rows: repeat(2,auto);
-    grid-auto-columns: 60% auto;
+    grid-auto-columns: 6fr 4fr;
     grid-column-gap: $gap * 5;
     grid-template-areas: "img title" "img description";
 

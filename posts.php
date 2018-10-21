@@ -8,6 +8,10 @@
 get_header();
 $GLOBALS[ 'nextLink' ] =  '';
 $GLOBALS[ 'prevLink' ] =  '';
+$GLOBALS[ 'pageLink' ] =  get_permalink();
+$GLOBALS[ 'postLink' ] =  '';
+
+
 $args = array(
   'posts_per_page' => 1,
   // 'offset' => 0,
@@ -28,7 +32,7 @@ $post_id = get_the_ID();
 // $post_meta = get_post_meta( $post->ID,  'specs_custom_field', true );
   $next_post= get_adjacent_post( true, '', false );
   $prev_post= get_adjacent_post( true, '', true );
-
+  $GLOBALS[ 'postLink' ] =  get_permalink();
   $GLOBALS[ 'prevLink' ] = get_permalink( $prev_post->ID );
 ?>
   <!-- <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a> -->
@@ -77,9 +81,9 @@ endif
     <!-- <div class="posts__text"><?php the_excerpt(); ?></div> -->
   </article>
   <?php 
-endwhile;
-endif
-?>
+  endwhile;
+  endif
+  ?>
 </section>
 <?php 
 get_footer();

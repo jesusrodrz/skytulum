@@ -19,4 +19,4 @@ mixin navBar(items)
               each subItem in item.subMenu
                 li.menu__item--sub-menu
                   a.menu__link--sub-menu(href=subItem.url) #{subItem.name}
-    a.cta-btn#ctaBtn(href='#'): span.cta-btn__text Solicita #[br] Info
+    a.cta-btn#ctaBtn(href='#',data-jsonsrc="js/data/particlesjs-config-cta.json"): span.cta-btn__text Solicita #[br] Info

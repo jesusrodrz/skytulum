@@ -13,8 +13,13 @@ while ( have_posts() ) : the_post();
   $next_post= get_adjacent_post( true, '', false );
   $prev_post= get_adjacent_post( true, '', true );
 
-  $GLOBALS[ 'nextLink' ] =  get_permalink( $next_post->ID );;
-  $GLOBALS[ 'prevLink' ] =  get_permalink( $prev_post->ID );;
+ if(get_permalink( $next_post->ID ) != get_permalink( )) {
+
+   $GLOBALS[ 'nextLink' ] =  get_permalink( $next_post->ID );
+ }
+
+  $GLOBALS[ 'prevLink' ] =  get_permalink( $prev_post->ID );
+
 ?>
 <!-- <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="post__btn--next"><i class="icon-arrow-right"></i></a>
   <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a> -->

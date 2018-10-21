@@ -48,5 +48,40 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
 endwhile;
 endif
 ?>
+<section class="posts" id="posts">
+  <?php 
+  $args = array(
+    'posts_per_page' => 6,
+    // 'offset' => 0,
+    'cat' => 'tulum',
+    // 'orderby' => 'ID',
+    // 'order' => 'DESC',
+    'post_type' => 'post',
+    'post_status' => 'publish'
+    // 'suppress_filters' => true 
+  );
+  
+  $posts = new WP_Query($args);
+  
+  ?>
+  <?php
+  if( $posts->have_posts() ): 
+    ?>
+      <h2 class="title-2 t-uppercase">Noticias de Tulum</h2>
+    <?php
+  while( $posts->have_posts() ) : $posts->the_post();
+  $post_id = get_the_ID();
+  // $post_meta = get_post_meta( $post->ID,  'specs_custom_field', true );
+  ?>
+  <article class="posts__item"><img class="posts__img" src="<?php the_post_thumbnail_url(); ?>"/>
+    <h3 class="posts__title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
+    <time class="posts__date"><?php the_date(); ?></time>
+    <!-- <div class="posts__text"><?php the_excerpt(); ?></div> -->
+  </article>
+  <?php 
+  endwhile;
+  endif
+  ?>
+</section>
 <?php 
 get_footer();

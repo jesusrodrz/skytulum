@@ -22,6 +22,17 @@ class Menu {
   open = () => {
     this.menu.classList.add('active')
   }
+  setParticles = () => {
+    const particles = document.createElement('div'),
+    particlesJson = this.cta.dataset.jsonsrc
+    particles.id = 'particlesCTA'
+    particles.classList.add('particles')
+    this.contact.appendChild(particles)
+    particlesJS.load('particlesCTA', particlesJson, function() {
+      console.log('particles ready')
+    })
+
+  }
   createModal = () => {
     this.contact = document.getElementById(this.contactId).cloneNode(true)
     const modal = document.createElement('div')
@@ -37,6 +48,8 @@ class Menu {
     modal.appendChild(this.contact)
     modal.addEventListener('click', this.handleClick)
 
+    this.setParticles()
+    
     return modal
   }
   closeContact = () => {
@@ -262,8 +275,6 @@ class Lightbox2 {
     this.btnClose = document.createElement('button')
     this.btnClose.innerHTML = `&times;`
     this.btnClose.classList.add('lightbox__close')
-    // this.modal.append(this.btnNext)
-    // this.modal.append(this.btnPrev)
     this.modal.append(this.btnClose)
     this.body.append(this.modal)
     this.modal.addEventListener('click', this.handleClick)
@@ -297,7 +308,12 @@ class Lightbox2 {
   handleClick = (e) => {
     const btn = e.target.closest('.table-level__btn')
     if (this.btns.includes(btn)) this.open(this.btns.indexOf(btn))
-    if ( this.btnClose.contains( e.target ) )  this.close()
+    // if ( this.btnClose.contains( e.target ) )  this.close()
+    if (this.btnClose) {
+      
+      if ( this.btnClose.contains( e.target ) )  this.close()
+    }
+
   }
   init = () => {
     this.lightbox.addEventListener('click', this.handleClick)
@@ -351,3 +367,68 @@ if (sliderContainer) {
   const slider = new Slider(sliderContainer,'hero__img')
   slider.init()
 }
+
+class LazyLoad{
+  constructor (itemsCLass) {
+    this.elements = [...document.getElementsByClassName(itemsCLass)]
+    
+  }
+  getData = (element) => {
+    const items = [...element.getElementsByClassName('table-level__btn')],
+      itemsData = items.map( item => {
+        
+        return {
+          src: item.dataset.src,
+          area: item.dataset.area
+        }
+
+    } )
+    
+    return itemsData
+
+  }
+  load = ( item ) => {
+    const index = this.elements.indexOf(item),
+      data = this.elementsLazy[index].images,
+      element = item
+    
+    data.forEach( item  => {
+      const fig = document.createElement('figure'),
+        img = document.createElement('img'),
+      area = document.createElement('span')
+
+      fig.classList.add('level__fig')
+      img.classList.add('level__img')
+      area.classList.add('level__area')
+
+      img.src = item.src
+      area.innerText = item.area
+
+      fig.append(img)
+      fig.append(area)
+      element.append(fig)
+    } )
+
+  }
+  init = () => {
+    if (this.elements) {
+      this.elementsLazy = this.elements.map(item => {
+        console.log(item)
+        return  {
+          item: item,
+          images: this.getData(item)
+        }
+      })
+      this.elements.forEach(item => {
+        this.load(item)
+      })
+    }
+  }
+}
+
+if (window.innerWidth < 864) {
+  
+  const lazy = new LazyLoad('level')
+  lazy.init()
+}
+// if ()  
