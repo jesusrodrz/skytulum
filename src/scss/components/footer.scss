@@ -4,7 +4,8 @@
   color:white;
   padding: var(--paddin-footer);
   background: linear-gradient(#404052 0%, #23222b 100%);
-
+  position:relative;
+  z-index: 20;
   &__section{
     border-top: solid white 1px;
     &:last-of-type{

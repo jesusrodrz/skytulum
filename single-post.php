@@ -5,21 +5,28 @@
  */
 
 get_header();
+$GLOBALS[ 'nextLink' ] =  '';
+$GLOBALS[ 'prevLink' ] =  '';
 // Start the loop.
 while ( have_posts() ) : the_post();
 
   $next_post= get_adjacent_post( true, '', false );
   $prev_post= get_adjacent_post( true, '', true );
+
+  $GLOBALS[ 'nextLink' ] =  get_permalink( $next_post->ID );;
+  $GLOBALS[ 'prevLink' ] =  get_permalink( $prev_post->ID );;
 ?>
+<!-- <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="post__btn--next"><i class="icon-arrow-right"></i></a>
+  <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a> -->
 <section class="perspective left news">
   <h2 class="perspective__title section__title title-2 bg-square-center t-uppercase news__title"><?php the_title(); ?></h2>
   <time class="news__date" datetime="2018-10-12"><?php the_date(); ?></time>
-  <div class="perspective__body"><?php the_excerpt(); ?></div>
+  <!-- <div class="perspective__body"><?php the_excerpt(); ?></div> -->
   <figure class="perspective__fig"><img class="perspective__img" src="<?php the_post_thumbnail_url(); ?>"></figure>
 </section>
 <section class="post">
-  <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="post__btn--next"><i class="icon-arrow-right"></i></a>
-  <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a>
+  <!-- <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="post__btn--next"><i class="icon-arrow-right"></i></a>
+  <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a> -->
   <div class="post__text">
     <p><?php the_content(); ?></p>
   </div>
@@ -51,7 +58,7 @@ endwhile;
   <article class="posts__item"><img class="posts__img" src="<?php the_post_thumbnail_url(); ?>"/>
     <h3 class="posts__title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
     <time class="posts__date"><?php the_date(); ?></time>
-    <div class="posts__text"><?php the_excerpt(); ?></div>
+    <!-- <div class="posts__text"><?php the_excerpt(); ?></div> -->
   </article>
   <?php 
 endwhile;

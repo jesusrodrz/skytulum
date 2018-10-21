@@ -1,9 +1,9 @@
 .post{
-  position: relative;
+  // position: relative;
   @at-root [class^="post__btn"]{
     border: none;
     outline: none;
-    position: absolute;
+    position: fixed;
     width: 2em;
     min-height: 5em;
     height: 30vh;
@@ -15,12 +15,14 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    z-index: 5;
     &:hover{
       background-color: saturate(lighten(color(dark-footer), 20),20);
       background-color: lighten(color(dark-footer), 10);
     }
-
+    
   }
+  padding: 0 3em;
   &__btn--next{
     right: 0;
   }
@@ -28,8 +30,15 @@
     
   }
   &__text{
-    padding: 1em 3em;
-    font-size: 1.3em
+    padding: 1em 1em;
+    font-size: 1.3em;
+    background-color: white; 
+    border-radius: 16px; 
+    box-shadow: 16px 16px 50px rgba(0,0,0,.05);
+    &, p{
+      text-align: justify;
+      
+    }
   }
 
 }
@@ -60,6 +69,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 16px; 
+    box-shadow: 16px 16px 50px rgba(0,0,0,.05);
+    max-height: 120px;
     @include media(md){
       max-height: 180px;
 
@@ -91,7 +103,6 @@
   }
   &__text{
     grid-area: post;
-
     @include media(md){
       display: none;
     }

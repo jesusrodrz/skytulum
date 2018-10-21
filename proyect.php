@@ -55,26 +55,29 @@ endif
         $taxonomy ='specs_categories';
         $terms = get_terms( $taxonomy);
         // var_dump($terms);
-        foreach( $terms as $term ) : 
+        // foreach( $terms as $term ) : 
             $posts = new WP_Query( 
               array(
                 // 'term'=> $term->slug,
                 'posts_per_page'=> -1,
                 'post_type'=>'specs',
-                'tax_query' => array(
-                  array(
-                      'taxonomy'  => $taxonomy,
-                      'terms'     => array( $term->slug ),
-                      'field'     => 'slug'
-                  )
-                )
+                'order' => 'ASC',
+                // 'tax_query' => array(
+                //   array(
+                //       'taxonomy'  => $taxonomy,
+                //       'terms'     => array( $term->slug ),
+                //       'field'     => 'slug'
+                //   )
+                // )
               ) 
             );
-            
+            if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post();
+            $post_id = get_the_ID();
+            $post_meta = get_post_meta( $post->ID,  'specs_custom_field', true );
               
               ?>
                 <article class="level">
-                  <h3 class="level__title section__title title-2 bg-center font-1-6"><?php echo $term->name;  ?></h3>
+                  <h3 class="level__title section__title title-2 bg-center font-1-6"><?php the_title();  ?></h3>
                   <table class="table-level level__table">
                     <thead>
                       <tr>
@@ -85,28 +88,34 @@ endif
                     </thead>
                     <tbody>
                       <?php
-                        if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post();
-                        $post_id = get_the_ID();
-                        $post_meta = get_post_meta( $post->ID,  'specs_custom_field', true );
+                        $items = $post_meta['level'];
+                        foreach ($items as $index => $item):
+                          // if(!isset($item) ){ continue; }
+                          // if( $item['unit'] == ' ' || $item['unit'] == ''  ){ continue; }
+                          // if( $item['type'] == ' ' || $item['type'] == ''  ){ continue; }
+                          // if( $item['total'] == ' ' || $item['total'] == ''  ){ continue; }
+                          // if( $item['image'] == ' ' || $item['image'] == ''  ){ continue; }
+                          if( $item['image'] != ' ' || $item['image'] != ''  ){ continue; }
                        ?>
-                      <tr class="table-level__row">
-                        <th class="table-level__col"><?php if (isset($post_meta['unit'])) echo $post_meta['unit']; ?></th>
-                        <th class="table-level__col"><?php if (isset($post_meta['type'])) echo $post_meta['type']; ?></th>
-                        <th class="table-level__col"><?php if (isset($post_meta['total'])) echo $post_meta['total']; ?></th>
-                        <th class="table-level__col table-level__col--btn">
-                          <button class="t-uppercase table-level__btn" data-src="<?php if (isset($post_meta['image'])) echo $post_meta['image']; ?>"><i class="icon-image"></i>  Ver</button>
-                        </th>
-                      </tr>
+                        <tr class="table-level__row">
+                          <th class="table-level__col"><?php if (isset($item['unit'])) echo $item['unit']; ?></th>
+                          <th class="table-level__col"><?php if (isset($item['type'])) echo $item['type']; ?></th>
+                          <th class="table-level__col"><?php if (isset($item['total'])) echo $item['total']; ?></th>
+                          <th class="table-level__col table-level__col--btn">
+                            <button class="t-uppercase table-level__btn" data-src="<?php if (isset($item['image'])) echo $item['image']; ?>"><i class="icon-image"></i>  Ver</button>
+                          </th>
+                        </tr>
                       <?php
-                        endwhile; endif;
+                        endforeach;
+                        
                        ?>
                     </tbody>
                   </table>
                 </article>
               <?php
-            
+            endwhile; endif;
     
-        endforeach;
+        // endforeach;
     
     // endforeach;
   ?>

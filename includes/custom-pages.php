@@ -55,6 +55,42 @@
         </div>
       <?php
     },
+    'level' => function ($meta, $meta_id){
+      ?>
+        <div class="custom-field" >
+          <?php for ($i = 0; $i <10; $i++):?>
+            <div>
+              <label style="font-weight: bold" class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[level]' );?>"><?php esc_html_e( 'Item', 'sky-tulum' );?> <?php echo $i + 1 ; ?></label>
+              <div>
+                <label style="padding-left:2em;" class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[level]['.$i.'][unit]' );?>"><span style="width:4em; display:inline-block"><?php esc_html_e( 'Unidad', 'sky-tulum' );?></span>
+                  <input type="text" name="<?php echo esc_attr($meta_id . '[level]['.$i.'][unit]' );?>" id="<?php echo esc_attr($meta_id . '[level]['.$i.'][unit]' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['level'][$i]['unit'])){ echo esc_attr($meta['level'][$i]['unit']);} ?>">
+                </label><br>
+                <label style="padding-left:2em;" class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[level]['.$i.'][type]' );?>"><span style="width:4em; display:inline-block"><?php esc_html_e( 'Tipo', 'sky-tulum' );?></span>
+                  <input type="text" name="<?php echo esc_attr($meta_id . '[level]['.$i.'][type]' );?>" id="<?php echo esc_attr($meta_id . '[level]['.$i.'][type]' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['level'][$i]['type'])){ echo esc_attr($meta['level'][$i]['type']);} ?>">
+                </label><br>
+                <label style="padding-left:2em;" class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[level]['.$i.'][total]' );?>"><span style="width:4em; display:inline-block"><?php esc_html_e( 'Total', 'sky-tulum' );?></span>
+                  <input type="text" name="<?php echo esc_attr($meta_id . '[level]['.$i.'][total]' );?>" id="<?php echo esc_attr($meta_id . '[level]['.$i.'][total]' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['level'][$i]['total'])){ echo esc_attr($meta['level'][$i]['total']);} ?>">
+                </label><br>
+                <label style="padding-left:2em;" class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[level]['.$i.'][image]' );?>"><span style="width:4em; display:inline-block"><?php esc_html_e( 'Imagen', 'sky-tulum' );?></span>
+
+                  <figure style="display:table" class="gallery__fig images-field" id="imageField" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
+                    <input class="gallery__input" type="text" value="<?php if (is_array($meta) && isset($meta['level'][$i]['image'])){ echo esc_attr($meta['level'][$i]['image']);} ?>" name="<?php echo esc_attr($meta_id . '[level]['.$i.'][image]' );?>" id="<?php echo esc_attr($meta_id . '[level]['.$i.'][image]' );?>">
+                    <?php if (is_array($meta) && isset($meta['level'][$i]['image'])){ 
+                      ?>
+                      <img width="100" class="gallery__img" src="<?php echo esc_attr($meta['level'][$i]['image']); ?>"  >
+                      <?php 
+                      } 
+                    ?>
+                  </figure>
+                </label>
+              </div>
+            
+            </div>
+            <br>
+          <?php endfor;?>
+        </div>
+      <?php
+    },
     'sell' => function ($meta, $meta_id){
       ?>
         <div class="custom-field" >

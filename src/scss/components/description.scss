@@ -15,9 +15,11 @@
     grid-area: text;
     font-family: 'Scheherazade', serif;
     color: rgba(0, 0, 0, 0.7);
-    text-align: justify;
     font-size: 1.2em;
-
+    &, p{
+      text-align: justify;
+      
+    }
   }
 
 }

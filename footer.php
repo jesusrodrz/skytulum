@@ -27,6 +27,13 @@
         <div class="particles__bg"></div>
       </div>
   </main>
+  <?php  if ( $GLOBALS[ 'nextLink' ]!=  '' ): ?>
+    <a href="<?php echo $GLOBALS[ 'nextLink' ]; ?>" class="post__btn--next"><i class="icon-arrow-right"></i></a>
+    <?php  endif; ?>
+    <?php  if ( $GLOBALS[ 'prevLink' ] !=  '' ): ?>
+    <a href="<?php echo $GLOBALS[ 'prevLink' ]; ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a>
+      
+  <?php  endif; ?>
   <footer class="footer">
     <button class="up-btn" id="btnUp"><i class="icon-up"></i> <span class="up-btn__text">Inicio</span>  </button>
     <section class="footer__section notices-ft">
