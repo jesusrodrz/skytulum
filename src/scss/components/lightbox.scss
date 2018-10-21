@@ -82,7 +82,8 @@
   }
   &__img{
     display: block;
-    width: 85%;
+    max-width: 85%;
+    max-height: 85%;
     height: 85%;
     opacity: 0;
     position: absolute;

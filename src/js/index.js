@@ -27,7 +27,6 @@ class Menu {
     particlesJson = this.cta.dataset.jsonsrc
     particles.id = 'particlesCTA'
     particles.classList.add('particles')
-    console.log(particles,particlesJson)
     this.contact.appendChild(particles)
     particlesJS.load('particlesCTA', particlesJson, function() {
       console.log('particles ready 2')
@@ -70,7 +69,6 @@ class Menu {
   }
   handleClick = (e) => {
     // e.preventDefault();
-    console.log(e,e.target)
     const target = e.target,
       isLink = e.target.parentElement.nodeName === 'LI'
     // check if is a link and not a button
@@ -162,7 +160,6 @@ class Lightbox {
         img.src = src
         return img
         })
-      console.log(images,images.contact(imagesLazy))
       return images.contact(imagesLazy)
     }
 
@@ -171,7 +168,6 @@ class Lightbox {
     const images = [...this.lightbox.getElementsByClassName('gallery__img')]
 
     const imagesSrc = this.lightbox.dataset.images.split(',')
-    console.log(this.lightbox.dataset.images)
       const imagesLazy = imagesSrc.map( src => {
       const img = document.createElement('img')
       img.classList.add('lightbox__img')
@@ -248,7 +244,6 @@ class Lightbox {
   }
   handleClick = (e) => {
     const target = e.target
-    console.log(target)
     if ( this.btn === target )  this.open(null)
     if ( this.btnNext.contains( target ) )  this.next()
     if ( this.btnPrev.contains( target ) )  this.prev()
@@ -334,7 +329,6 @@ class Lightbox2 {
   }
   setImges = (images) => {
     this.currentImages = []
-    console.log(images)
     if (images.length === 1 ) {
       this.btnNext.classList.add('unactive')
       this.btnPrev.classList.add('unactive')
@@ -369,7 +363,6 @@ class Lightbox2 {
       
       if ( this.btnPrev.contains( target ) )  this.prev()
     }
-
     if (this.modal === e.target) this.close()
 
   }
@@ -472,7 +465,6 @@ class LazyLoad{
   init = () => {
     if (this.elements) {
       this.elementsLazy = this.elements.map(item => {
-        console.log(item)
         return  {
           item: item,
           images: this.getData(item)

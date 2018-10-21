@@ -140,10 +140,8 @@ class Image {
   }
 
   close = () => {
-    console.log(this.inputText, this.image)
     this.inputText.value = ''
     this.image.src = ''
-    console.log(this.inputText,this.inputText.value, this.image)
 
   }
 
