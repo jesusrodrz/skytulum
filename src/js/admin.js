@@ -139,9 +139,24 @@ class Image {
     this.image = this.fig.getElementsByTagName('img')[0]
   }
 
+  close = () => {
+    console.log(this.inputText, this.image)
+    this.inputText.value = ''
+    this.image.src = ''
+    console.log(this.inputText,this.inputText.value, this.image)
+
+  }
+
   openMediaSingle = (e) => {
     // console.log(e.target)
     // this.target = element
+
+    if (e.target.classList.contains('gallery__close')) {
+      e.preventDefault()
+      this.close()
+      return
+    }
+
     if (this.wp_media_s) {
       this.wp_media_s.open();
       return;

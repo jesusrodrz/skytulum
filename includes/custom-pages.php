@@ -91,6 +91,7 @@
                         <?php 
                         } 
                       ?>
+                      <button class="gallery__btn gallery__close" ></button>
                     </figure>
                     <figure style="display:table" class="gallery__fig images-field" id="imageField" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
                       <input class="gallery__input" type="text" value="<?php if (is_array($meta) && isset($meta['level'][$i]['image'][1])){ echo esc_attr($meta['level'][$i]['image'][1]);} ?>" name="<?php echo esc_attr($meta_id . '[level]['.$i.'][image][1]' );?>" id="<?php echo esc_attr($meta_id . '[level]['.$i.'][image][1]' );?>">
@@ -100,6 +101,7 @@
                         <?php 
                         } 
                       ?>
+                      <button class="gallery__btn gallery__close" ></button>
                     </figure>
                   </div>
                 </label>
