@@ -53,6 +53,9 @@
   }
   &__item{
     margin-bottom: 2em;
+    border-radius: 16px; 
+    box-shadow: 16px 16px 50px rgba(0,0,0,.05);
+    background-color: #fff;
     @include media(md,max){
       display: grid;
       grid-column-gap: 2em;
