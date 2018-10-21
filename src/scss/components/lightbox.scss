@@ -57,6 +57,9 @@
     transform: scale(.9);
   }
   &__next{
+    &.unactive{
+      display: none;
+    }
     right: 35%;
     // transform: translateX( calc( 100%  ) );
     @include media(md){
@@ -64,6 +67,9 @@
     }
   }
   &__prev{
+    &.unactive{
+      display: none;
+    }
     left: 35%;
     // transform: translateX( calc( -100%  ) );
     @include media(md){

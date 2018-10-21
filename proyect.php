@@ -94,7 +94,9 @@ endif
                           if( $item['unit'] == ' ' || $item['unit'] == ''  ){ continue; }
                           if( $item['type'] == ' ' || $item['type'] == ''  ){ continue; }
                           if( $item['total'] == ' ' || $item['total'] == ''  ){ continue; }
-                          if( $item['image'] == ' ' || $item['image'] == ''  ){ continue; }
+                          // if( $item['image'] == ' ' || $item['image'] == ''  ){ continue; }
+                          if( !isset($item['image'])   ){ continue; }
+                           $image_str = implode(",", $item['image']);
                           // if( $item['image'] != ' ' || $item['image'] != ''  ){ continue; }
                        ?>
                         <tr class="table-level__row">
@@ -102,7 +104,7 @@ endif
                           <th class="table-level__col"><?php if (isset($item['type'])) echo $item['type']; ?></th>
                           <th class="table-level__col"><?php if (isset($item['total'])) echo $item['total']; ?></th>
                           <th class="table-level__col table-level__col--btn">
-                            <button class="t-uppercase table-level__btn" data-src="<?php if (isset($item['image'])) echo $item['image']; ?>" data-area="<?php if (isset($item['total'])) echo $item['total']; ?>"><i class="icon-image"></i>  Ver</button>
+                            <button class="t-uppercase table-level__btn" data-src="<?php if (isset($item['image'])) echo $image_str; ?>" data-area="<?php if (isset($item['total'])) echo $item['total']; ?>"><i class="icon-image"></i>  Ver</button>
                           </th>
                         </tr>
                       <?php

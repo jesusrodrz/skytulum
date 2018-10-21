@@ -72,16 +72,26 @@
                   <input type="text" name="<?php echo esc_attr($meta_id . '[level]['.$i.'][total]' );?>" id="<?php echo esc_attr($meta_id . '[level]['.$i.'][total]' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['level'][$i]['total'])){ echo esc_attr($meta['level'][$i]['total']);} ?>">
                 </label><br>
                 <label style="padding-left:2em;" class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[level]['.$i.'][image]' );?>"><span style="width:4em; display:inline-block"><?php esc_html_e( 'Imagen', 'sky-tulum' );?></span>
-
-                  <figure style="display:table" class="gallery__fig images-field" id="imageField" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
-                    <input class="gallery__input" type="text" value="<?php if (is_array($meta) && isset($meta['level'][$i]['image'])){ echo esc_attr($meta['level'][$i]['image']);} ?>" name="<?php echo esc_attr($meta_id . '[level]['.$i.'][image]' );?>" id="<?php echo esc_attr($meta_id . '[level]['.$i.'][image]' );?>">
-                    <?php if (is_array($meta) && isset($meta['level'][$i]['image'])){ 
+                  <div style="display:flex">
+                    <figure style="display:table" class="gallery__fig images-field" id="imageField" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
+                      <input class="gallery__input" type="text" value="<?php if (is_array($meta) && isset($meta['level'][$i]['image'][0])){ echo esc_attr($meta['level'][$i]['image'][0]);} ?>" name="<?php echo esc_attr($meta_id . '[level]['.$i.'][image][0]' );?>" id="<?php echo esc_attr($meta_id . '[level]['.$i.'][image][0]' );?>">
+                      <?php if (is_array($meta) && isset($meta['level'][$i]['image'][0])){ 
+                        ?>
+                        <img width="100" class="gallery__img" src="<?php echo esc_attr($meta['level'][$i]['image'][0]); ?>"  >
+                        <?php 
+                        } 
                       ?>
-                      <img width="100" class="gallery__img" src="<?php echo esc_attr($meta['level'][$i]['image']); ?>"  >
-                      <?php 
-                      } 
-                    ?>
-                  </figure>
+                    </figure>
+                    <figure style="display:table" class="gallery__fig images-field" id="imageField" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
+                      <input class="gallery__input" type="text" value="<?php if (is_array($meta) && isset($meta['level'][$i]['image'][1])){ echo esc_attr($meta['level'][$i]['image'][1]);} ?>" name="<?php echo esc_attr($meta_id . '[level]['.$i.'][image][1]' );?>" id="<?php echo esc_attr($meta_id . '[level]['.$i.'][image][1]' );?>">
+                      <?php if (is_array($meta) && isset($meta['level'][$i]['image'][1])){ 
+                        ?>
+                        <img width="100" class="gallery__img" src="<?php echo esc_attr($meta['level'][$i]['image'][1]); ?>"  >
+                        <?php 
+                        } 
+                      ?>
+                    </figure>
+                  </div>
                 </label>
               </div>
             

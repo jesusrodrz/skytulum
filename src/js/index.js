@@ -268,14 +268,42 @@ class Lightbox2 {
     this.btns = [...this.lightbox.getElementsByClassName('table-level__btn')]
     this.body = document.body
   }
+
+  change = (newImage,oldImage) => {
+    this.curretImage = newImage
+    oldImage.classList.remove('active')
+    newImage.classList.add('active')
+  }
+  next = () => {
+    const index = this.imgIndex(),
+      newImage = (index < this.currentImages.length - 1) ? this.currentImages[index + 1] : this.currentImages[0]
+    this.change(newImage, this.curretImage)
+    
+  }
+
+  imgIndex = () => this.currentImages.indexOf(this.curretImage) 
+
+  prev = () => {
+    const index = this.imgIndex(),
+      newImage = ( index > 0 ) ? this.currentImages[index - 1] : this.currentImages[this.currentImages.length - 1]
+    this.change(newImage,this.curretImage)
+  }
+
   create = () => {
     this.modal = document.createElement('div')
     this.modal.classList.add('lightbox')
     this.btnNext = document.createElement('button')
+    this.btnNext.classList.add('lightbox__next')
+    this.btnNext.innerHTML = `<i class="icon-arrow-right"></i>`
+    this.btnPrev = document.createElement('button')
+    this.btnPrev.classList.add('lightbox__prev')
+    this.btnPrev.innerHTML = `<i class="icon-arrow-left"></i>`
     this.btnClose = document.createElement('button')
     this.btnClose.innerHTML = `&times;`
     this.btnClose.classList.add('lightbox__close')
     this.modal.append(this.btnClose)
+    this.modal.append(this.btnPrev)
+    this.modal.append(this.btnNext)
     this.body.append(this.modal)
     this.modal.addEventListener('click', this.handleClick)
 
@@ -286,33 +314,62 @@ class Lightbox2 {
     this.body.classList.add('overflow-hidden')
     this.modal.classList.add('active')
 
-    if (!this.modal.getElementsByTagName('img')[0]) {
-      this.img = document.createElement('img')
-      this.img.classList.add('lightbox__img')
-      this.img.classList.add('active')
-      this.img.src = this.btns[index].dataset.src
-      this.modal.appendChild(this.img)
-      return
-    }
-    this.img.src = this.btns[index].dataset.src
-    // if (target === null) {
-    //   this.images[0].classList.add('active')
-    //   this.curretImage = this.images[0]
-    //   this.modal.append(this.curretImage)
-    // }
+    this.setImges(this.getImages(index))
+    
   }
   close = () => {
     this.body.classList.remove('overflow-hidden')
     this.modal.classList.remove('active')
+    if ( this.btnNext.classList.contains('unactive') ) this.btnNext.classList.remove('unactive')
+    if (this.btnPrev.classList.contains('unactive')) this.btnPrev.classList.remove('unactive')
+    this.currentImages.forEach( item => {
+      this.modal.removeChild(item)
+    })
+  }
+  getImages = (index) => {
+    const string = this.btns[index].dataset.src,
+      imgs = string.split(',')
+    return imgs.filter( img=> img !== '' && img !== ' ')
+  }
+  setImges = (images) => {
+    this.currentImages = []
+    console.log(images)
+    if (images.length === 1 ) {
+      this.btnNext.classList.add('unactive')
+      this.btnPrev.classList.add('unactive')
+    }
+    images.forEach((imgsrc, index) => {
+      const img = document.createElement('img')
+      img.classList.add('lightbox__img')
+      img.src = imgsrc
+      if (index === 0) {
+        img.classList.add('active')
+        this.curretImage = img
+      }
+      this.modal.appendChild(img)
+      this.currentImages.push(img)
+    })
   }
   handleClick = (e) => {
-    const btn = e.target.closest('.table-level__btn')
+    const btn = e.target.closest('.table-level__btn'),
+    target = e.target
     if (this.btns.includes(btn)) this.open(this.btns.indexOf(btn))
     // if ( this.btnClose.contains( e.target ) )  this.close()
     if (this.btnClose) {
       
       if ( this.btnClose.contains( e.target ) )  this.close()
     }
+
+    if (this.btnNext) {
+      
+      if ( this.btnNext.contains( target ) )  this.next()
+    }
+    if (this.btnPrev) {
+      
+      if ( this.btnPrev.contains( target ) )  this.prev()
+    }
+
+    if (this.modal === e.target) this.close()
 
   }
   init = () => {
@@ -376,9 +433,9 @@ class LazyLoad{
   getData = (element) => {
     const items = [...element.getElementsByClassName('table-level__btn')],
       itemsData = items.map( item => {
-        
+        const srcS = item.dataset.src.split(',').filter( img=> img !== '' && img !== ' ')
         return {
-          src: item.dataset.src,
+          srcs: srcS,
           area: item.dataset.area
         }
 
@@ -392,21 +449,22 @@ class LazyLoad{
       data = this.elementsLazy[index].images,
       element = item
     
-    data.forEach( item  => {
-      const fig = document.createElement('figure'),
-        img = document.createElement('img'),
-      area = document.createElement('span')
+    data.forEach(item => {
+      item.srcs.forEach(imgsrc => {
 
-      fig.classList.add('level__fig')
-      img.classList.add('level__img')
-      area.classList.add('level__area')
-
-      img.src = item.src
-      area.innerText = item.area
-
-      fig.append(img)
-      fig.append(area)
-      element.append(fig)
+        const fig = document.createElement('figure'),
+          img = document.createElement('img'),
+        area = document.createElement('span')
+  
+        fig.classList.add('level__fig')
+        img.classList.add('level__img')
+        img.src = imgsrc
+        area.classList.add('level__area')
+        area.innerText = item.area
+        fig.append(img)
+        fig.append(area)
+        element.append(fig)
+      })
     } )
 
   }
