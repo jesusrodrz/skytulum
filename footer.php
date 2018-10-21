@@ -88,11 +88,20 @@
           console.log('Map init')
 
           if (mapContainer) {
-            
+            const myLatLng = {lat: 20.199254, lng: -87.477989}  
             const map = new google.maps.Map(mapContainer, {
-              center: {lat: 20.199254, lng: -87.477989},
+              center: myLatLng,
               zoom: 15
             })
+
+            const marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              animation: google.maps.Animation.DROP,
+              icon: '<?php get_asset('assets/img/map-marker-alt.png')?>',
+              title: 'Sky tulum'
+            });
+
             console.log('Map ready')
           }
         }
