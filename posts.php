@@ -15,7 +15,7 @@ $args = array(
   // 'orderby' => 'ID',
   'order' => 'DESC',
   'post_type' => 'post',
-  'post_status' => 'publish',
+  'post_status' => 'publish'
   // 'suppress_filters' => true 
 );
 
