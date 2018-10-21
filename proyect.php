@@ -91,11 +91,11 @@ endif
                         $items = $post_meta['level'];
                         foreach ($items as $index => $item):
                           // if(!isset($item) ){ continue; }
-                          // if( $item['unit'] == ' ' || $item['unit'] == ''  ){ continue; }
-                          // if( $item['type'] == ' ' || $item['type'] == ''  ){ continue; }
-                          // if( $item['total'] == ' ' || $item['total'] == ''  ){ continue; }
-                          // if( $item['image'] == ' ' || $item['image'] == ''  ){ continue; }
-                          if( $item['image'] != ' ' || $item['image'] != ''  ){ continue; }
+                          if( $item['unit'] == ' ' || $item['unit'] == ''  ){ continue; }
+                          if( $item['type'] == ' ' || $item['type'] == ''  ){ continue; }
+                          if( $item['total'] == ' ' || $item['total'] == ''  ){ continue; }
+                          if( $item['image'] == ' ' || $item['image'] == ''  ){ continue; }
+                          // if( $item['image'] != ' ' || $item['image'] != ''  ){ continue; }
                        ?>
                         <tr class="table-level__row">
                           <th class="table-level__col"><?php if (isset($item['unit'])) echo $item['unit']; ?></th>
@@ -128,28 +128,20 @@ endif
           <li class="amenities__list-item">Carril de Nado</li>
           <li class="amenities__list-item">Alberca </li>
           <li class="amenities__list-item">Jacuzzi de Acrilico</li>
+          <li class="amenities__list-item">Cinema al aire libre</li>
+          <li class="amenities__list-item">BBQ Brill</li>
+          <li class="amenities__list-item">Bar</li>
         </ul>
         <ul class="amenities__list">
           <li class="amenities__list-item">Gym</li>
           <li class="amenities__list-item">Yoga Zone</li>
           <li class="amenities__list-item">Área de lectura</li>
           <li class="amenities__list-item">Cinema al aire libre</li>
-        </ul>
-        <ul class="amenities__list">
-          <li class="amenities__list-item">Cinema al aire libre</li>
-          <li class="amenities__list-item">BBQ Brill</li>
-          <li class="amenities__list-item">Bar</li>
-        </ul>
-        <ul class="amenities__list">
           <li class="amenities__list-item">Snack Bar</li>
           <li class="amenities__list-item">Lavandería</li>
           <li class="amenities__list-item">Concerge</li>
         </ul>
 <?php 
-// if ( have_posts() ) : 
-// while ( have_posts() ) : the_post();
-//     $post_meta = get_post_meta( $post->ID,  'proyecto_custom_field', true ); 
-    
 
 ?> 
 <?php
@@ -160,7 +152,7 @@ if (isset($meta['images'])) {
     
     <figure class="amenities__fig">
       <?php 
-        if($index > 2):
+        if($index > 1):
           ?>
             <figcaption class="amenities__cap t-uppercase">Tulum</figcaption>
           <?php

@@ -202,7 +202,7 @@
           </figure>
           <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[images][3]' );?>"><?php esc_html_e( 'Imagen 4 ', 'sky-tulum' );?></label>
 
-          <figure class="gallery__fig images-field" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
+          <!-- <figure class="gallery__fig images-field" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
             <input class="gallery__input" type="text" value="<?php if (is_array($meta) && isset($meta['images'][3])){ echo esc_attr($meta['images'][3]);} ?>" name="<?php echo esc_attr($meta_id . '[images][3]' );?>" id="<?php echo esc_attr($meta_id . '[images][3]' );?>">
             <?php if (is_array($meta) && isset($meta['images'][3])){ 
               ?>
@@ -210,7 +210,7 @@
               <?php 
               } 
             ?>
-          </figure>
+          </figure> -->
         </div>
         <br>
       <?php
