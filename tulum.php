@@ -36,7 +36,7 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
           <img class="hero__flor" src="<?php get_asset('assets/img/flordevida.png')?>" alt="flor de la vida">
         </section> 
   <section class="tulum">
-    <h2 class="title-2 t-uppercase tulum__title">Tulum</h2>
+    <h2 class="title-2 t-uppercase tulum__title"><?php if (isset($post_meta['title'])) {echo $post_meta['title'];};?></h2>
     <div class="tulum__text">
       <?php the_content(); ?>
     </div>
@@ -48,7 +48,7 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
 endwhile;
 endif
 ?>
-<section class="posts" id="posts">
+
   <?php 
   $args = array(
     'posts_per_page' => 6,
@@ -67,7 +67,10 @@ endif
   <?php
   if( $posts->have_posts() ): 
     ?>
-      <h2 class="title-2 t-uppercase">Noticias de Tulum</h2>
+      <section class="section" id="posts">
+        <h2 class="title-2 t-uppercase">Noticias de Tulum</h2>
+      </section>
+      <section class="posts" id="posts">
     <?php
   while( $posts->have_posts() ) : $posts->the_post();
   $post_id = get_the_ID();
@@ -80,8 +83,10 @@ endif
   </article>
   <?php 
   endwhile;
-  endif
   ?>
-</section>
+    </section>  
+  <?php
+  endif;
+  ?>
 <?php 
 get_footer();
