@@ -38,7 +38,9 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
   <section class="tulum">
     <h2 class="title-2 t-uppercase tulum__title"><?php if (isset($post_meta['title'])) {echo $post_meta['title'];};?></h2>
     <div class="tulum__text">
-      <?php the_content(); ?>
+      <div class="tulum__text-container">
+        <?php the_content(); ?> 
+      </div>         
     </div>
     <div class="tulum__map" id="map"></div>
     <!-- <img class="tulum__map" src="<?php get_asset('assets/img/mapa.png'); ?>" alt=""> -->
