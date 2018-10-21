@@ -27,9 +27,10 @@ class Menu {
     particlesJson = this.cta.dataset.jsonsrc
     particles.id = 'particlesCTA'
     particles.classList.add('particles')
+    console.log(particles,particlesJson)
     this.contact.appendChild(particles)
     particlesJS.load('particlesCTA', particlesJson, function() {
-      console.log('particles ready')
+      console.log('particles ready 2')
     })
 
   }

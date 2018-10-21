@@ -53,7 +53,8 @@ endif
   $args = array(
     'posts_per_page' => 6,
     // 'offset' => 0,
-    'cat' => 'tulum',
+    // 'cat' => 'tulum',
+    'category' => 'tulum',
     // 'orderby' => 'ID',
     // 'order' => 'DESC',
     'post_type' => 'post',

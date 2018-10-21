@@ -10,17 +10,27 @@
     grid-template-rows: repeat(2,auto);
     grid-template-areas: "title map" "text map";
     min-height: 100vh;
+    grid-gap: $gap * 2;
   }
   &__title, &__text{
     margin: 0em 2em;
   }
   &__title{
     grid-area: title;
-    align-self: start;
+    align-self: end;
+    justify-self: start;
   }
   &__text{
+    
     grid-area: text;
-
+    background-color: white; 
+    border-radius: 16px; 
+    padding: 1em;
+    box-shadow: 16px 16px 50px rgba(0,0,0,.05);
+    &, p{
+      text-align: justify;
+      
+    }
   }
   &__palm{
     display: block;
