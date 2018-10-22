@@ -5,7 +5,7 @@
   @extend %bg-square;
   @include media(md) {
       &::before{
-      width: 130%;
+      width: calc(100% + 1em);
       left: 50%;
       transform: translateX(-50%) ;
     }

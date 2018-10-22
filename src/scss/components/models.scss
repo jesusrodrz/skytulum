@@ -94,7 +94,7 @@
     position: relative;
     left: 1.2em;
     &::before{
-      content:'✓';
+      content:'○';
       position: absolute;
       top: 0;
       left: -1.2em;
