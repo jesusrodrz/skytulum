@@ -28,6 +28,7 @@ if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post();
   $prev_post= get_adjacent_post( true, '', true );
   $GLOBALS[ 'postLink' ] =  get_permalink();
   $GLOBALS[ 'prevLink' ] = get_permalink( $prev_post->ID );
+  $post_meta = get_post_meta( $post->ID,  'posts_custom_field', true );
 ?>
   <section class="perspective left news">
     <h2 class="perspective__title section__title title-2 bg-square-center t-uppercase news__title"><?php the_title(); ?></h2>
@@ -48,7 +49,14 @@ endif
   $args = array(
     'posts_per_page' => 6,
     'post_type' => 'post',
-    'post_status' => 'publish'
+    'post_status' => 'publish',
+    'tax_query' => array(
+      array(
+      'taxonomy' => 'category',
+      'field' => 'term_id',
+      'terms' => (isset($post_meta['category'])) ? $post_meta['category'] : ''
+       )
+    )
   );
   
   $posts = new WP_Query($args);
