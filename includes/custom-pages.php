@@ -234,7 +234,7 @@
           </figure>
           <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[images][3]' );?>"><?php esc_html_e( 'Imagen 4 ', 'sky-tulum' );?></label>
 
-          <!-- <figure class="gallery__fig images-field" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
+          <figure class="gallery__fig images-field" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
             <input class="gallery__input" type="text" value="<?php if (is_array($meta) && isset($meta['images'][3])){ echo esc_attr($meta['images'][3]);} ?>" name="<?php echo esc_attr($meta_id . '[images][3]' );?>" id="<?php echo esc_attr($meta_id . '[images][3]' );?>">
             <?php if (is_array($meta) && isset($meta['images'][3])){ 
               ?>
@@ -242,7 +242,7 @@
               <?php 
               } 
             ?>
-          </figure> -->
+          </figure>
         </div>
         <br>
       <?php
@@ -301,9 +301,11 @@
       ?>
         <div class="custom-field list" >
             <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[list]' );?>"><?php esc_html_e( 'Lista', 'sky-tulum' );?></label>
-            <div>
-            <textarea name="<?php echo esc_attr($meta_id . '[list]' );?>" id="<?php echo esc_attr($meta_id . '[list]' );?>" cols="50" rows="5"><?php if (is_array($meta) && isset($meta['list'])){ echo esc_attr($meta['list']);} ?></textarea>
-            </div>
+            <ol>
+              <?php for ($i = 0; $i <10; $i++):  ?>
+                <li><input type="text" name="<?php echo esc_attr($meta_id . '[list]['.$i.']' );?>" id="<?php echo esc_attr($meta_id . '[list]['.$i.']' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['list'][$i])){ echo esc_attr($meta['list'][$i]);} ?>"></li>
+              <?php endfor; ?>
+            </ol>
         </div>
         <br>
       <?php

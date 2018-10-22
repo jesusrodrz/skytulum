@@ -83,6 +83,34 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtS5WYRyer1rZS0ctPOLVlN0Xny1XJ7YE&callback=initMap"
     async defer></script>
     <script>
+        const mapStyle = [
+{
+"elementType": "geometry.fill",
+"stylers": [
+{
+"color": "#ffffff"
+}
+]
+},
+{
+"featureType": "administrative.land_parcel",
+"elementType": "geometry.fill",
+"stylers": [
+{
+"visibility": "on"
+}
+]
+},
+{
+"featureType": "water",
+"elementType": "geometry.fill",
+"stylers": [
+{
+"color": "#dceae9"
+}
+]
+}
+]
         function initMap() {
           const mapContainer = document.getElementById('map')
           console.log('Map init')
@@ -91,7 +119,8 @@
             const myLatLng = {lat: 20.199254, lng: -87.477989}  
             const map = new google.maps.Map(mapContainer, {
               center: myLatLng,
-              zoom: 15
+              zoom: 15,
+              styles: mapStyle
             })
 
             const marker = new google.maps.Marker({

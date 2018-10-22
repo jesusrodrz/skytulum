@@ -30,7 +30,9 @@
     box-shadow: 16px 16px 50px rgba(0,0,0,.05);
     &, p{
       text-align: justify;
-      
+    }
+    p{
+      margin: 1em 0;
     }
   }
   &__text-container{

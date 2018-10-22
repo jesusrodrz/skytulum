@@ -12,8 +12,8 @@
     grid-template-columns: 20% 1fr  20%;
     grid-template-columns: 2fr 8fr 2fr;
     grid-template-rows: repeat(2,auto);
-    grid-template-areas: "title .     ." 
-                         ".     table ."
+    grid-template-areas: ".  title ." 
+                         ".  table ."
   }
   @include media(lg){
     grid-template-columns: 15% 1fr  15%;
@@ -23,7 +23,7 @@
   }
   &__title{
     grid-area: title;
-    justify-self: end;
+    justify-self: start;
     padding: 0 .4em;
     font-size: 1.6em;
     &::before{

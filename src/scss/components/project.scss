@@ -25,6 +25,13 @@
     grid-area: description;
     align-self: start;
     text-align: justify;
+    &, p{
+      text-align: justify;
+      
+    }
+    p{
+      margin: 1em 0;
+    }
     @include media(md,max){
       padding: 1em;
     }

@@ -62,8 +62,10 @@ get_header();
         <?php	
           if (isset($post_meta['list'])) {
             // echo 
-            $list_items = explode('.',$post_meta['list']);
+            // $list_items = explode('.',$post_meta['list']);
+            $list_items = $post_meta['list'];
             foreach ($list_items as $index => $item):
+              if ($item == '' || $item == ' ') {continue;}
             ?>
               <li class="models__list-item"><?php  echo $item; ?></li>
             <?php

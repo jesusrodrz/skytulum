@@ -154,7 +154,7 @@ if (isset($meta['images'])) {
     
     <figure class="amenities__fig">
       <?php 
-        if($index > 1):
+        if($index > 2):
           ?>
             <figcaption class="amenities__cap t-uppercase">Tulum</figcaption>
           <?php

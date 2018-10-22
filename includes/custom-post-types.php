@@ -4,9 +4,9 @@ $post_types['models'] = array(
     'post_id' =>'models',
     'custom-fields' => array(
       $custom_fields['image'],
-      $custom_fields['list'],
-      $custom_fields['area'],
       $custom_fields['sell'],
+      $custom_fields['area'],
+      $custom_fields['list'],
     ) ,
     'args' =>  array(
       'labels' => array(
