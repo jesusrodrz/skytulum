@@ -1,4 +1,4 @@
-.btn,[class^='btn']{
+.btn{
   --theme-color: #{color(cta)};
   text-transform: uppercase;
   outline: none;
@@ -23,7 +23,10 @@
     color: white;
   }
 }
-.btn-white, .wpcf7-submit{
+[class^='btn']{
+  @extend .btn;
+}
+.btn-white{
   --theme-color: white;
   font-family: 'Scheherazade', serif;
 	// font-size: 1em;

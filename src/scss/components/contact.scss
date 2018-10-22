@@ -37,6 +37,15 @@
   }
   &__form, .wpcf7{
     width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-end;
+  }
+  .wpcf7-form{
+    p{
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__input{
     margin: .5em 0;
@@ -60,31 +69,33 @@
       color: rgba(#fff,.6);
     }
   }
-  &__btn, .wpcf7-submit{
+  &__btn{
+    @extend .btn;
+    align-self: flex-end;
     // --theme-color: #{color(cta)};
-    text-transform: uppercase;
-    outline: none;
-    padding: .6em;
-    color:var(--theme-color);
-    border: solid 1px var(--theme-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all ease-in-out .4s;
-    background-color: inherit;
+    // text-transform: uppercase;
+    // outline: none;
+    // padding: .6em;
+    // color:var(--theme-color);
+    // border: solid 1px var(--theme-color);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // transition: all ease-in-out .4s;
+    // background-color: inherit;
 
-    font-family: 'Scheherazade', serif;
-    font-size: 1.5em;
-    letter-spacing: .3em;
-    margin-top: .8em;
-    margin-bottom: .8em;
-    cursor: pointer;
+    // font-family: 'Scheherazade', serif;
+    // font-size: 1.5em;
+    // letter-spacing: .3em;
+    // margin-top: .8em;
+    // margin-bottom: .8em;
+    // cursor: pointer;
 
-    &:hover{
-      --theme-color: rgba(#fff,.7);
-      color:white;
-      border: solid 1px var(--theme-color);
-    }
+    // &:hover{
+    //   --theme-color: rgba(#fff,.7);
+    //   color:white;
+    //   border: solid 1px var(--theme-color);
+    // }
   }
 }
 
