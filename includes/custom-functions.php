@@ -36,7 +36,7 @@ function print_custom_menu($menu_name) {
 						?>"  href="<?php echo $url; ?>"><?php echo $title; ?></a></li>
 						<?php
 					endforeach;
-					?></ul><a class="cta-btn" id="ctaBtn" data-jsonsrc="<?php get_asset('assets/particlesjs-config.json')?>" href="#"><span class="cta-btn__text"><?php echo _e( 'Solicita <br> Info', 'sky-tulum' ); ?></span></a>
+					?></ul><a class="cta-btn" id="ctaBtn" data-jsonsrc="<?php get_asset('assets/particlesjs-config.1.json')?>" href="#"><span class="cta-btn__text"><?php echo _e( 'Solicita <br> Info', 'sky-tulum' ); ?></span></a>
       </nav>
 		<?php
 	else:

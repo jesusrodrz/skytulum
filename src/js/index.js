@@ -120,7 +120,7 @@ class ScrollToTop {
   toggleBtn = () => {
     const position = window.pageYOffset,
       height = window.innerHeight;  
-    
+    // console.log(this.btn.classList,position,height)
     if( position <= height && this.btn.classList.contains('active') ) this.btn.classList.remove('active')
     if (position >= height && !this.btn.classList.contains('active')) this.btn.classList.add('active')
     if (position <= height) {

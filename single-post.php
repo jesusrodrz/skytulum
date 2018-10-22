@@ -21,19 +21,14 @@ while ( have_posts() ) : the_post();
   $GLOBALS[ 'prevLink' ] =  get_permalink( $prev_post->ID );
 
 ?>
-<!-- <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="post__btn--next"><i class="icon-arrow-right"></i></a>
-  <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a> -->
 <section class="perspective left news">
   <h2 class="perspective__title section__title title-2 bg-square-center t-uppercase news__title"><?php the_title(); ?></h2>
   <time class="news__date" datetime="2018-10-12"><?php the_date(); ?></time>
-  <!-- <div class="perspective__body"><?php the_excerpt(); ?></div> -->
   <figure class="perspective__fig"><img class="perspective__img" src="<?php the_post_thumbnail_url(); ?>"></figure>
 </section>
 <section class="post">
-  <!-- <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="post__btn--next"><i class="icon-arrow-right"></i></a>
-  <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a> -->
   <div class="post__text">
-    <p><?php the_content(); ?></p>
+    <?php the_content(); ?>
   </div>
 </section>
 <?php 

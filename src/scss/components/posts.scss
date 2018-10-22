@@ -5,8 +5,8 @@
     outline: none;
     position: fixed;
     width: 2em;
-    min-height: 5em;
-    height: 30vh;
+    min-height: 3em;
+    height: 20vh;
     top: 50%;
     transform: translateY(-50%);
     background-color: color(dark-footer);
@@ -15,7 +15,12 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    z-index: 5;
+    z-index: 40;
+    @include media(md,max){
+      // width: 1em;
+      // height: 20vh;
+      // font-size: .8em
+    }
     &:hover{
       background-color: saturate(lighten(color(dark-footer), 20),20);
       background-color: lighten(color(dark-footer), 10);
@@ -24,10 +29,10 @@
   }
   padding: 0 3em;
   &__btn--next{
-    right: 0;
+    right: .5em;
   }
   &__btn--prev{
-    
+    left: .5em;
   }
   &__text{
     padding: 1em 1em;
@@ -40,6 +45,9 @@
       
     }
     p{
+      margin: 1em 0;
+    }
+    br{
       margin: 1em 0;
     }
   }

@@ -26,8 +26,8 @@
     <?php  if ( $GLOBALS[ 'prevLink' ] !=  '' ): ?>
       <a href="<?php echo $GLOBALS[ 'prevLink' ]; ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a>
     <?php  endif; ?>
-  <footer class="footer">
     <button class="up-btn" id="btnUp"><i class="icon-up"></i> <span class="up-btn__text">Inicio</span>  </button>
+  <footer class="footer">
     <section class="footer__section notices-ft">
       <h2 class="footer__title notices-ft__title">Noticias</h2>
       <?php 
@@ -84,33 +84,33 @@
     async defer></script>
     <script>
         const mapStyle = [
-{
-"elementType": "geometry.fill",
-"stylers": [
-{
-"color": "#ffffff"
-}
-]
-},
-{
-"featureType": "administrative.land_parcel",
-"elementType": "geometry.fill",
-"stylers": [
-{
-"visibility": "on"
-}
-]
-},
-{
-"featureType": "water",
-"elementType": "geometry.fill",
-"stylers": [
-{
-"color": "#dceae9"
-}
-]
-}
-]
+          {
+          "elementType": "geometry.fill",
+          "stylers": [
+          {
+          "color": "#ffffff"
+          }
+          ]
+          },
+          {
+          "featureType": "administrative.land_parcel",
+          "elementType": "geometry.fill",
+          "stylers": [
+          {
+          "visibility": "on"
+          }
+          ]
+          },
+          {
+          "featureType": "water",
+          "elementType": "geometry.fill",
+          "stylers": [
+          {
+          "color": "#dceae9"
+          }
+          ]
+          }
+        ]
         function initMap() {
           const mapContainer = document.getElementById('map')
           console.log('Map init')

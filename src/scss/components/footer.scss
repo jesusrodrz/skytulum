@@ -1,5 +1,9 @@
 .footer{
+  --paddin-footer:2em;
+  @include media(md){
   --paddin-footer:1em;
+
+  }
   background-color: $color-darkgray;
   color:white;
   padding: var(--paddin-footer);
