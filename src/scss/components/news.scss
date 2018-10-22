@@ -1,6 +1,6 @@
 .news{
   &.left{
-
+    padding: 0 3em;
     grid-template-areas: "title" "date" "img" "body";
     grid-template-rows: repeat(4,auto);
     @include media(md){
