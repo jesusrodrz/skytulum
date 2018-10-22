@@ -54,13 +54,15 @@ endif
   <?php 
   $args = array(
     'posts_per_page' => 6,
-    // 'offset' => 0,
-    // 'cat' => 'tulum',
-    'category' => 'tulum',
-    // 'orderby' => 'ID',
-    // 'order' => 'DESC',
     'post_type' => 'post',
-    'post_status' => 'publish'
+    'post_status' => 'publish',
+    'tax_query' => array(
+      array(
+      'taxonomy' => 'category',
+      'field' => 'term_id',
+      'terms' => (isset($post_meta['category'])) ? $post_meta['category'] : ''
+       )
+    )
     // 'suppress_filters' => true 
   );
   

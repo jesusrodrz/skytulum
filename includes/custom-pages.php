@@ -31,6 +31,36 @@
         <br>
       <?php
     },
+    'category' => function ($meta, $meta_id){
+      ?>
+        <div class="custom-field" >
+          <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[title2]' );?>"><?php esc_html_e( 'Categoría del feed', 'sky-tulum' );?></label>
+          <select name="<?php echo esc_attr($meta_id . '[category]' );?>">
+            <?php 
+              $terms = get_terms('category');
+
+              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
+
+                $value = (is_array($meta) && isset($meta['category'])) ? $meta['category'] : '';
+
+              ?>
+              <option  selected value> -- <?php esc_html_e( 'Seleciona una categoría', 'sky-tulum' );?> -- </option>
+              <?php
+                foreach ($terms as $term) :
+           
+                // endif;
+              ?>
+              <option value="<?php echo $term->term_id;?>" <?php echo ($term->term_id == $value )? 'selected' :'' ?>  > <?php echo $term->name;?></option>
+              <?php
+              ?>
+            <?php
+              endforeach;endif;
+            ?>
+          </select>
+        </div>
+        <br>
+      <?php
+    },
     'area' => function ($meta, $meta_id){
       ?>
         <div class="custom-field" >
@@ -348,7 +378,8 @@
     'custom-fields'  =>   array(
       $custom_fields['hero'],
       $custom_fields['title'],
-      $custom_fields['title-2']
+      $custom_fields['title-2'],
+      $custom_fields['category']
     ) 
   );
 

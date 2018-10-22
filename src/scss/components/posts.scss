@@ -55,7 +55,7 @@
 }
 
 .posts{
-  padding: 2em;
+  padding: 3em;
   @include media(md){
     padding: 3em;
     display: grid;
@@ -102,15 +102,26 @@
     font-family: Raleway;
     @include media(md,max){
       font-size: .8em;
+
       
     }
   }
   &__date{
     grid-area: date;
     padding: 0 24px;
+    margin-bottom: 1em;
+    @include media(md,max){
+      margin-bottom: 1em;
+      
+      
+    }
   }
   &__title{
     grid-area: title;
+    @include media(md,max){
+      margin-top: 1em;
+      
+    }
     padding: 0 24px;
 
     font-weight: bolder;
