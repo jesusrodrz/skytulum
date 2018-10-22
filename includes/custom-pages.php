@@ -21,6 +21,16 @@
         <br>
       <?php
     },
+    'title-2' => function ($meta, $meta_id){
+      ?>
+        <div class="custom-field" >
+          <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[title2]' );?>"><?php esc_html_e( 'Titulo del feed', 'sky-tulum' );?></label>
+          <input type="text" name="<?php echo esc_attr($meta_id . '[title2]' );?>" id="<?php echo esc_attr($meta_id . '[title2]' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['title2'])){ echo esc_attr($meta['title2']);} ?>">
+          <!-- <?php esc_html_e( 'El valor por defecto es el titulo de la página', 'sky-tulum' );?> -->
+        </div>
+        <br>
+      <?php
+    },
     'area' => function ($meta, $meta_id){
       ?>
         <div class="custom-field" >
@@ -335,7 +345,8 @@
     //custom-field must be a array
     'custom-fields'  =>   array(
       $custom_fields['hero'],
-      $custom_fields['title']
+      $custom_fields['title'],
+      $custom_fields['title-2']
     ) 
   );
 

@@ -71,7 +71,7 @@ endif
   if( $posts->have_posts() ): 
     ?>
       <section class="section" id="posts">
-        <h2 class="title-2 t-uppercase">Noticias de Tulum</h2>
+        <h2 class="title-2 t-uppercase"><?php if (isset($post_meta['title2'])) {echo $post_meta['title2'];};?></h2>
       </section>
       <section class="posts" id="posts">
     <?php
