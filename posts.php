@@ -28,7 +28,7 @@ if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post();
   $prev_post= get_adjacent_post( true, '', true );
   $GLOBALS[ 'postLink' ] =  get_permalink();
   $GLOBALS[ 'prevLink' ] = get_permalink( $prev_post->ID );
-  $post_meta = get_post_meta( $post->ID,  'post_custom_field', true );
+  // $post_meta = get_post_meta( $post->ID,  'post_custom_field', true );
 ?>
   <section class="perspective left news">
     <h2 class="perspective__title section__title title-2 bg-square-center t-uppercase news__title"><?php the_title(); ?></h2>

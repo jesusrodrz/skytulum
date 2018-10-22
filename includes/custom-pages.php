@@ -382,13 +382,13 @@
       $custom_fields['category']
     ) 
   );
-  $custom_pages['posts'] = array(
-    'name'           =>   __('post','sky-tulum'),
-    'template'       =>   'posts.php',
-    //custom-field must be a array
-    'custom-fields'  =>   array(
-      $custom_fields['category']
-    ) 
-  );
+  // $custom_pages['posts'] = array(
+  //   'name'           =>   __('post','sky-tulum'),
+  //   'template'       =>   'posts.php',
+  //   //custom-field must be a array
+  //   'custom-fields'  =>   array(
+  //     $custom_fields['category']
+  //   ) 
+  // );
 
   
