@@ -53,7 +53,7 @@
       <article class="notice-item">
         <h3 class="notice-item__title"><a class="notice-item" href="<?php the_permalink(); ?>" target="blank"><?php the_title(); ?></a></h3>
         <p class="notice-item__text">
-          <time class="notice-item__date" datetime="2018-10-12"><?php the_date(); ?></time>
+          <time class="notice-item__date" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished" ><?php echo get_the_date(); ?></time>
         </p>
       </article>
       <?php 
@@ -63,15 +63,7 @@
     </section>
     <section class="footer__section subcribe">
       <h2 class="footer__title subcribe__title contact__title t-uppercase"><?php echo _e( 'Suscribirse', 'sky-tulum' );?></h2>
-      <?php 
-          // echo do_shortcode( '[contact-form-7 id="64" id="110" class="contact__form" title="Solicitar información"]' ); 
-          echo do_shortcode( '[contact-form-7 id="111" title="Suscribete"]' ); 
-          // echo do_shortcode( '[contact-form-7 id="64" title="Solicitar información"]' ); 
-          ?>
-      <!-- <form class="subscribe__form">
-        <input class="contact__input" type="email" name="email" placeholder="<?php echo _e( 'Correo Electrónico', 'sky-tulum' );?>">
-        <button class="btn-white subscribe__btn btn" type="submit"><?php echo _e( 'Enviar', 'sky-tulum' );?></button>
-      </form> -->
+      <?php echo do_shortcode( '[contact-form-7 id="111" title="Suscribete"]' ); ?>
     </section>
     <section class="footer__section develop-copy">
       <h2 class="footer__title"><?php echo _e( 'Un desarrollo de', 'sky-tulum' );?></h2>

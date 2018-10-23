@@ -1,13 +1,13 @@
 .tulum{
   position:relative;
-  padding-bottom: 50vh;
+  // padding-bottom: 50vh;
   z-index: 20;
   margin-top: 2em;
   @include media(md){
-    padding-bottom: 20vh;
+    // padding-bottom: 20vh;
     display: grid;
     grid-template-columns: 70% 1fr;
-    grid-template-rows: repeat(2,auto);
+    grid-template-rows: auto 1fr;
     grid-template-areas: "title map" "text map";
     min-height: 100vh;
     grid-gap: $gap * 2;
@@ -62,11 +62,9 @@
     width: 100%;
     height: 70vh;
     @include media(md){
-      // align-self: center;
-      // height: 95%;
-      // object-fit: cover;
       width: 100%;
-      height:80vh;
+      min-height:80vh;
+      height: 100%
     }
   }
 }

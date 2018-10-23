@@ -83,8 +83,7 @@ endif
   ?>
   <article class="posts__item"><img class="posts__img" src="<?php the_post_thumbnail_url(); ?>"/>
     <h3 class="posts__title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
-    <time class="posts__date"><?php the_date(); ?></time>
-    <!-- <div class="posts__text"><?php the_excerpt(); ?></div> -->
+    <time class="posts__date" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished" ><?php echo get_the_date(); ?></time>
   </article>
   <?php 
   endwhile;

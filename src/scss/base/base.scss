@@ -26,3 +26,17 @@ figure{
 th {
   font-weight: normal;
 }
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+li{
+  position: relative;
+  left: 1.2em;
+  &::before{
+    content:'○';
+    position: absolute;
+    top: 0;
+    left: -1.2em;
+  }
+}

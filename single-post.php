@@ -23,7 +23,7 @@ while ( have_posts() ) : the_post();
 ?>
 <section class="perspective left news">
   <h2 class="perspective__title section__title title-2 bg-square-center t-uppercase news__title"><?php the_title(); ?></h2>
-  <time class="news__date" datetime="2018-10-12"><?php the_date(); ?></time>
+  <time class="news__date" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
   <figure class="perspective__fig"><img class="perspective__img" src="<?php the_post_thumbnail_url(); ?>"></figure>
 </section>
 <section class="post">
@@ -57,7 +57,7 @@ endwhile;
   ?>
   <article class="posts__item"><img class="posts__img" src="<?php the_post_thumbnail_url(); ?>"/>
     <h3 class="posts__title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
-    <time class="posts__date"><?php the_date(); ?></time>
+    <time class="posts__date" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished" ><?php echo get_the_date(); ?></time>
     <!-- <div class="posts__text"><?php the_excerpt(); ?></div> -->
   </article>
   <?php 

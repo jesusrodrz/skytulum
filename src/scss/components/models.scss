@@ -2,7 +2,7 @@
   max-width: none;
   overflow: hidden;
   margin: 2em 0;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
   width: 100%;
   
   &__title{
@@ -31,10 +31,9 @@
     align-items: center;
     margin-top: 10%;
     position: relative;
-    // max-height: 80vh;
-    // height: calc(95vh - var(--header-height) );
     width: 100%;
     @include media(md){
+      margin-top: 0;
       display: grid;
       grid-template-columns: 60% 1fr;
       grid-template-rows: auto auto;
@@ -45,7 +44,6 @@
     
   }
   &__description{
-    // justify-self: start;
     grid-area: description;
     align-self: start;
     @include media(md,max){
@@ -57,8 +55,9 @@
     width: 100%;
     perspective: 100vw;
     perspective-origin: 50% 50%;
-    height: 100%;
-    // margin-top:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
   }
   &__img{
@@ -79,26 +78,11 @@
   }
   &__img{
     display: block;
-    // display: none;
-    // height: 100%;
     width: 100%;
-    object-fit: contain;
-    box-shadow: 8px 8px 15px rgb(195, 195, 195); 
-  }
-
-  &__list{
-    list-style: none;
-    padding-left: 0;
-  }
-  &__list-item{
-    position: relative;
-    left: 1.2em;
-    &::before{
-      content:'○';
-      position: absolute;
-      top: 0;
-      left: -1.2em;
+    @include media(md){
+      width: 60%;
     }
+    box-shadow: 8px 8px 15px rgb(195, 195, 195); 
   }
 
   &__sold{

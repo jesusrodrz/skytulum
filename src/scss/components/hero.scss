@@ -1,7 +1,7 @@
 .hero{
   height: calc(60vh - #{$header-height});
   @include media(md){
-    height: calc(90vh - #{$header-height});
+    height: calc(100vh - #{$header-height});
   }
   position: relative;
   overflow: hidden;
