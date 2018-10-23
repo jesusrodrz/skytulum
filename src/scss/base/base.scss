@@ -26,7 +26,7 @@ figure{
 th {
   font-weight: normal;
 }
-ul{
+ul:not(.menu){
   list-style: none;
   padding-left: 0;
   li{
