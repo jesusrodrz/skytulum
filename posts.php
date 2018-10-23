@@ -35,11 +35,11 @@ if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post();
     <time class="news__date" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
     <figure class="perspective__fig"><img class="perspective__img" src="<?php the_post_thumbnail_url(); ?>"></figure>
   </section>
-  <!-- <section class="post">1
-    <div class="post__text">2
-      </div>
-    </section> -->
-    <?php the_content(); ?>
+  <section class="post">
+    <div class="post__text">
+      <?php the_content(); ?>
+    </div>
+  </section>
 <?php 
 endwhile;
 endif

@@ -73,7 +73,7 @@
   }
   &__item{
     // --padding-post: 24px;
-    margin-bottom: 2em;
+    
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
     box-shadow: 16px 16px 50px rgba(0,0,0,.05);
@@ -88,6 +88,7 @@
 
     }
     @include media(md,max){
+      margin-bottom: 2em;
       display: grid;
       grid-column-gap: 2em;
       grid-auto-columns: 30% 1fr;

@@ -38,13 +38,8 @@ endwhile;
   <?php 
   $args = array(
     'posts_per_page' => 6,
-    // 'offset' => 0,
-    // 'cat' => $cat->cat_ID,
-    // 'orderby' => 'ID',
-    // 'order' => 'DESC',
     'post_type' => 'post',
     'post_status' => 'publish'
-    // 'suppress_filters' => true 
   );
   
   $posts = new WP_Query($args);
