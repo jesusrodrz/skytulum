@@ -21,6 +21,22 @@
         <br>
       <?php
     },
+    'link' => function ($meta, $meta_id){
+      ?>
+        <div class="custom-field" >
+          <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[link]' );?>"><?php esc_html_e( 'Leer más link', 'sky-tulum' );?></label>
+          <div>
+            <li>
+              <?php esc_html_e( 'Texto', 'sky-tulum' );?>  <input type="text" name="<?php echo esc_attr($meta_id . '[link][name]' );?>" id="<?php echo esc_attr($meta_id . '[link][name]' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['link']['name'])){ echo esc_attr($meta['link']['name']);} ?>">
+            </li>
+            <li>
+              <?php esc_html_e( 'Link ref', 'sky-tulum' );?> <input type="text" name="<?php echo esc_attr($meta_id . '[link][ref]' );?>" id="<?php echo esc_attr($meta_id . '[link][ref]' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['link']['ref'])){ echo esc_attr($meta['link']['ref']);} ?>">
+            </li>
+          </div>
+        </div>
+        <br>
+      <?php
+    },
     'title-2' => function ($meta, $meta_id){
       ?>
         <div class="custom-field" >
@@ -378,6 +394,7 @@
     'custom-fields'  =>   array(
       $custom_fields['hero'],
       $custom_fields['title'],
+      $custom_fields['link'],
       $custom_fields['title-2'],
       $custom_fields['category']
     ) 

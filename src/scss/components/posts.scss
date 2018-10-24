@@ -58,8 +58,25 @@
     br{
       margin: 1em 0;
     }
-  }
 
+    ol li ol{
+      padding:0;
+    }
+      
+    ol li ol li {
+      list-decoration: none;
+    }
+      
+      
+    ol li{
+      padding:0;
+      color: #636366;
+      font-weight: 400;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1em;
+    }
+  }
+  
 }
 
 .posts{
@@ -92,25 +109,38 @@
       display: grid;
       grid-column-gap: 2em;
       grid-auto-columns: 30% 1fr;
-      grid-template-rows: repeat(3,auto);
-      grid-template-areas: "img title" "img date" "img post"
+      grid-template-rows: repeat(2,auto);
+      grid-template-areas: "img title" "img date"
 
     }
 
   }
+  &__fig{
+    // padding-bottom: 56.25%;
+     grid-area: img;
+      height: 20vw;
+      min-height: 20vw;
+    @include media(md){
+      // max-height: 180px;
+      height: 15vw;
+      max-height: 15vw;
+    }
+    position: relative;
+  }
   &__img{
-    grid-area: img;
+    
     display: block;
+    // position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    max-height: 120px;
+    // max-height: 120px;
     @include media(md){
-      max-height: 180px;
+      // max-height: 180px;
 
     }
     @include media(lg){
-      max-height: 240px;
+      // max-height: 240px;
 
     }
     @include media(xl){
@@ -142,6 +172,7 @@
     grid-area: title;
     @include media(md,max){
       margin-top: 1em;
+      padding-right: var(--padding-post);
       
     }
     @include media(md){

@@ -37,7 +37,7 @@ endwhile;
 <section class="posts" id="posts">
   <?php 
   $args = array(
-    'posts_per_page' => 6,
+    'posts_per_page' => 30,
     'post_type' => 'post',
     'post_status' => 'publish'
   );
@@ -50,10 +50,12 @@ endwhile;
   $post_id = get_the_ID();
   // $post_meta = get_post_meta( $post->ID,  'specs_custom_field', true );
   ?>
-  <article class="posts__item"><img class="posts__img" src="<?php the_post_thumbnail_url(); ?>"/>
+  <article class="posts__item">
+    <figure class="posts__fig">
+      <img class="posts__img" src="<?php the_post_thumbnail_url(); ?>"/>
+    </figure>
     <h3 class="posts__title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
     <time class="posts__date" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished" ><?php echo get_the_date(); ?></time>
-    <!-- <div class="posts__text"><?php the_excerpt(); ?></div> -->
   </article>
   <?php 
 endwhile;

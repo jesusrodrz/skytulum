@@ -39,7 +39,17 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
     <h2 class="title-2 t-uppercase tulum__title"><?php if (isset($post_meta['title'])) {echo $post_meta['title'];};?></h2>
     <div class="tulum__text">
       <div class="tulum__text-container">
-        <?php the_content(); ?> 
+        <?php the_content(); ?>
+        <?php 
+          if(isset($post_meta['link']) && isset($post_meta['link']['name']) && isset($post_meta['link']['ref'])): 
+            $link = $post_meta['link']['ref'];
+            $name = $post_meta['link']['name'];
+        ?>
+          <div style="display:flex; justify-content:center" >
+            <a href="<?php echo $link;?>" class="gallery__btn btn t-uppercase" style="display:flex; align-items:center"style="font-family: Raleway;font-weight:200" ><?php echo $name;?></a>
+          </div>
+        <?php endif; ?>
+
       </div>         
     </div>
     <div class="tulum__map" id="map"></div>
@@ -53,7 +63,7 @@ endif
 
   <?php 
   $args = array(
-    'posts_per_page' => 6,
+    'posts_per_page' => 30,
     'post_type' => 'post',
     'post_status' => 'publish',
     'tax_query' => array(
@@ -81,7 +91,10 @@ endif
   $post_id = get_the_ID();
   // $post_meta = get_post_meta( $post->ID,  'specs_custom_field', true );
   ?>
-  <article class="posts__item"><img class="posts__img" src="<?php the_post_thumbnail_url(); ?>"/>
+  <article class="posts__item">
+    <figure class="posts__fig">
+      <img class="posts__img" src="<?php the_post_thumbnail_url(); ?>"/>
+    </figure>
     <h3 class="posts__title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
     <time class="posts__date" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished" ><?php echo get_the_date(); ?></time>
   </article>
