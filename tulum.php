@@ -46,7 +46,7 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
             $name = $post_meta['link']['name'];
         ?>
           <div style="display:flex; justify-content:center" >
-            <a href="<?php echo $link;?>" class="gallery__btn btn t-uppercase" style="display:flex; align-items:center"style="font-family: Raleway;font-weight:200" ><?php echo $name;?></a>
+            <a href="<?php echo $link;?>" class="gallery__btn btn t-uppercase" style="font-family: Raleway;font-weight:200" ><?php echo $name;?></a>
           </div>
         <?php endif; ?>
 
