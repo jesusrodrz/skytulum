@@ -33,7 +33,18 @@
     }
     p{
       margin: 1em 0;
+
+      a{
+        @extend .gallery__btn ;
+        @extend .btn ; 
+        // @extend .t-uppercase ;
+        text-transform: uppercase;
+        display: inline;
+      }
     }
+
+
+
   }
   &__text-container{
     position: relative;
