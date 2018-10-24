@@ -61,10 +61,12 @@
 
     ol li ol{
       padding:0;
+      list-style: none;
+      margin: 1em 0;
     }
       
     ol li ol li {
-      list-decoration: none;
+      font-family: $primary-font;
     }
       
       
@@ -81,6 +83,7 @@
 
 .posts{
   padding: 3em;
+  position: relative;
   --padding-post: 24px;
   @include media(md){
     padding: 1em 5em;
@@ -90,7 +93,8 @@
   }
   &__item{
     // --padding-post: 24px;
-    
+    position: relative;
+    z-index: 20;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
     box-shadow: 16px 16px 50px rgba(0,0,0,.05);

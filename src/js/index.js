@@ -382,10 +382,6 @@ particlesJS.load('particles', particlesJson, function() {
   console.log('particles ready')
 })
 
-const posts = document.getElementById("posts")
-if (posts) {
-  
-}
 
 class Slider {
   constructor (container,itemClass) {

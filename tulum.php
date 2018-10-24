@@ -44,17 +44,18 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
           if(isset($post_meta['link']) && isset($post_meta['link']['name']) && isset($post_meta['link']['ref'])): 
             $link = $post_meta['link']['ref'];
             $name = $post_meta['link']['name'];
+            if($link != "" || $link != " "  &&  $name != "" || $name != " " ):
         ?>
-          <div style="display:flex; justify-content:center" >
+          <!-- <div style="display:flex; justify-content:center" >
             <a href="<?php echo $link;?>" class="gallery__btn btn t-uppercase" style="font-family: Raleway;font-weight:200" ><?php echo $name;?></a>
-          </div>
-        <?php endif; ?>
+          </div> -->
+        <?php endif; endif; ?>
 
       </div>         
     </div>
     <div class="tulum__map" id="map"></div>
     <!-- <img class="tulum__map" src="<?php get_asset('assets/img/mapa.png'); ?>" alt=""> -->
-    <img class="tulum__palm" src="<?php get_asset('assets/img/circulo-rosa.png'); ?>" alt="">
+    <!-- <img class="tulum__palm" src="<?php get_asset('assets/img/circulo-rosa.png'); ?>" alt=""> -->
   </section>
 <?php 
 endwhile;
@@ -86,6 +87,7 @@ endif
         <h2 class="title-2 t-uppercase"><?php if (isset($post_meta['title2'])) {echo $post_meta['title2'];};?></h2>
       </section>
       <section class="posts" id="posts">
+      <img class="tulum__palm" src="<?php get_asset('assets/img/circulo-rosa.png'); ?>" alt="">
     <?php
   while( $posts->have_posts() ) : $posts->the_post();
   $post_id = get_the_ID();
