@@ -84,7 +84,7 @@
     font-size: .6em;
     color: color(text);
     padding: .8em;
-    transition: all ease-in-out .6s;
+    transition: all cubic-bezier(0.22, 1.09, 1, 1.55) .3s;
     cursor: pointer;
 
     &:hover{

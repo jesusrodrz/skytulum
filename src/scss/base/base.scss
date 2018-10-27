@@ -41,10 +41,13 @@ ul:not(.menu){
   }
 }
 
-a{
-  color: color(primary);
-  cursor: pointer;
-  &:hover{
-    text-decoration: underline;
+.post, .tulum__text, .description__text, .project__description{
+
+  a{
+    color: color(primary);
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }
