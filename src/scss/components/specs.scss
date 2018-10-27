@@ -84,11 +84,13 @@
     font-size: .6em;
     color: color(text);
     padding: .8em;
+    transition: all ease-in-out .6s;
     cursor: pointer;
 
     &:hover{
       background-color: saturate(darken(color(primary,trans80),20), 90);
       background-color: darken(saturate(color(primary,trans80),90), 20);
+      transform: scale(1.15)
     }
   }
 

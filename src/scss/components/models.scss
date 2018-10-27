@@ -9,6 +9,9 @@
     grid-area: title;
     align-self: end;
   }
+  &__text{
+    font-size: 1.3em;
+  }
   &__item:nth-of-type(odd){
     grid-template-areas: "img title" "img description";
     grid-template-columns: 60% 1fr;
