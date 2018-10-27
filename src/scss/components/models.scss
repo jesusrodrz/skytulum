@@ -11,6 +11,7 @@
   }
   &__text{
     font-size: 1.3em;
+    font-family: Raleway, sans-serif;
   }
   &__item:nth-of-type(odd){
     grid-template-areas: "img title" "img description";
