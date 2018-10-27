@@ -58,7 +58,6 @@
     outline: none;
     font-family: 'Scheherazade', serif;
     letter-spacing: .2em;
-    text-transform: uppercase ;
 
     &:focus{
       background-color: rgba(#fff,.4);
@@ -180,7 +179,9 @@
 
 
 .wpcf7-form{
-
+  .wpcf7-response-output{
+    margin: 0;
+  }
   .wpcf7-response-output.wpcf7-validation-errors {
       color: #D8000C;
       font-family: Raleway;

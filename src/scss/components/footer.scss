@@ -25,9 +25,6 @@
     font-size: 1.5em;
     font-weight: 200;
     cursor: pointer;
-    &:hover{
-      text-decoration: underline;
-    }
   }
 
   @include media(md){
@@ -51,6 +48,9 @@
     font-size: 1em;
     font-weight: 400;
     font-size: 1.2em;
+    &:hover{
+      text-decoration: underline;
+    }
   }
   &__text,&__title{
     margin: 0;
