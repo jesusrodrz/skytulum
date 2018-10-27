@@ -33,6 +33,11 @@ $post_types['models'] = array(
       'description' => 'View new signals',
       'menu_position' => 5,
       'public' => true,
+      'exclude_from_search' => true,
+      'show_in_admin_bar'   => false,
+      'show_in_nav_menus'   => false,
+      'publicly_queryable'  => false,
+      'query_var'           => false
       'hierarchical' => false,
       'has_archive' => false,
       'rewrite' => array(
@@ -49,7 +54,7 @@ $post_types['models'] = array(
       'capabilities' => array(
         'create_posts'
       ),
-      'menu_icon' => 'dashicons-admin-multisite',
+      'menu_icon' => 'dashicons-list-view',
     )
   );
   $post_types['specs'] = array(
@@ -87,6 +92,11 @@ $post_types['models'] = array(
       'description' => 'View new signals',
       'menu_position' => 5,
       'public' => true,
+      'exclude_from_search' => true,
+      'show_in_admin_bar'   => false,
+      'show_in_nav_menus'   => false,
+      'publicly_queryable'  => false,
+      'query_var'           => false
       'hierarchical' => false,
       'has_archive' => false,
       'rewrite' => array(

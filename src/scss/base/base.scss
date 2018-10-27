@@ -40,3 +40,11 @@ ul:not(.menu){
     }
   }
 }
+
+a{
+  color: color(primary);
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
+}

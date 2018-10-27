@@ -32,7 +32,7 @@
       <h2 class="footer__title notices-ft__title">Noticias</h2>
       <?php 
       $args = array(
-        'posts_per_page' => 4,
+        'posts_per_page' => 2,
         'offset' => 0,
         'cat' => $cat->cat_ID,
         'orderby' => 'ID',

@@ -24,6 +24,10 @@
     text-transform: uppercase;
     font-size: 1.5em;
     font-weight: 200;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
   }
 
   @include media(md){
