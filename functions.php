@@ -358,3 +358,6 @@ function specs_levels_taxonomy() {
 add_action( 'init', 'specs_levels_taxonomy');
 
 add_theme_support( 'post-thumbnails' );
+
+// REMOVE GENESIS FAVICON
+remove_action('genesis_meta', 'genesis_load_favicon');

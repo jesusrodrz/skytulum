@@ -70,7 +70,9 @@ endif
   ?>
   <article class="posts__item">
     <figure class="posts__fig">
-      <img class="posts__img" src="<?php the_post_thumbnail_url(); ?>"/>
+      <a class="posts__link" href="<?php the_permalink(); ?>">
+        <img class="posts__img" src="<?php the_post_thumbnail_url(); ?>"/>
+      </a>
     </figure>
     <h3 class="posts__title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
     <time class="posts__date" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished" ><?php echo get_the_date(); ?></time>

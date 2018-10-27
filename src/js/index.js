@@ -34,7 +34,8 @@ class Menu {
 
   }
   createModal = () => {
-    this.contact = document.getElementById(this.contactId).cloneNode(true)
+    this.contact = document.getElementById(this.contactId)
+    this.contactParent = document.getElementById(this.contactId).parentElement
     const modal = document.createElement('div')
     modal.classList.add('modal-contact')
     this.closeContactBtn = this.closeBtn.cloneNode(true)
@@ -55,12 +56,14 @@ class Menu {
   closeContact = () => {
     this.body.classList.remove('overflow-hidden')
     this.modal.classList.remove('active')
-    if(this.modal.classList.contains('nav')) this.modal.classList.remove('nav')
+    if (this.modal.classList.contains('nav')) this.modal.classList.remove('nav')
+    this.contactParent.appendChild(this.contact)
   }
   openContact = (isNav) => {
 
     if (!this.modal) this.modal = this.createModal()
-    
+    if (this.modal) this.modal.appendChild(this.contact)
+
     this.body.classList.add('overflow-hidden')
     this.modal.classList.add('active')
     this.modal.classList.add('active')
