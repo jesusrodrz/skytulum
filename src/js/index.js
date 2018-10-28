@@ -203,6 +203,12 @@ class Lightbox {
       this.curretImage = this.images[0]
       this.modal.append(this.curretImage)
     }
+    if ( !isNaN(target) )  {
+      this.images[target].classList.add('active')
+      this.curretImage = this.images[target]
+      this.modal.append(this.curretImage)
+    }
+      
   }
 
   change = (newImage,oldImage) => {
@@ -227,6 +233,8 @@ class Lightbox {
   close = () => {
     this.body.classList.remove('overflow-hidden')
     this.modal.classList.remove('active')
+    this.modal.removeChild(this.curretImage)
+    this.curretImage.classList.remove('active')
   }
   create = () => {
     this.modal = document.createElement('div')
@@ -245,10 +253,13 @@ class Lightbox {
     this.modal.append(this.btnClose)
     this.body.append(this.modal)
     this.modal.addEventListener('click', this.handleClick)
+    // this.modal.nodeType
   }
   handleClick = (e) => {
-    const target = e.target
+    const target = e.target,
+    image = (e.target.nodeName === 'IMG') ? [...this.lightbox.getElementsByTagName('img')].indexOf( target ) : null
     if ( this.btn === target )  this.open(null)
+    if ( image )  this.open(image)
     if ( this.btnNext.contains( target ) )  this.next()
     if ( this.btnPrev.contains( target ) )  this.prev()
     if ( this.btnClose.contains( target ) )  this.close()
