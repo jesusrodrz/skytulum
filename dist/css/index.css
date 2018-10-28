@@ -1273,7 +1273,7 @@ div.wpcf7-validation-errors:before {
       align-items: stretch; } }
   .develop-copy__fig {
     position: relative;
-    transform: translateX(3.8em) rotateY(-10deg) rotateX(5deg) scale(1);
+    transform: translateX(0) rotateY(-10deg) rotateX(5deg) scale(1);
     transition: transform ease-in-out .3s; }
     .develop-copy__fig:hover {
       transform: translateX(3.8em) rotateY(-30deg) rotateX(15deg) scale(1.2); }
