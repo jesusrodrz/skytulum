@@ -1228,8 +1228,7 @@ div.wpcf7-validation-errors:before {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     font-size: 1.5em;
-    font-weight: 200;
-    cursor: pointer; }
+    font-weight: 200; }
   @media (min-width: 54rem) {
     .footer {
       padding: 1em 2em;
@@ -1333,9 +1332,9 @@ div.wpcf7-validation-errors:before {
     grid-area: img;
     perspective: 100vw; }
   .project__fig:nth-of-type(odd) .project__img {
-    transform: rotateY(30deg) rotateX(15deg) scale(0.8); }
+    transform: rotateY(30deg) rotateX(15deg) scale(1); }
   .project__fig:nth-of-type(odd):hover .project__img, .project__fig:nth-of-type(odd).active .project__img {
-    transform: rotateY(20deg) rotateX(10deg) scale(1); }
+    transform: rotateY(20deg) rotateX(10deg) scale(1.1); }
   .project__img {
     width: 100%;
     transition: transform .4s ease-out;
