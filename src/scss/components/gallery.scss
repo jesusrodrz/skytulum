@@ -21,13 +21,13 @@
       transform: rotateY(-30deg) rotateX(15deg) scale(1);
     }
     &__item:nth-of-type(odd):hover &__img, &__item:nth-of-type(odd).active &__img{
-      transform: rotateY(-22deg) rotateX(7deg) scale(.8);
+      transform: rotateY(-20deg) rotateX(10deg) scale(1.1)
     }
     &__item:nth-of-type(even) &__img{
       transform: rotateY(30deg) rotateX(15deg) scale(1);
     }
     &__item:nth-of-type(even):hover &__img, &__item:nth-of-type(even).active &__img{
-      transform: rotateY(22deg) rotateX(7deg) scale(.8);
+      transform: rotateY(20deg) rotateX(10deg) scale(1.1);
     }
     &__img{
       display: block;
@@ -100,40 +100,40 @@
     }
     &__item:nth-of-type(1) &__img {
       // transform-origin: center right;
-      transform: rotateY(-30deg) rotateX(15deg) scale(.8);
+      transform: rotateY(-30deg) rotateX(15deg) scale(1);
     }
     &__item:nth-of-type(1):hover &__img {
-      transform: rotateY(-22deg) rotateX(7deg) scale(.6);
+      transform: rotateY(-20deg) rotateX(10deg) scale(1.1);
     }
     &__item:nth-of-type(2) {
       grid-area: item2;
       perspective: calc( 3 / 4 * 100vw);
       perspective-origin: 50% 50%;
-      transform: translateX(-2.6em)
+      transform: translateX(-2.6em) rotateY(30deg) rotateX(15deg) scale(1) 
     }
     &__item:nth-of-type(2):hover &__img {
-      transform: translateX(-2.6em) rotateY(22deg) rotateX(8deg) scale(.9);
+      transform: translateX(-2.6em) rotateY(20deg) rotateX(10deg) scale(1.1);
       // transform: 
     }
     &__item:nth-of-type(3) {
       grid-area: item3;
       perspective: calc( 3 / 4 * 100vw);
       perspective-origin: 50% 50%;
-      transform: translateX(-2.2em)
+      transform: translateX(-2.2em) rotateY(30deg) rotateX(15deg) scale(1)
 
     }
     &__item:nth-of-type(3):hover &__img {
-      transform: translateX(-2.2em) rotateY(22deg) rotateX(10deg) scale(.9);
+      transform: translateX(-2.2em)  rotateY(20deg) rotateX(10deg) scale(1.1);
       // transform: 
     }
     &__item:nth-of-type(4) {
       grid-area: item4;
       perspective: calc( 3 / 4 * 100vw);
       perspective-origin: 50% 50%;
-      transform: translateX(-1.2em)
+      transform: translateX(-1.2em) rotateY(30deg) rotateX(15deg) scale(1)
     }
     &__item:nth-of-type(4):hover &__img {
-      transform: translateX(-1.2em) rotateY(22deg) rotateX(12deg) scale(.9);
+      transform: translateX(-1.2em)  rotateY(20deg) rotateX(10deg) scale(1.1);
       // transform: 
     }
     &__item:nth-of-type(5) {

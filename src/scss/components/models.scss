@@ -69,16 +69,16 @@
     transition: transform .4s ease-out ;
   }
   &__item:nth-of-type(even) &__img{
-    transform: rotateY(-30deg) rotateX(15deg) scale(.8);
+    transform: rotateY(-30deg) rotateX(15deg) scale(1);
   }
   &__item:nth-of-type(even):hover &__img, &__item:nth-of-type(even).active &__img{
-    transform: rotateY(-12deg) rotateX(7deg) scale(1);
+    transform: rotateY(-15deg) rotateX(7deg) scale(1.1);
   }
   &__item:nth-of-type(odd) &__img{
-    transform: rotateY(30deg) rotateX(15deg) scale(.8);
+    transform: rotateY(30deg) rotateX(15deg) scale(1);
   }
   &__item:nth-of-type(odd):hover &__img, &__item:nth-of-type(odd).active &__img{
-    transform: rotateY(12deg) rotateX(7deg) scale(1);
+    transform: rotateY(15deg) rotateX(7deg) scale(1.1);
   }
   &__img{
     display: block;

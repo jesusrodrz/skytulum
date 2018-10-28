@@ -4,6 +4,7 @@
   --paddin-footer:1em;
 
   }
+  overflow-x: hidden;
   background-color: $color-darkgray;
   color:white;
   padding: var(--paddin-footer);
@@ -74,9 +75,15 @@
   }
   &__fig{
     position: relative;
+    transform: translateX( 0 ) rotateY(-30deg) rotateX(15deg) scale(1.2);
+    transition: transform ease-in-out .3s;
+    &:hover{
+      transform: translateX(3.8em) rotateY(-30deg) rotateX(15deg) scale(1.2);
+    }
     @include media(md){
       transform: translateX( 2.8em );
     }
+    
     &::before{
       content: '';
       position: absolute;
@@ -92,7 +99,6 @@
     max-height: 90px;
     display: block;
     position: relative;
-    
     @include media(md){
       // background-color: rgba($color: #000000, $alpha: .15);
       display: block;
