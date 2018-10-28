@@ -57,3 +57,6 @@ function print_custom_menu($menu_name) {
 function get_asset($path) {
 	echo get_stylesheet_directory_uri() . '/dist/'. $path;
 }
+function sky_asset($path) {
+	return get_stylesheet_directory_uri() . '/dist/'. $path;
+}
