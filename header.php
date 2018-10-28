@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="<?php get_asset('assets/img/favicon.ico')?>"/>
+    <link rel="icon" href="<?php get_asset('assets/img/favicon.ico')?>"/>
     <?php wp_head(); ?>
-    <link rel="icon" href="<?php get_asset('assets/img/favicon.ico')?>"/>
-    <link rel="icon" href="<?php get_asset('assets/img/favicon.ico')?>"/>
-    <!-- GOOGLE MAPS START -->
       
-    <!-- GOOGLE MAPS END -->
     <title>
       <?php 
         if(is_front_page() || is_home()){
