@@ -1021,7 +1021,7 @@ body {
       perspective-origin: 50% 50%;
       transform: rotateY(30deg) rotateX(15deg) scale(1); }
     .gallery__item:nth-of-type(4):hover .gallery__img {
-      transform: translateX(-1.2em) rotateY(20deg) rotateX(10deg) scale(1.1); }
+      transform: rotateY(20deg) rotateX(10deg) scale(1.1); }
     .gallery__item:nth-of-type(5) {
       grid-area: item5; }
     .gallery__item:nth-of-type(5) .gallery__img {
