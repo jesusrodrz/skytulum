@@ -59,11 +59,11 @@
     
   }
   &.left &__img{
-    transform: rotateY(-15deg) rotateX(7deg) scale(1);
+    transform: rotateY(-15deg) rotateX(7deg) scale(.8);
     box-shadow: -8px 8px 15px rgb(195, 195, 195); 
   }
   &.left:hover &__img, &.left.active &__img{
-    transform: rotateY(-30deg) rotateX(15deg) scale(1.2);
+    transform: rotateY(-30deg) rotateX(15deg) scale(1);
   }
 
   &__img{

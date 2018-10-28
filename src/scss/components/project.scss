@@ -41,10 +41,10 @@
     perspective: 100vw;
   }
   &__fig:nth-of-type(odd) &__img{
-    transform: rotateY(30deg) rotateX(15deg) scale(1);
+    transform: rotateY(30deg) rotateX(15deg) scale(.8);
   }
   &__fig:nth-of-type(odd):hover &__img, &__fig:nth-of-type(odd).active &__img{
-    transform: rotateY(20deg) rotateX(10deg) scale(1.1);
+    transform: rotateY(20deg) rotateX(10deg) scale(1);
   }
 
   &__img{

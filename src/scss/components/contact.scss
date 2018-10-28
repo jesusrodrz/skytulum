@@ -8,6 +8,7 @@
   grid-area: contact;
   background: linear-gradient(to right, #357a6d 0%,#429994 100%);
   min-height: auto;
+  font-size: .9em;
 
   &__title{
 
@@ -179,41 +180,47 @@
 
 
 .wpcf7-form{
+  .wpcf7-not-valid-tip{
+    color: #fff;
+    font-family: Raleway;
+    font-size: .7em;
+    padding: .4em;
+    display: inline-block;
+    position: relative;
+    &::after{
+      content: '*';
+      font-size: 3em;
+      position: absolute;
+      color: #D8000C;
+      display: flex;
+      left: 100%;
+      top: 0%;
+    }
+  }
   .wpcf7-response-output{
     margin: 0;
-  }
-  .wpcf7-response-output.wpcf7-validation-errors {
+    font-family: Raleway;
+    font-size: .8em;
+    font-weight: 200;
+    border: none;
+    padding: .5em;
+
+    &.wpcf7-validation-errors {
       color: #D8000C;
-      font-family: Raleway;
-      font-weight: 200;
       background-color: #FFBABA;
-      border: 0;
-      padding: 10px;
-  }
-  .wpcf7-response-output.wpcf7-validation-errors {
-    color: #D8000C;
-    font-family: Raleway;
-    font-weight: 200;
-    background-color: #FFBABA;
-    border: 0;
-    padding: 10px;
-  }
-  .wpcf7-response-output.wpcf7-mail-sent-ok {
+    }
+
+    &.wpcf7-mail-sent-ok {
       color: #4F8A10;
-      font-family: Raleway;
-      font-weight: 200;
       background-color: #DFF2BF;
-      border: 0;
-      padding: 10px;
+    }
+
+    &.wpcf7-mail-sent-ng{
+      color: #D8000C;
+      background-color: #FFBABA;
+    }
   }
-  .wpcf7-response-output.wpcf7-mail-sent-ng{
-    color: #D8000C;
-    font-family: Raleway;
-    font-weight: 200;
-    background-color: #FFBABA;
-    border: 0;
-    padding: 10px;
-}
+  
 } 
   
 div.wpcf7-mail-sent-ok:before,div.wpcf7-validation-errors:before {
@@ -222,10 +229,10 @@ div.wpcf7-mail-sent-ok:before,div.wpcf7-validation-errors:before {
     vertical-align: middle;
 }
 div.wpcf7-mail-sent-ok:before {
-  content: '✓';
+  content: '✓ ';
 }div.wpcf7-mail-sent-ng:before {
-  content: '✖';
+  content: '✖ ';
 }
 div.wpcf7-validation-errors:before {
-    content: '✖';
+    content: '✖ ';
 }
