@@ -360,4 +360,10 @@ add_action( 'init', 'specs_levels_taxonomy');
 add_theme_support( 'post-thumbnails' );
 
 // REMOVE GENESIS FAVICON
-remove_action('genesis_meta', 'genesis_load_favicon');
+// remove_action('genesis_meta', 'genesis_load_favicon');
+
+/** Adding custom Favicon */
+add_filter( 'genesis_pre_load_favicon', 'custom_favicon' );
+function custom_favicon( $favicon_url ) {
+	return get_asset('assets/img/favicon.ico');
+}
