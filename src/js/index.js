@@ -73,10 +73,11 @@ class Menu {
   handleClick = (e) => {
     // e.preventDefault();
     const target = e.target,
-      isLink = e.target.parentElement.nodeName === 'LI'
+      isLink = e.target.parentElement.nodeName === 'LI',
+      isSubmit = e.target.classList.contains('btn-white')
     // check if is a link and not a button
-    if (!isLink)  e.preventDefault() 
-    
+    if (!isLink && !isSubmit )  e.preventDefault() 
+    console.log(target,e)
     // mobile menu
     if (window.innerWidth < 864) {
       
