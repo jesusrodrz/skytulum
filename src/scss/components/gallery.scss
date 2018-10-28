@@ -109,28 +109,28 @@
       grid-area: item2;
       perspective: calc( 3 / 4 * 100vw);
       perspective-origin: 50% 50%;
-      transform: translateX(-2.6em) rotateY(30deg) rotateX(15deg) scale(1) 
+      transform:  rotateY(30deg) rotateX(15deg) scale(1) 
     }
     &__item:nth-of-type(2):hover &__img {
-      transform: translateX(-2.6em) rotateY(20deg) rotateX(10deg) scale(1.1);
+      transform:  rotateY(20deg) rotateX(10deg) scale(1.1);
       // transform: 
     }
     &__item:nth-of-type(3) {
       grid-area: item3;
       perspective: calc( 3 / 4 * 100vw);
       perspective-origin: 50% 50%;
-      transform: translateX(-2.2em) rotateY(30deg) rotateX(15deg) scale(1)
+      transform:  rotateY(30deg) rotateX(15deg) scale(1)
 
     }
     &__item:nth-of-type(3):hover &__img {
-      transform: translateX(-2.2em)  rotateY(20deg) rotateX(10deg) scale(1.1);
+      transform:   rotateY(20deg) rotateX(10deg) scale(1.1);
       // transform: 
     }
     &__item:nth-of-type(4) {
       grid-area: item4;
       perspective: calc( 3 / 4 * 100vw);
       perspective-origin: 50% 50%;
-      transform: translateX(-1.2em) rotateY(30deg) rotateX(15deg) scale(1)
+      transform:  rotateY(30deg) rotateX(15deg) scale(1)
     }
     &__item:nth-of-type(4):hover &__img {
       transform: translateX(-1.2em)  rotateY(20deg) rotateX(10deg) scale(1.1);
