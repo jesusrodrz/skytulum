@@ -896,19 +896,18 @@ body {
     position: absolute;
     height: 90%;
     left: 0;
-    transform: translateX(-50%) rotateZ(0deg) scale(0.7);
-    animation: florRotate linear 9s infinite;
-    transition: animation ease-in-out .2s; }
+    transform: translateX(-50%) rotateZ(0deg) scale(1);
+    animation: florRotate linear 45s infinite; }
 
 @keyframes florRotate {
   to {
-    transform: translateX(-50%) rotateZ(360deg) scale(0.7); } }
+    transform: translateX(-50%) rotateZ(360deg) scale(0.25); } }
   .hero__flore {
     position: absolute;
     height: 90%;
     left: 0;
-    transform: translateX(-50%) rotateZ(0deg) scale(0.6);
-    animation: floreRotate linear .5s infinite; }
+    transform: translateX(-50%) rotateZ(0deg) scale(4);
+    animation: floreRotate linear 45s infinite; }
 
 @keyframes floreRotate {
   to {
