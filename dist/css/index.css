@@ -899,11 +899,15 @@ body {
     display: block;
     height: 100%;
     transform: translateX(-50%) rotateZ(0deg) scale(1);
-    animation: florRotate linear 45s infinite; }
+    animation: florRotate linear 90s infinite; }
 
 @keyframes florRotate {
-  to {
-    transform: translateX(-50%) rotateZ(360deg) scale(0.25); } }
+  0% {
+    transform: translateX(-50%) rotateZ(0deg) scale(1); }
+  50% {
+    transform: translateX(-50%) rotateZ(360deg) scale(0.25); }
+  100% {
+    transform: translateX(-50%) rotateZ(0deg) scale(1); } }
   .hero__flore {
     position: absolute;
     height: 90%;
@@ -1269,13 +1273,13 @@ div.wpcf7-validation-errors:before {
       align-items: stretch; } }
   .develop-copy__fig {
     position: relative;
-    transform: translateX(0) rotateY(-30deg) rotateX(15deg) scale(1.2);
+    transform: translateX(3.8em) rotateY(-10deg) rotateX(5deg) scale(1);
     transition: transform ease-in-out .3s; }
     .develop-copy__fig:hover {
       transform: translateX(3.8em) rotateY(-30deg) rotateX(15deg) scale(1.2); }
     @media (min-width: 54rem) {
       .develop-copy__fig {
-        transform: translateX(2.8em); } }
+        transform: translateX(3.8em); } }
     .develop-copy__fig::before {
       content: '';
       position: absolute;
@@ -2005,9 +2009,8 @@ div.wpcf7-validation-errors:before {
   .amenities__fig:nth-of-type(4) {
     position: relative; }
   .amenities__fig:nth-of-type(4):hover .amenities__cap {
-    border: solid 1px #429994;
-    background-color: rgba(66, 153, 148, 0.2);
-    color: #429994; }
+    background-color: #2e2d38;
+    border: solid 3px #2B2A35; }
   .amenities__cap {
     background-color: #2e2d38cf;
     position: absolute;
@@ -2022,9 +2025,6 @@ div.wpcf7-validation-errors:before {
     font-family: Raleway;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); }
     .amenities__cap:hover {
-      border: solid 1px #429994;
-      background-color: rgba(66, 153, 148, 0.2);
-      color: #429994;
       background-color: #2e2d38;
       border: solid 3px #2B2A35; }
   .amenities__img {

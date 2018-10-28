@@ -45,13 +45,19 @@
     display: block;
     height: 100%;
     transform: translateX(-50%) rotateZ(0deg) scale(1);
-    animation: florRotate linear 45s infinite ;
+    animation: florRotate linear 90s infinite;
     // &:hover{
     //   animation: florRotate linear 7s infinite;
     // }
     @keyframes florRotate {
-      to {
-        transform: translateX(-50%) rotateZ(360deg) scale(.25);; 
+      0% {
+        transform: translateX(-50%) rotateZ(0deg) scale(1); 
+      }
+      50% {
+        transform: translateX(-50%) rotateZ(360deg) scale(.25);
+      }
+      100% {
+        transform: translateX(-50%) rotateZ(0deg) scale(1);
       }
     }
 

@@ -119,7 +119,7 @@
       grid-area: item3;
       perspective: calc( 3 / 4 * 100vw);
       perspective-origin: 50% 50%;
-      transform:  rotateY(30deg) rotateX(15deg) scale(1)
+      transform:  rotateY(30deg) rotateX(15deg) scale(1);
 
     }
     &__item:nth-of-type(3):hover &__img {
