@@ -1279,7 +1279,7 @@ div.wpcf7-validation-errors:before {
       transform: translateX(3.8em) rotateY(-30deg) rotateX(15deg) scale(1.2); }
     @media (min-width: 54rem) {
       .develop-copy__fig {
-        transform: translateX(3.8em); } }
+        transform: translateX(3.8em) rotateY(-10deg) rotateX(5deg) scale(1); } }
     .develop-copy__fig::before {
       content: '';
       position: absolute;
