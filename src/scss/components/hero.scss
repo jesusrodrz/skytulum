@@ -46,9 +46,7 @@
     height: 100%;
     transform: translateX(-50%) rotateZ(0deg) scale(1);
     animation: florRotate linear 90s infinite;
-    // &:hover{
-    //   animation: florRotate linear 7s infinite;
-    // }
+    
     @keyframes florRotate {
       0% {
         transform: translateX(-50%) rotateZ(0deg) scale(1); 
@@ -58,19 +56,6 @@
       }
       100% {
         transform: translateX(-50%) rotateZ(0deg) scale(1);
-      }
-    }
-
-  }
-  &__flore{
-    position: absolute;
-    height: 90%;
-    left: 0;
-    transform: translateX(-50%) rotateZ(0deg) scale(4);
-    animation: floreRotate linear 45s infinite;
-    @keyframes floreRotate {
-      to {
-        transform: translateX(-50%) rotateZ(360deg) scale(1);
       }
     }
 

@@ -26,10 +26,10 @@
     <?php  if ( $GLOBALS[ 'prevLink' ] !=  '' ): ?>
       <a href="<?php echo $GLOBALS[ 'prevLink' ]; ?>" class="post__btn--prev"><i class="icon-arrow-left"></i></a>
     <?php  endif; ?>
-    <button class="up-btn" id="btnUp"><i class="icon-up"></i> <span class="up-btn__text">Inicio</span>  </button>
+    <button class="up-btn" id="btnUp"><i class="icon-up"></i> <span class="up-btn__text"><?php esc_html_e('Inicio','sky-tulum'); ?></span>  </button>
   <footer class="footer">
     <section class="footer__section notices-ft">
-      <h2 class="footer__title notices-ft__title">Noticias</h2>
+      <h2 class="footer__title notices-ft__title"><?php esc_html_e('Noticias','sky-tulum'); ?></h2>
       <?php 
       $args = array(
         'posts_per_page' => 2,
