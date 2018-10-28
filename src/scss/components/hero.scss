@@ -42,6 +42,8 @@
     position: absolute;
     height: 90%;
     left: 0;
+    display: block;
+    height: 100%;
     transform: translateX(-50%) rotateZ(0deg) scale(1);
     animation: florRotate linear 45s infinite ;
     // &:hover{
