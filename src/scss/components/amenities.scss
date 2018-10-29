@@ -38,17 +38,17 @@
       transform: rotateY(12deg) rotateX(7deg) scale(1);
       
     }
-    &__fig:nth-of-type(3) &__img{
+    &__fig:nth-of-type(4) &__img{
       transform: rotateY(-30deg) rotateX(15deg) scale(.8);
       box-shadow: -8px 8px 15px rgb(195, 195, 195); 
     }
-    &__fig:nth-of-type(3):hover &__img, &__fig:nth-of-type(3).active &__img{
+    &__fig:nth-of-type(4):hover &__img, &__fig:nth-of-type(4).active &__img{
       transform: rotateY(-12deg) rotateX(7deg) scale(1);
     }
-    &__fig:nth-of-type(3) &__cap{
+    &__fig:nth-of-type(4) &__cap{
       transform: rotateY(-30deg) rotateX(15deg) scale(.8) translateX(-10%);
     }
-    &__fig:nth-of-type(3):hover &__cap, &__fig:nth-of-type(3).active &__cap{
+    &__fig:nth-of-type(4):hover &__cap, &__fig:nth-of-type(4).active &__cap{
       transform: rotateY(0deg) rotateX(0deg) scale(1);
       border: solid 1px color(primary);
       background-color: color(primary, trans80);

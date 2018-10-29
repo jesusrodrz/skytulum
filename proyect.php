@@ -38,8 +38,7 @@ if (isset($post_meta['hero'])) {
   <img class="hero__flor" src="<?php get_asset('assets/img/flordevida.png')?>" alt="flor de la vida">
 </section>
   <section class="section-project project">
-        
-    <h2 class="project__title section__title title-2 bg-square-center t-uppercase">Sky Tulum</h2>
+    <h2 class="project__title section__title title-2 bg-square-center t-uppercase"><?php esc_html_e('Sky Tulum','sky-tulum'); ?></h2>
     <div class="project__description"><?php the_content(); ?></div>
     <figure class="project__fig"><img class="project__img" src="<?php the_post_thumbnail_url(); ?>" alt=""></figure>
   </section>
@@ -48,7 +47,7 @@ endwhile;
 endif
 ?>
 <section class="section-specs specs" id="specsLightbox">
-  <h2 class="specs__title section__title title-2 bg-square-center t-uppercase">Especificaciones</h2>
+  <h2 class="specs__title section__title title-2 bg-square-center t-uppercase"><?php esc_html_e('Especificaciones','sky-tulum'); ?></h2>
   
   <?php
     
@@ -61,14 +60,7 @@ endif
                 // 'term'=> $term->slug,
                 'posts_per_page'=> -1,
                 'post_type'=>'specs',
-                'order' => 'ASC',
-                // 'tax_query' => array(
-                //   array(
-                //       'taxonomy'  => $taxonomy,
-                //       'terms'     => array( $term->slug ),
-                //       'field'     => 'slug'
-                //   )
-                // )
+                'order' => 'ASC'
               ) 
             );
             if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post();
@@ -81,9 +73,9 @@ endif
                   <table class="table-level level__table">
                     <thead>
                       <tr>
-                        <th class="table-level__col">Unidad</th>
-                        <th class="table-level__col">Tipo</th>
-                        <th class="table-level__col">Total</th>
+                        <th class="table-level__col"><?php esc_html_e('Unidad','sky-tulum'); ?></th>
+                        <th class="table-level__col"><?php esc_html_e('Tipo','sky-tulum'); ?></th>
+                        <th class="table-level__col"><?php esc_html_e('Total','sky-tulum'); ?></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -124,24 +116,24 @@ endif
 
 </section>
 <section class="amenities">
-        <h2 class="amenities__title section__title title-2 bg-square-center t-uppercase">Amenidades</h2>
+        <h2 class="amenities__title section__title title-2 bg-square-center t-uppercase"><?php esc_html_e('Amenidades','sky-tulum'); ?></h2>
         <ul class="amenities__list">
-          <li class="amenities__list-item">Sky Pool</li>
-          <li class="amenities__list-item">Carril de Nado</li>
-          <li class="amenities__list-item">Alberca </li>
-          <li class="amenities__list-item">Jacuzzi de Acrilico</li>
-          <li class="amenities__list-item">Cinema al aire libre</li>
-          <li class="amenities__list-item">BBQ Brill</li>
-          <li class="amenities__list-item">Bar</li>
+          <li class="amenities__list-item"><?php esc_html_e('Sky Pool','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('Carril de Nado','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('Alberca','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('Jacuzzi de Acrilico','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('Cinema al aire libre','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('BBQ Brill','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('Bar','sky-tulum'); ?></li>
         </ul>
         <ul class="amenities__list">
-          <li class="amenities__list-item">Gym</li>
-          <li class="amenities__list-item">Yoga Zone</li>
-          <li class="amenities__list-item">Área de lectura</li>
-          <li class="amenities__list-item">Cinema al aire libre</li>
-          <li class="amenities__list-item">Snack Bar</li>
-          <li class="amenities__list-item">Lavandería</li>
-          <li class="amenities__list-item">Concerge</li>
+          <li class="amenities__list-item"><?php esc_html_e('Gym','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('Yoga Zone','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('Área de lectura','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('Cinema al aire libre','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('Snack Bar','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('Lavandería','sky-tulum'); ?></li>
+          <li class="amenities__list-item"><?php esc_html_e('Concerge','sky-tulum'); ?></li>
         </ul>
 <?php 
 
