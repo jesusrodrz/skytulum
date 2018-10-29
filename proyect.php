@@ -154,9 +154,11 @@ if (isset($meta['images'])) {
     
     <figure class="amenities__fig">
       <?php 
-        if($index > 2):
+        if($index > 2 && isset($meta['linkcta']['name']) && isset($meta['linkcta']['ref']) ):
+          $link = home_url('/'.$meta['linkcta']['ref']) ;
+          $name =  $meta['linkcta']['name'];
           ?>
-            <figcaption class="amenities__cap t-uppercase">Tulum</figcaption>
+            <a class="amenities__cap t-uppercase" href="<?php echo $link;?>" target="_blank" rel="noopener noreferrer"><?php echo $name;?></a>
           <?php
         endif;
       ?>

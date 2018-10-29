@@ -126,11 +126,6 @@
   &__fig:nth-of-type(4){
     position: relative;
   }
-  &__fig:nth-of-type(4):hover &__cap{
-    background-color: #2e2d38;
-    border: solid 3px #2B2A35;
-
-  }
   &__cap{
     background-color: #2e2d38cf;
     position: absolute;

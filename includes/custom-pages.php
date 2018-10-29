@@ -37,6 +37,22 @@
         <br>
       <?php
     },
+    'linkcta' => function ($meta, $meta_id){
+      ?>
+        <div class="custom-field" >
+          <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[linkcta]' );?>"><?php esc_html_e( 'Link hacia página', 'sky-tulum' );?></label>
+          <div>
+            <li>
+              <?php esc_html_e( 'texto del link', 'sky-tulum' );?>  <input type="text" name="<?php echo esc_attr($meta_id . '[linkcta][name]' );?>" id="<?php echo esc_attr($meta_id . '[linkcta][name]' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['linkcta']['name'])){ echo esc_attr($meta['linkcta']['name']);} ?>">
+            </li>
+            <li>
+              <?php esc_html_e( 'slug de la pagina', 'sky-tulum' );?> <input type="text" name="<?php echo esc_attr($meta_id . '[linkcta][ref]' );?>" id="<?php echo esc_attr($meta_id . '[linkcta][ref]' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['linkcta']['ref'])){ echo esc_attr($meta['linkcta']['ref']);} ?>">
+            </li>
+          </div>
+        </div>
+        <br>
+      <?php
+    },
     'title-2' => function ($meta, $meta_id){
       ?>
         <div class="custom-field" >
@@ -374,6 +390,7 @@
     'custom-fields'  =>   array(
       $custom_fields['hero'],
       $custom_fields['images'],
+      $custom_fields['linkcta']
       // $custom_fields['text'],
     ) 
   );
