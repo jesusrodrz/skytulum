@@ -160,7 +160,6 @@ if (isset($meta['images'])) {
   endforeach;
 }
 ?>
-?>
       </section>
       
 <?php 
