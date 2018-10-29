@@ -47,9 +47,9 @@
     }
     &__fig:nth-of-type(4):hover &__cap, &__fig:nth-of-type(4).active &__cap{
       transform: rotateY(0deg) rotateX(0deg) scale(1);
-      border: solid 1px color(primary);
-      background-color: color(primary, trans80);
-      color: color(primary);
+      background-color: #2e2d38;
+      border: solid 3px #2B2A35;
+
     }
   }
   @include media(md){
