@@ -28,7 +28,7 @@
     <?php  endif; ?>
     <button class="up-btn" id="btnUp"><i class="icon-up"></i> <span class="up-btn__text"><?php esc_html_e('Inicio','sky-tulum'); ?></span>  </button>
   <footer class="footer">
-    <section class="footer__section notices-ft">
+    <!-- <section class="footer__section notices-ft">
       <h2 class="footer__title notices-ft__title"><?php esc_html_e('Noticias','sky-tulum'); ?></h2>
       <?php 
       $args = array(
@@ -60,7 +60,7 @@
       endwhile;
       endif
       ?>
-    </section>
+    </section> -->
     <section class="footer__section subcribe">
       <h2 class="footer__title subcribe__title contact__title t-uppercase"><?php echo _e( 'Suscribirse', 'sky-tulum' );?></h2>
       <?php echo do_shortcode( '[contact-form-7 id="111" title="Suscribete"]' ); ?>

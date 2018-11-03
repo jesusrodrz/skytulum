@@ -74,9 +74,11 @@ class Menu {
     // e.preventDefault();
     const target = e.target,
       isLink = e.target.parentElement.nodeName === 'LI',
+      isLang = e.target.parentElement.contains('.nav-lang'),
+      isLangM = e.target.parentElement.contains('.nav-lang--mobile'),
       isSubmit = e.target.classList.contains('btn-white')
     // check if is a link and not a button
-    if (!isLink && !isSubmit )  e.preventDefault() 
+    if (!isLink && !isSubmit && !isLang && !isLangM )  e.preventDefault() 
     console.log(target,e)
     // mobile menu
     if (window.innerWidth < 864) {
