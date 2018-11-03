@@ -36,6 +36,13 @@
     left: 50%;
     transform: translateX(-50%)
   }
+  // @include media(lg){
+  //   display: none;
+  //   position: relative;
+  //   top: unset;
+  //   left: unset;
+  //   transform: translateX(0);
+  // }
   &__img{
     display: block;
     height: 100%;
