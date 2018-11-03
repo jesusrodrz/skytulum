@@ -9,6 +9,38 @@
   flex-direction: row;
   }
 }
+.nav-lang,.nav-lang--mobile{
+  display: none;
+  position: absolute ;
+  font-family: Raleway;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+.nav-lang{
+  @include media(md){
+    display: flex;
+  }
+  z-index: 3000;
+  &__link{
+    margin: 0 .2em;
+    text-transform: capitalize;
+    &.active,&:hover{
+      font-weight:bolder; 
+    }
+  }
+}
+.nav-lang--mobile{
+  @include media(md,max){
+    display: flex;
+    top: 2em;
+    left:50%;
+    transform: translateY(0) translateX(-50%);
+    justify-content: center;
+    font-size: 1.5em;
+  }
+}
 .menu{
   &,ul{
     display: none;
@@ -32,9 +64,25 @@
     transform: translateX(100%);
     transition: transform ease-in-out .5s;    
     z-index: 2000;
+    @include media(lg){
+      position: relative;
+      transform: translateX(0);
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+      background-color: transparent;
+    }
   }
   &.active{
     transform: translateX(0);
+  }
+  &__logo.main-logo{
+    order: 4;
+    // justify-self: center;
+    @include media(lg){
+      // display: flex;
+
+    }
   }
   &__item{
     margin: .5em 0;
@@ -48,6 +96,34 @@
       --theme-color:#{color(primary,trans20)};
       color: color(black)
     }
+    @include media(lg){
+      // width: 6em;
+      // margin: 0 1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // background-color: wheat;
+      &:first-of-type{
+        display: none;
+      }
+      &:nth-of-type(1){
+      }
+      &:nth-of-type(2){
+      }
+      &:nth-of-type(3){
+        margin-right: 10%;
+        transform: translateX(-20%);
+      }
+      &:nth-of-type(4){
+      }
+      &:nth-of-type(5){
+      }
+      &:hover::before,&.active::before{
+        width: 100% !important;
+        top: 100%;
+        height: 3px !important;
+      }
+    }
   }
   &__link{
     text-transform: uppercase;
@@ -58,11 +134,16 @@
     font-size: 1.4em;
     font-family: Raleway;
 
+
   }
   &__btn{
     width: calc( #{$header-height} * 1.5);
     display: flex;
     transition: transform ease-in-out .2s;
+    @include media(lg){
+      display: none;
+
+    }
     &:active{
       transform: scale(.8)
     }
@@ -114,6 +195,7 @@
     left: 1em;
     height: 40px;
     width: 40px;
+
   }
   &__icon--close{
     @extend .menu__icon;
