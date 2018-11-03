@@ -7,7 +7,8 @@ function get_lang_links(){
 			if ($i>0) {
 				?>/<?php
 			}
-			?>
+			?>	
+			<!-- lang 1 -->
 				<a class="nav-lang__link" href="<?php echo $l['url'] ?>"><?php echo $l['language_code'] ?></a>
 			<?php
 		endforeach;
@@ -56,7 +57,7 @@ function print_custom_menu($menu_name) {
 						<?php
 					endforeach;
 					?></ul>
-					<div class="nav-lang--mobile">
+					<div class="nav-lang">
 						<?php get_lang_links(); ?>
 					</div>
 					<a class="cta-btn" id="ctaBtn" data-jsonsrc="<?php get_asset('assets/particlesjs-config.1.json')?>" href="#"><span class="cta-btn__text"><?php echo _e( 'Solicita <br> Info', 'sky-tulum' ); ?></span></a>
