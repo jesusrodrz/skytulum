@@ -84,3 +84,73 @@
 .icon-arrow-right:before {
   content: "\e906";
 }
+
+
+
+.icon-uniF101:before,.icon-instagram:before {
+  content: "\f101";
+}
+.icon-uniF102:before,.icon-facebook:before  {
+  content: "\f102";
+}
+.icon-uniF100:before,.icon-linkedin:before  {
+  content: "\f100";
+}
+.icon-social-white{
+  position: relative;
+  &::before{
+    position: relative;
+    z-index: 20;
+  }
+  &::after{
+    position: absolute;
+    z-index: 10;
+    content: "";
+    background-color: white;
+    width: calc(100% );
+    height:calc(100% );
+    border-radius: 30%;
+    left: 0;
+    top: 50%;
+    transform: translateY(calc(-50% )) scale(.9);
+    
+  }
+}
+
+
+.icon-uniF105:before {
+  content: "\f105";
+}
+.icon-uniF106:before {
+  content: "\f106";
+}
+.icon-uniF10A:before {
+  content: "\f10a";
+}
+.icon-uniF104:before {
+  content: "\f104";
+}
+.icon-uniF1001:before {
+  content: "\f103";
+}
+.icon-uniF1021:before {
+  content: "\f107";
+}
+.icon-uniF109:before {
+  content: "\f109";
+}
+.icon-uniF107:before {
+  content: "\f108";
+}
+.icon-uniF10B:before {
+  content: "\f10b";
+}
+.icon-uniF103:before {
+  content: "\f10c";
+}
+.icon-uniF1011:before {
+  content: "\f10d";
+}
+.icon-uniF108:before {
+  content: "\f10e";
+}
