@@ -67,7 +67,14 @@
     </section>
     <section class="footer__section develop-copy">
       <h2 class="footer__title"><?php echo _e( 'Un desarrollo de', 'sky-tulum' );?></h2>
-      <figure class="develop-copy__fig"><img class="develop-copy__img" src="<?php echo get_stylesheet_directory_uri();?>/dist/assets/img/Mia.png" alt="alt"></figure>
+      <div class="develop-copy__fig">
+        <nav class="develop-copy__nav">
+          <a class="develop-copy__link" href="#"><i class="icon-facebook icon-social-white"></i></a>
+          <a class="develop-copy__link" href="#"><i class="icon-instagram icon-social-white"></i></a>
+          <a class="develop-copy__link" href="#"><i class="icon-linkedin icon-social-white"></i></a>
+        </nav>
+        <img class="develop-copy__img" src="<?php echo get_stylesheet_directory_uri();?>/dist/assets/img/Mia.png" alt="alt">
+      </div>
     </section>
   </footer>
   <?php wp_footer(); ?>
