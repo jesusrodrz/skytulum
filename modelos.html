@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200|Scheherazade&amp;amp;subset=latin-ext">
-  <link href="css/index.css?c5d92dcc34156225c464" rel="stylesheet"><link href="css/admin.css?c5d92dcc34156225c464" rel="stylesheet"></head>
+  <link href="css/index.css?905600f993bc74443dc4" rel="stylesheet"><link href="css/admin.css?905600f993bc74443dc4" rel="stylesheet"></head>
   <body>
     <header class="main-header">
       <figure class="main-logo"><img class="main-logo__img" src="assets/img/skytulum-logo.png" alt="Sky Tulum logo"></figure>
           <nav class="main-nav" id="mainNavigation"><a class="menu__btn" id="menuOpen" href="#">
               <div class="menu__icon"><span class="menu__icon-span"></span><span class="menu__icon-span"></span><span class="menu__icon-span"></span></div><span class="menu__text">Menu</span></a>
-            <ul class="menu" id="mainMenu"><a class="menu__btn--close" id="menuClose" href="#">
-                <div class="menu__icon--close"><span class="menu__icon--close-span"></span><span class="menu__icon--close-span"></span></div></a>
+            <ul class="menu" id="mainMenu">
+              <div class="nav-lang--mobile"><a class="nav-lang__link" href="#">Es</a>/<a class="nav-lang__link" href="#">En</a></div><a class="menu__btn--close" id="menuClose" href="#">
+                <div class="menu__icon--close"><span class="menu__icon--close-span"></span><span class="menu__icon--close-span"> </span></div></a>
               <li class="menu__item active"><a class="menu__link" href="./">Inicio</a>
               </li>
               <li class="menu__item"><a class="menu__link" href="proyecto.html">Proyecto</a>
@@ -24,7 +25,8 @@
               </li>
               <li class="menu__item"><a class="menu__link" href="noticias.html">Noticias</a>
               </li>
-            </ul><a class="cta-btn" id="ctaBtn" href="#" data-jsonsrc="js/data/particlesjs-config-cta.json"><span class="cta-btn__text">Solicita <br> Info</span></a>
+            </ul>
+            <div class="nav-lang"><a class="nav-lang__link" href="#">Es</a>/<a class="nav-lang__link" href="#">En</a></div><a class="cta-btn" id="ctaBtn" href="#" data-jsonsrc="js/data/particlesjs-config-cta.json"><span class="cta-btn__text">Solicita <br> Info</span></a>
           </nav>
     </header>
     <main class="main-content">
@@ -75,46 +77,21 @@
         <div class="particles__bg"></div>
       </div>
     </main>
+    <button class="up-btn" id="btnUp"><i class="icon-up"></i> <span class="up-btn__text">Inicio</span>  </button>
     <footer class="footer">
-      <button class="up-btn" id="btnUp"><i class="icon-up"></i> <span class="up-btn__text">Inicio</span>  </button>
-      <section class="footer__section notices-ft">
-        <h2 class="footer__title notices-ft__title">Noticias</h2>
-        <article class="notice-item">
-          <h3 class="notice-item__title"><a class="notice-item" href="#" target="blank">La primera piedra del desarrollo</a></h3>
-          <p class="notice-item__text">
-            <time class="notice-item__date" datetime="2018-10-12">12 octubre 2018</time>
-          </p>
-        </article>
-        <article class="notice-item">
-          <h3 class="notice-item__title"><a class="notice-item" href="#" target="blank">Tulum, patrimonio de la humanidad</a></h3>
-          <p class="notice-item__text">
-            <time class="notice-item__date" datetime="2018-10-12">12 octubre 2018</time>
-          </p>
-        </article>
-        <article class="notice-item">
-          <h3 class="notice-item__title"><a class="notice-item" href="#" target="blank">¿Qué hacer en Tulum?</a></h3>
-          <p class="notice-item__text">
-            <time class="notice-item__date" datetime="2018-10-12">12 octubre 2018</time>
-          </p>
-        </article>
-        <article class="notice-item">
-          <h3 class="notice-item__title"><a class="notice-item" href="#" target="blank">La vida en el mar es mas sabrosa</a></h3>
-          <p class="notice-item__text">
-            <time class="notice-item__date" datetime="2018-10-12">12 octubre 2018</time>
-          </p>
-        </article>
-      </section>
       <section class="footer__section subcribe">
         <h2 class="footer__title subcribe__title contact__title t-uppercase">Suscribirse</h2>
         <form class="subscribe__form">
-          <input class="contact__input" type="email" name="email" placeholder="Correo Electrónico">
+          <input class="subscribe__input contact__input" type="email" name="email" placeholder="Correo Electrónico">
           <button class="btn-white subscribe__btn btn" type="submit">Enviar</button>
         </form>
       </section>
       <section class="footer__section develop-copy">
         <h2 class="footer__title">Un desarrollo de</h2>
-        <figure class="develop-copy__fig"><img class="develop-copy__img" src="assets/img/Mia.png" alt="alt"></figure>
+        <div class="develop-copy__fig">
+          <nav class="develop-copy__nav"><a class="develop-copy__link" href="#"><i class="icon-facebook icon-social-white"></i></a><a class="develop-copy__link" href="#"><i class="icon-instagram icon-social-white"></i></a><a class="develop-copy__link" href="#"><i class="icon-linkedin icon-social-white"></i></a></nav><img class="develop-copy__img" src="assets/img/Mia.png" alt="alt">
+        </div>
       </section>
     </footer>
-  <script type="text/javascript" src="js/index.js?c5d92dcc34156225c464"></script><script type="text/javascript" src="js/admin.js?c5d92dcc34156225c464"></script></body>
+  <script type="text/javascript" src="js/index.js?905600f993bc74443dc4"></script><script type="text/javascript" src="js/admin.js?905600f993bc74443dc4"></script></body>
 </html>
