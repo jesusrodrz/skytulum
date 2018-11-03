@@ -1,28 +1,18 @@
 
+button#btnUp.up-btn #[i.icon-up] #[span.up-btn__text Inicio]  
 footer.footer
-  button#btnUp.up-btn #[i.icon-up] #[span.up-btn__text Inicio]  
-  section.footer__section.notices-ft
-    h2.footer__title.notices-ft__title Noticias
-    article.notice-item
-      h3.notice-item__title: a.notice-item(href="#",target="blank") La primera piedra del desarrollo
-      p.notice-item__text: time(datetime="2018-10-12").notice-item__date 12 octubre 2018
-    article.notice-item
-      h3.notice-item__title: a.notice-item(href="#",target="blank") Tulum, patrimonio de la humanidad
-      p.notice-item__text: time(datetime="2018-10-12").notice-item__date 12 octubre 2018
-    article.notice-item
-      h3.notice-item__title: a.notice-item(href="#",target="blank") ¿Qué hacer en Tulum?
-      p.notice-item__text: time(datetime="2018-10-12").notice-item__date 12 octubre 2018
-    article.notice-item
-      h3.notice-item__title: a.notice-item(href="#",target="blank") La vida en el mar es mas sabrosa
-      p.notice-item__text: time(datetime="2018-10-12").notice-item__date 12 octubre 2018
   section.footer__section.subcribe
     h2.footer__title.subcribe__title.contact__title.t-uppercase Suscribirse
     form.subscribe__form
-      input.contact__input(type="email", name="email", placeholder="Correo Electrónico")
+      input.subscribe__input.contact__input(type="email", name="email", placeholder="Correo Electrónico")
       button.btn-white.subscribe__btn.btn(type="submit") Enviar
   section.footer__section.develop-copy
     h2.footer__title Un desarrollo de
-    figure.develop-copy__fig
+    div.develop-copy__fig
+      nav.develop-copy__nav
+        a(href="#").develop-copy__link: i.icon-facebook.icon-social-white
+        a(href="#").develop-copy__link: i.icon-instagram.icon-social-white
+        a(href="#").develop-copy__link: i.icon-linkedin.icon-social-white
       img.develop-copy__img(src=img('Mia','png'), alt="alt")
   
 
