@@ -29,20 +29,19 @@
 .main-logo{
   height: 100%;
   padding:.2em 0;
-  // margin-left: .8em;
   @include media(md){
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    z-index: 5010;
+    
   }
-  // @include media(lg){
-  //   display: none;
-  //   position: relative;
-  //   top: unset;
-  //   left: unset;
-  //   transform: translateX(0);
-  // }
+  &__link{
+    cursor:pointer;
+    display: block;
+    height: 100%;
+  }
   &__img{
     display: block;
     height: 100%;
