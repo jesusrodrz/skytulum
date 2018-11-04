@@ -74,8 +74,8 @@ class Menu {
     // e.preventDefault();
     const target = e.target,
       isLink = e.target.parentElement.nodeName === 'LI',
-      isLang = e.target.parentElement.contains('.nav-lang'),
-      isLangM = e.target.parentElement.contains('.nav-lang--mobile'),
+      isLang = e.target.parentElement.classList.contains('.nav-lang'),
+      isLangM = e.target.parentElement.classList.contains('.nav-lang--mobile'),
       isSubmit = e.target.classList.contains('btn-white')
     // check if is a link and not a button
     if (!isLink && !isSubmit && !isLang && !isLangM )  e.preventDefault() 
@@ -92,9 +92,18 @@ class Menu {
       if (this.openBtn.contains(target)) this.openContact(true)
       if (this.cta.contains(target)) this.openContact(false)
       if (this.closeBtn.contains(target)) this.closeContact()
-      if (this.closeContactBtn.contains(target)) this.closeContact()
-      if (this.closeMenuBtn.contains(target)) this.closeContact()
-      if (this.modal === target ) this.closeContact()
+      if(this.closeContactBtn) {
+
+        if (this.closeContactBtn.contains(target)) this.closeContact()
+      }
+      if(this.closeMenuBtn) {
+
+        if (this.closeMenuBtn.contains(target)) this.closeContact()
+      }
+      if (this.modal) {
+        
+        if (this.modal === target ) this.closeContact()
+      }
     }
 
   }
