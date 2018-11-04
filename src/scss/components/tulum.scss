@@ -51,6 +51,9 @@
         @include media(md,max){
           font-size: .6em;
         }
+        &:hover{
+          text-decoration: none;
+        }
       }
     }
 

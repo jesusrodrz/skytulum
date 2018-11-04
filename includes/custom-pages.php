@@ -14,7 +14,7 @@
     'title' => function ($meta, $meta_id){
       ?>
         <div class="custom-field" >
-          <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[title]' );?>"><?php esc_html_e( 'Titulo', 'sky-tulum' );?></label>
+          <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[title]' );?>"><?php esc_html_e( 'Primer Titular', 'sky-tulum' );?></label>
           <input type="text" name="<?php echo esc_attr($meta_id . '[title]' );?>" id="<?php echo esc_attr($meta_id . '[title]' );?>" class="regular-text" value="<?php if (is_array($meta) && isset($meta['title'])){ echo esc_attr($meta['title']);} ?>">
           <!-- <?php esc_html_e( 'El valor por defecto es el titulo de la página', 'sky-tulum' );?> -->
         </div>
@@ -380,6 +380,7 @@
     'template'       =>   'home.php',
     'custom-fields'  =>   array(
       $custom_fields['hero'],
+      $custom_fields['title'],
       $custom_fields['gallery']
     )
   );

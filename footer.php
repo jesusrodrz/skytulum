@@ -62,7 +62,7 @@
       ?>
     </section> -->
     <section class="footer__section subscribe">
-      <h2 class="footer__title subscribe__title contact__title t-uppercase"><?php echo _e( 'Suscribirse', 'sky-tulum' );?></h2>
+      <h2 class="footer__title subscribe__title contact__title"><?php echo _e( 'Suscribirse', 'sky-tulum' );?></h2>
 
       <?php echo do_shortcode( '[contact-form-7 id="111" title="Suscribete"]' ); ?>
     </section>

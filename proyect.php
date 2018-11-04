@@ -17,13 +17,13 @@ if (isset($post_meta['hero'])) {
   $title = $post_meta['hero']['title'];
   $imgs = $post_meta['hero']['gallery'];
 } else {
-  $title = the_title();
+  $title = the_title($before = '', $after = '', $echo = false );
   $img = get_stylesheet_directory_uri() . '/dist/assets/img/interior.jpg';
 }
 
 ?>  
 <section class="hero section" id="slider"> 
-  <h1 class="hero__title title-1 bg-square-2"><?php echo $title;?></h1>
+  <h1 class="hero__title title-1 bg-square-2"><?php esc_html_e( $title, 'sky-tulum' );?></h1>
   <?php	
       if(is_array($imgs) &&  isset($post_meta['hero']['gallery']) ) {
       

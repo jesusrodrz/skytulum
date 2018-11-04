@@ -19,13 +19,15 @@ get_header();
           $title = $post_meta['hero']['title'];
           $imgs = $post_meta['hero']['gallery'];
         } else {
-          $title = the_title();
+          $title = the_title($before = '', $after = '', $echo = false );
           $img = get_stylesheet_directory_uri() . '/dist/assets/img/interior.jpg';
         }
 
       ?>  
         <section class="hero section" id="slider">
-          <h1 class="hero__title title-1 bg-square-1"><?php echo $title;?></h1>
+          <h1 class="hero__title title-1 bg-square-1">
+            <?php echo $title;?>
+          </h1>
           <?php	
               if(is_array($imgs) &&  isset($post_meta['hero']['gallery']) ) {
               
@@ -40,7 +42,16 @@ get_header();
           <img class="hero__flor" src="<?php get_asset('assets/img/flordevida.png')?>" alt="flor de la vida">
         </section> 
         <section class="section-description description">
-          <h2 class="description__title title-2 t-uppercase"><?php esc_html_e('Descripción del Proyecto','sky-tulum'); ?></h2>
+          <h2 class="description__title title-2 t-uppercase">
+            <?php 
+              if (isset($post_meta['title'])) {
+                esc_html_e($post_meta['title'],'sky-tulum');
+              } else {
+
+                esc_html_e('Descripción del Proyecto','sky-tulum'); 
+              }
+            ?>
+          </h2>
           <div class="description__text"><?php the_content();  ?></div>
         </section>
         

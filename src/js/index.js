@@ -1,5 +1,6 @@
 import '../scss/style.scss'
 import 'particles.js'
+import './cutter.js'
 
 class Menu {
   constructor (options) {
@@ -74,8 +75,8 @@ class Menu {
     // e.preventDefault();
     const target = e.target,
       isLink = e.target.parentElement.nodeName === 'LI',
-      isLang = e.target.parentElement.classList.contains('.nav-lang'),
-      isLangM = e.target.parentElement.classList.contains('.nav-lang--mobile'),
+      isLang = e.target.parentElement.classList.contains('nav-lang'),
+      isLangM = e.target.parentElement.classList.contains('nav-lang--mobile'),
       isSubmit = e.target.classList.contains('btn-white')
     // check if is a link and not a button
     if (!isLink && !isSubmit && !isLang && !isLangM )  e.preventDefault() 
@@ -504,4 +505,29 @@ if (window.innerWidth < 864) {
   const lazy = new LazyLoad('level')
   lazy.init()
 }
-// if ()  
+
+class Truncate {
+  constructor (element) {
+    this.container = element
+    
+  }
+
+  init = () => {
+    // this.parent.addEventListener('click', this.handleClick)
+    Cutter.run(this.container, this.container, 40, {viewMoreText:this.container.dataset.btn.toString(), more:this.container.dataset.btn})
+  }
+  handleClick = (e) => {
+    // if(e.target === this.btn) this.show()
+  }
+  show = () => {
+    
+  }
+}
+
+const truncateContainer = document.getElementById('truncate'),
+  truncatedContainer = document.getElementById('truncated'),
+  cutBtn = document.getElementById('cutBtn')
+if (truncateContainer ) {
+  const truncate = new Truncate(truncateContainer)
+  truncate.init()
+}

@@ -38,7 +38,17 @@
   &__btn--prev{
     left: .5em;
   }
+  &__btn{
+    width: 100%;
+    font-size: 1em;
+    @include media(md,max){
+      font-size: .6em;
+    }
+  }
   &__text{
+    @at-root #truncate > br{
+      display: none
+    }
     @include media(md){
 
       padding: 1em 4em;

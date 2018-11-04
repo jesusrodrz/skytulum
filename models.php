@@ -16,7 +16,7 @@ get_header();
           $title = $post_meta['hero']['title'];
           $imgs = $post_meta['hero']['gallery'];
         } else {
-          $title = the_title();
+          $title = the_title($before = '', $after = '', $echo = false );
           $img = get_stylesheet_directory_uri() . '/dist/assets/img/interior.jpg';
         }
 

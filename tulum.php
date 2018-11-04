@@ -15,13 +15,13 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
           $title = $post_meta['hero']['title'];
           $imgs = $post_meta['hero']['gallery'];
         } else {
-          $title = the_title();
+          $title = the_title($before = '', $after = '', $echo = false );
           $img = get_stylesheet_directory_uri() . '/dist/assets/img/interior.jpg';
         }
 
       ?>  
         <section class="hero section" id="slider">
-          <h1 class="hero__title title-1 bg-square-2"><?php echo $title;?></h1>
+          <h1 class="hero__title title-1 bg-square-2"><?php esc_html_e( $title, 'sky-tulum' );?></h1>
           <?php	
               if(is_array($imgs) &&  isset($post_meta['hero']['gallery']) ) {
               
@@ -36,7 +36,13 @@ $post_meta = get_post_meta( $post->ID,  'tulum_custom_field', true );
           <img class="hero__flor" src="<?php get_asset('assets/img/flordevida.png')?>" alt="flor de la vida">
         </section> 
   <section class="tulum">
-    <h2 class="title-2 t-uppercase tulum__title"><?php if (isset($post_meta['title'])) {echo $post_meta['title'];};?></h2>
+    <h2 class="title-2 t-uppercase tulum__title">
+      <?php 
+        if (isset($post_meta['title'])) {
+          esc_html_e($post_meta['title'],'sky-tulum');
+        }
+      ?>
+    </h2>
     <div class="tulum__text">
       <div class="tulum__text-container">
         <?php the_content(); ?>
@@ -84,7 +90,13 @@ endif
   if( $posts->have_posts() ): 
     ?>
       <section class="section" id="posts">
-        <h2 class="title-2 t-uppercase"><?php if (isset($post_meta['title2'])) {echo $post_meta['title2'];};?></h2>
+        <h2 class="title-2 t-uppercase">
+          <?php 
+            if (isset($post_meta['title2'])) {
+              esc_html_e($post_meta['title2'],'sky-tulum');
+            }
+          ?>
+        </h2>
       </section>
       <section class="posts" id="posts">
       <img class="tulum__palm" src="<?php get_asset('assets/img/circulo-rosa.png'); ?>" alt="">
