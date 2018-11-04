@@ -92,9 +92,11 @@ endif
                           // if( $item['image'] != ' ' || $item['image'] != ''  ){ continue; }
                        ?>
                         <tr class="table-level__row">
-                          <th class="table-level__col"><?php if (isset($item['unit'])) echo $item['unit']; ?></th>
-                          <th class="table-level__col"><?php if (isset($item['type'])) echo $item['type']; ?></th>
-                          <th class="table-level__col"><?php if (isset($item['total'])) echo $item['total']; ?></th>
+                          <th class="table-level__col"><?php if (isset($item['unit'])) esc_html_e( $item['unit'], 'sky-tulum' ); ?></th>
+                          <th class="table-level__col"><?php if (isset($item['type'])) esc_html_e( $item['type'], 'sky-tulum' ); ?></th>
+                          <th class="table-level__col"><?php if (isset($item['toatl'])) esc_html_e( $item['toatl'], 'sky-tulum' ); ?></th>
+                          <!-- <th class="table-level__col"><?php if (isset($item['type'])) echo $item['type']; ?></th>
+                          <th class="table-level__col"><?php if (isset($item['total'])) echo $item['total']; ?></th> -->
                           <th class="table-level__col table-level__col--btn">
                             <button class="t-uppercase table-level__btn" data-src="<?php if (isset($item['image'])) echo $image_str; ?>" data-area="<?php if (isset($item['total'])) echo $item['total']; ?>"><i class="icon-image"></i>  Ver</button>
                           </th>
