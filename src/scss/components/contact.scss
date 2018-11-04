@@ -119,7 +119,7 @@
   display: none;
   top: 0;
   z-index: 6000;
-
+  
   .menu{
     display: none;
     position: static;
@@ -158,7 +158,9 @@
     &__form{
       align-items: flex-start;
     }
-
+    .menu__btn--close{
+      display: flex;
+    }
     .menu__icon--close-span{
       background-color: #fff;
     }
