@@ -25,10 +25,13 @@
   </head>
   <body>
     <header class="main-header">
-      <figure class="main-logo"><img class="main-logo__img" src="<?php echo get_stylesheet_directory_uri();?>/dist/assets/img/skytulum-logo.png" alt="Sky Tulum logo"></figure>
-          <?php 
-            print_custom_menu('main-menu');
-          ?>
-          
+      <figure class="main-logo">
+        <a class="main-logo__link" href="<?php echo get_home_url(); ?>">
+          <img class="main-logo__img" src="<?php echo get_stylesheet_directory_uri();?>/dist/assets/img/skytulum-logo.png" alt="Sky Tulum logo">
+        </a>
+      </figure>
+      <?php 
+        print_custom_menu('main-menu');
+      ?>
     </header>
     <main class="main-content">
