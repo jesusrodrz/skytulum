@@ -28,7 +28,7 @@ while ( have_posts() ) : the_post();
 </section>
 <section class="post">
   <div class="post__text">
-    <?php the_content(); ?>
+    <div id="truncate" data-btn='<?php esc_html_e('Leer Más','sky-tulum');?>' ><?php the_content(); ?></div>
   </div>
 </section>
 <?php 
