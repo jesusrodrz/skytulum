@@ -2,16 +2,17 @@
 function get_lang_links(){
 	$languages = icl_get_languages('skip_missing=1');
   if(1 < count($languages)){
-		
+		$index = 0;
 		foreach($languages as $i => $l):
-			if ($i>0) {
+			if ($index>0) {
 				echo ' / ';
 			}
-			echo '<!-- '. $i . '-->';
+			echo '<!-- '. $index . '-->';
 			?>	
 			<!-- lang 1 -->
 				<a class="nav-lang__link <?php echo ($l['active']) ? 'active' : ''  ?>" href="<?php echo $l['url'] ?>"><?php echo $l['language_code'] ?></a>
 			<?php
+			$index++;
 		endforeach;
   }
 
