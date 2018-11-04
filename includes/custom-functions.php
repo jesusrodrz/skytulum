@@ -5,9 +5,9 @@ function get_lang_links(){
 		
 		foreach($languages as $i => $l):
 			if ($i>0) {
-				echo '<!-- '. $i . '-->';
 				echo ' / ';
 			}
+			echo '<!-- '. $i . '-->';
 			?>	
 			<!-- lang 1 -->
 				<a class="nav-lang__link <?php echo ($l['active']) ? 'active' : ''  ?>" href="<?php echo $l['url'] ?>"><?php echo $l['language_code'] ?></a>
