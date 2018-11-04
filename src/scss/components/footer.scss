@@ -19,6 +19,9 @@
     }
     --paddin-footer-sec:.8em;
     padding: var(--paddin-footer-sec);
+    @include media(md){
+      padding-bottom: calc(var(--paddin-footer-sec) + 1.66em);
+    }
   }
   &__title{
     text-align: left;
