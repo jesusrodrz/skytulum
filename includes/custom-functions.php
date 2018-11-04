@@ -9,7 +9,7 @@ function get_lang_links(){
 			}
 			?>	
 			<!-- lang 1 -->
-				<a class="nav-lang__link" href="<?php echo $l['url'] ?>"><?php echo $l['language_code'] ?></a>
+				<a class="nav-lang__link <?php echo ($l['active'])? 'active' : ''  ?>" href="<?php echo $l['url'] ?>"><?php echo $l['language_code'] ?></a>
 			<?php
 		endforeach;
   }

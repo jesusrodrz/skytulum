@@ -56,13 +56,12 @@ get_header();
     <h2 class="models__title section__title title-2 bg-square-center t-uppercase"> <?php the_title();?></h2>
     <div class="models__description">
       <p class="models__text"> <?php 
-        if (isset($post_meta['area'])) echo $post_meta['area']; 
+        if (isset($post_meta['area'])) esc_html_e( $post_meta['area'], 'sky-tulum' ); 
       ?></p>
       <ul class="models__list">
         <?php	
           if (isset($post_meta['list'])) {
-            // echo 
-            // $list_items = explode('.',$post_meta['list']);
+            
             $list_items = $post_meta['list'];
             foreach ($list_items as $index => $item):
               if ($item == '' || $item == ' ') {continue;}
