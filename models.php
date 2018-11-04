@@ -61,7 +61,7 @@ get_header();
       <ul class="models__list">
         <?php	
           if (isset($post_meta['list'])) {
-            
+
             $list_items = $post_meta['list'];
             foreach ($list_items as $index => $item):
               if ($item == '' || $item == ' ') {continue;}

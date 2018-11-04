@@ -5,7 +5,8 @@ function get_lang_links(){
 		
 		foreach($languages as $i => $l):
 			if ($i>0) {
-				echo ' / '
+				echo '<!-- '. $i . '-->';
+				echo ' / ';
 			}
 			?>	
 			<!-- lang 1 -->
