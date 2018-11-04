@@ -12,11 +12,18 @@
     grid-template-columns: 20% 1fr  20%;
     grid-template-columns: 2fr 8fr 2fr;
     grid-template-rows: repeat(2,auto);
-    grid-template-areas: ".  title ." 
-                         ".  table ."
+    
+    &:nth-of-type(odd){
+      grid-template-areas: "title title ." 
+                           "table table .";
+    }
+    &:nth-of-type(even){
+      grid-template-areas: ". title title" 
+                           ". table table";
+    }
   }
   @include media(lg){
-    grid-template-columns: 15% 1fr  15%;
+    // grid-template-columns: 2fr 8fr 2fr;
   }
   &__table{
     grid-area: table;
@@ -65,10 +72,27 @@
     background-color:  color(primary,trans80);
     background-color:  #f0f1ff;
     background-color:  #e6e7fe;
-
   }
   &__col{
     padding: .5em 1em;
+  }
+  &__col--sold{
+    position: relative;
+  }
+  &__sold{
+    --size: 3em;
+    font-size: .9em;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 90%;
+    left:0;
+    display: flex;
+    align-items: center;
+    &::before{
+      border-radius: 1000px;
+      height:  var(--size);
+      width: var(--size);
+    }
   }
   &__col--btn{
     @include media(md,max){

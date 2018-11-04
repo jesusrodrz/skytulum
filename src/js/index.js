@@ -514,7 +514,7 @@ class Truncate {
 
   init = () => {
     // this.parent.addEventListener('click', this.handleClick)
-    Cutter.run(this.container, this.container, 40, {viewMoreText:this.container.dataset.btn.toString(), more:this.container.dataset.btn})
+    Cutter.run(this.container, this.container, 120, {viewMoreText:this.container.dataset.btn.toString(), more:this.container.dataset.btn})
   }
   handleClick = (e) => {
     // if(e.target === this.btn) this.show()

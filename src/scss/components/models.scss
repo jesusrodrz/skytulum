@@ -95,10 +95,10 @@
   &__sold{
     font-family: Raleway;
     font-size: 1.5em;
+    top: 3em;
     color: white;
     text-shadow: 1px 1px 3px rgb(119, 119, 119);
     position: absolute;
-    top: 3em;
     transition: transform .4s ease-out;
     &::before{
       position: absolute;

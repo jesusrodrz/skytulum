@@ -61,10 +61,6 @@ $post_types['models'] = array(
     'name'=>'specs',
     'post_id' =>'specs',
     'custom-fields' => array(
-      // $custom_fields['image'],
-      // $custom_fields['unit'],
-      // $custom_fields['type'],
-      // $custom_fields['total'],
       $custom_fields['level'],
     ) ,
     'args' =>  array(

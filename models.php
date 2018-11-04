@@ -8,6 +8,7 @@
 get_header();
 ?>
 <?php 
+    $sell = __('Vendido','sky-tulum');
     if ( have_posts() ) : 
       while ( have_posts() ) : the_post();
       $post_id = get_the_ID();
@@ -78,7 +79,7 @@ get_header();
         if (isset($post_meta['image'])) echo $post_meta['image']; 
       ?>" alt=""/>
       <?php 
-      if (isset($post_meta['sell'])) echo '<span class="models__sold">Vendido</span>'; 
+      if (isset($post_meta['sell'])) echo '<span class="models__sold">' . $sell . '</span>'; 
       ?>
     </figure>
   </article>

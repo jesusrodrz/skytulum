@@ -62,6 +62,7 @@
       justify-self: center;
       grid-area: title;
       margin-left: 1em;
+      transform: translateX(65%) ;
       &::before{
         width: 110%;
         left: 50%;
