@@ -116,10 +116,11 @@
           console.log('Map init')
 
           if (mapContainer) {
-            const myLatLng = {lat: 20.199254, lng: -87.477989}  
+            const myLatLng = {lat: 20.199254, lng: -87.477989},
+            mapCenter = {lat: 20.202531, lng: -87.462453}  
             const map = new google.maps.Map(mapContainer, {
               center: myLatLng,
-              zoom: 15,
+              zoom: 12,
               styles: mapStyle
             })
 
