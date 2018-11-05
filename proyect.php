@@ -90,9 +90,9 @@ endif
     </li>
   </ul>
   <?php
-    if (isset($meta['image'])) {
+    if (isset($post_meta['image'])) {
       $gallery_items = $meta['image'];
-      $$img= $meta['image'];
+      $$img= $post_meta['image'];
       // foreach ($gallery_items as $index => $img):
       ?>
         <figure class="amenities__fig">
