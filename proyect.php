@@ -50,6 +50,78 @@ if (isset($post_meta['hero'])) {
 endwhile;
 endif
 ?>
+<section class="amenities" id="amenities" >
+  <ul class="amenities__list">
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Sky Pool','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Carril de Nado','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Alberca','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Jacuzzi de Acrilico','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Cinema al aire libre','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('BBQ Brill','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Bar','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Gym','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Yoga Zone','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Área de lectura','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Cinema al aire libre','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Snack Bar','sky-tulum'); ?>
+    </li>
+    <!-- <li class="amenities__list-item">
+      <i class="icon-uniF105"></i><?php esc_html_e('Lavandería','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+      <i class="icon-uniF105"></i><?php esc_html_e('Concerge','sky-tulum'); ?>
+    </li> -->
+  </ul>
+  <?php
+    if (isset($meta['image'])) {
+      $gallery_items = $meta['image'];
+      $$img= $meta['image'];
+      // foreach ($gallery_items as $index => $img):
+      ?>
+        <figure class="amenities__fig">
+          <?php 
+            // if($index > 2 && isset($meta['linkcta']['name']) && isset($meta['linkcta']['ref']) ):
+            //   $link = home_url('/'.$meta['linkcta']['ref']) ;
+            //   $name =  $meta['linkcta']['name'];
+              ?>
+                <!-- <a class="amenities__cap t-uppercase" href="<?php 
+                // echo $link;
+                ?>" target="_blank" rel="noopener noreferrer"><?php 
+                // echo $name;
+                ?></a> -->
+              <?php
+            // endif;
+          ?>
+          <img class="amenities__img" src="<?php echo esc_attr( $img );?>" alt="skytulum">
+        </figure>
+      <?php
+      // endforeach;
+    }
+  ?>
+</section>
 <section class="section-specs specs" id="specsLightbox">
   <h2 class="specs__title section__title title-2 bg-square-center t-uppercase"><?php esc_html_e('Especificaciones','sky-tulum'); ?></h2>
   <?php
@@ -115,49 +187,7 @@ endif
     endwhile; endif;
   ?>
 </section>
-<section class="amenities">
-  <h2 class="amenities__title section__title title-2 bg-square-center t-uppercase"><?php esc_html_e('Amenidades','sky-tulum'); ?></h2>
-  <ul class="amenities__list">
-    <li class="amenities__list-item"><?php esc_html_e('Sky Pool','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('Carril de Nado','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('Alberca','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('Jacuzzi de Acrilico','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('Cinema al aire libre','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('BBQ Brill','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('Bar','sky-tulum'); ?></li>
-  </ul>
-  <ul class="amenities__list">
-    <li class="amenities__list-item"><?php esc_html_e('Gym','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('Yoga Zone','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('Área de lectura','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('Cinema al aire libre','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('Snack Bar','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('Lavandería','sky-tulum'); ?></li>
-    <li class="amenities__list-item"><?php esc_html_e('Concerge','sky-tulum'); ?></li>
-  </ul>
-  <?php
-    if (isset($meta['images'])) {
-      $gallery_items = $meta['images'];
-      foreach ($gallery_items as $index => $img):
-      ?>
-        
-        <figure class="amenities__fig">
-          <?php 
-            if($index > 2 && isset($meta['linkcta']['name']) && isset($meta['linkcta']['ref']) ):
-              $link = home_url('/'.$meta['linkcta']['ref']) ;
-              $name =  $meta['linkcta']['name'];
-              ?>
-                <a class="amenities__cap t-uppercase" href="<?php echo $link;?>" target="_blank" rel="noopener noreferrer"><?php echo $name;?></a>
-              <?php
-            endif;
-          ?>
-          <img class="amenities__img" src="<?php echo esc_attr( $img );?>" alt="skytulum">
-        </figure>
-      <?php
-      endforeach;
-    }
-  ?>
-</section>
+
       
 <?php 
 get_footer();

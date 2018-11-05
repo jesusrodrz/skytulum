@@ -524,10 +524,32 @@ class Truncate {
   }
 }
 
-const truncateContainer = document.getElementById('truncate'),
-  truncatedContainer = document.getElementById('truncated'),
-  cutBtn = document.getElementById('cutBtn')
+const truncateContainer = document.getElementById('truncate')
 if (truncateContainer ) {
   const truncate = new Truncate(truncateContainer)
   truncate.init()
+}
+
+{ 
+  const element = document.getElementById('amenities')
+  const isInViewport =  (elem) => {
+    var bounding = elem.getBoundingClientRect()
+    return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  }
+
+  const isVisible = () => {
+    if (isInViewport(element)) {
+      element.classList.add('active')
+      
+      window.removeEventListener('scroll', isVisible )
+
+    }
+  }
+  window.addEventListener('scroll', isVisible)
+  isVisible()
 }

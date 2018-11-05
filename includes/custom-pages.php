@@ -403,6 +403,7 @@
     //custom-field must be a array
     'custom-fields'  =>   array(
       $custom_fields['hero'],
+      $custom_fields['image'],
       $custom_fields['images'],
       $custom_fields['linkcta']
       // $custom_fields['text'],
