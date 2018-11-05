@@ -91,28 +91,12 @@ endif
   </ul>
   <?php
     if (isset($post_meta['image'])) {
-      $gallery_items = $meta['image'];
-      $$img= $post_meta['image'];
-      // foreach ($gallery_items as $index => $img):
+      $img= $post_meta['image'];
       ?>
         <figure class="amenities__fig">
-          <?php 
-            // if($index > 2 && isset($meta['linkcta']['name']) && isset($meta['linkcta']['ref']) ):
-            //   $link = home_url('/'.$meta['linkcta']['ref']) ;
-            //   $name =  $meta['linkcta']['name'];
-              ?>
-                <!-- <a class="amenities__cap t-uppercase" href="<?php 
-                // echo $link;
-                ?>" target="_blank" rel="noopener noreferrer"><?php 
-                // echo $name;
-                ?></a> -->
-              <?php
-            // endif;
-          ?>
           <img class="amenities__img" src="<?php echo esc_attr( $img );?>" alt="skytulum">
         </figure>
       <?php
-      // endforeach;
     }
   ?>
 </section>
