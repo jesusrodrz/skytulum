@@ -53,47 +53,41 @@ endif
 <section class="amenities" id="amenities" >
   <ul class="amenities__list">
     <li class="amenities__list-item">
-      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Sky Pool','sky-tulum'); ?>
+      <span class="amenities__icon" ><i class="icon-uniF1021"></i></span><?php esc_html_e('Carril de Nado','sky-tulum'); ?>
     </li>
     <li class="amenities__list-item">
-      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Carril de Nado','sky-tulum'); ?>
+      <span class="amenities__icon" ><i class="icon-uniF1011"></i></span><?php esc_html_e('Jacuzzi de Acrilico','sky-tulum'); ?>
     </li>
     <li class="amenities__list-item">
-      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Alberca','sky-tulum'); ?>
+      <span class="amenities__icon" ><i class="icon-uniF103"></i></span><?php esc_html_e('Cinema al aire libre','sky-tulum'); ?>
     </li>
     <li class="amenities__list-item">
-      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Jacuzzi de Acrilico','sky-tulum'); ?>
-    </li>
-    <li class="amenities__list-item">
-      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Cinema al aire libre','sky-tulum'); ?>
-    </li>
-    <li class="amenities__list-item">
-      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('BBQ Brill','sky-tulum'); ?>
+      <span class="amenities__icon" ><i class="icon-uniF104"></i></span><?php esc_html_e('BBQ Brill','sky-tulum'); ?>
     </li>
     <li class="amenities__list-item">
       <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Bar','sky-tulum'); ?>
     </li>
     <li class="amenities__list-item">
-      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Gym','sky-tulum'); ?>
+      <span class="amenities__icon" ><i class="icon-uniF106"></i></span><?php esc_html_e('Gym','sky-tulum'); ?>
     </li>
     <li class="amenities__list-item">
-      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Yoga Zone','sky-tulum'); ?>
+      <span class="amenities__icon" ><i class="icon-uniF107"></i></span><?php esc_html_e('Yoga Zone','sky-tulum'); ?>
     </li>
     <li class="amenities__list-item">
-      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Área de lectura','sky-tulum'); ?>
+      <span class="amenities__icon" ><i class="icon-uniF1021"></i></span><?php esc_html_e('Alberca','sky-tulum'); ?>
     </li>
     <li class="amenities__list-item">
-      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Cinema al aire libre','sky-tulum'); ?>
+      <span class="amenities__icon" ><i class="icon-uniF108"></i></span><?php esc_html_e('Área de lectura','sky-tulum'); ?>
     </li>
     <li class="amenities__list-item">
-      <span class="amenities__icon" ><i class="icon-uniF105"></i></span><?php esc_html_e('Snack Bar','sky-tulum'); ?>
-    </li>
-    <!-- <li class="amenities__list-item">
-      <i class="icon-uniF105"></i><?php esc_html_e('Lavandería','sky-tulum'); ?>
+      <span class="amenities__icon" ><i class="icon-uniF10B"></i></span><?php esc_html_e('Snack Bar','sky-tulum'); ?>
     </li>
     <li class="amenities__list-item">
-      <i class="icon-uniF105"></i><?php esc_html_e('Concerge','sky-tulum'); ?>
-    </li> -->
+    <span class="amenities__icon" ><i class="icon-uniF109"></i></span><?php esc_html_e('Lavandería','sky-tulum'); ?>
+    </li>
+    <li class="amenities__list-item">
+    <span class="amenities__icon" ><i class="icon-uniF10A"></i></span><?php esc_html_e('Concerge','sky-tulum'); ?>
+    </li>
   </ul>
   <?php
     if (isset($meta['image'])) {
