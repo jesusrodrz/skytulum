@@ -80,7 +80,7 @@
     position: relative;
   }
   &__sold{
-    --size: 3em;
+    --size: 4em;
     font-size: .9em;
     top: 50%;
     transform: translateY(-50%);
@@ -88,10 +88,15 @@
     left:0;
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: .5em;
+    left: 8px;
     &::before{
       border-radius: 1000px;
       height:  var(--size);
       width: var(--size);
+      transform: translateY(-50%);
+      background: rgba(253,202,202,0.8);
     }
   }
   &__col--btn{
