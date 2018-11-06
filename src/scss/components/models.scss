@@ -22,6 +22,7 @@
   }
   &__item:nth-of-type(odd) &__description, &__item:nth-of-type(odd) &__title{
     justify-self: start;
+    transform: translateX(-10vw)
     
   }
   &__item:nth-of-type(even){
@@ -30,6 +31,8 @@
   }
   &__item:nth-of-type(even) &__description, &__item:nth-of-type(even) &__title{
     justify-self: end;
+    transform: translateX(10vw)
+    
   }
   
   &__item{
@@ -72,16 +75,16 @@
     transition: transform .4s ease-out ;
   }
   &__item:nth-of-type(even) &__img{
-    transform: rotateY(-30deg) rotateX(15deg) scale(.6);
+    transform: rotateY(-30deg) rotateX(15deg) scale(.8);
   }
   &__item:nth-of-type(even):hover &__img, &__item:nth-of-type(even).active &__img{
-    transform: rotateY(-15deg) rotateX(7deg) scale(1);
+    transform: rotateY(-15deg) rotateX(7deg) scale(.9);
   }
   &__item:nth-of-type(odd) &__img{
-    transform: rotateY(30deg) rotateX(15deg) scale(.6);
+    transform: rotateY(30deg) rotateX(15deg) scale(.8);
   }
   &__item:nth-of-type(odd):hover &__img, &__item:nth-of-type(odd).active &__img{
-    transform: rotateY(15deg) rotateX(7deg) scale(1);
+    transform: rotateY(15deg) rotateX(7deg) scale(.9);
   }
   &__img{
     display: block;
@@ -100,6 +103,7 @@
     text-shadow: 1px 1px 3px rgb(119, 119, 119);
     position: absolute;
     transition: transform .4s ease-out;
+    font-weight: bold;
     &::before{
       position: absolute;
       content: "";
@@ -118,13 +122,13 @@
     transform: translate(-3em,1em) rotateY(-30deg) rotateX(15deg) scale(.8);
   }
   &__item:nth-of-type(even):hover &__sold, &__item:nth-of-type(even).active &__sold{
-    transform: rotateY(-12deg) rotateX(7deg) scale(1);
+    transform: rotateY(-12deg) rotateX(7deg) scale(.9);
   }
   &__item:nth-of-type(odd) &__sold{
     left: 3em;
     transform: translate(3em,1em) rotateY(30deg) rotateX(15deg) scale(.8);
   }
   &__item:nth-of-type(odd):hover &__sold, &__item:nth-of-type(odd).active &__sold{
-    transform: rotateY(12deg) rotateX(7deg) scale(1);
+    transform: rotateY(12deg) rotateX(7deg) scale(.9);
   }
 }
