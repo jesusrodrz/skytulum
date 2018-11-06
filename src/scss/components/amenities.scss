@@ -16,12 +16,14 @@
     z-index: 50;
     display: grid;
     padding: 1em;
+    padding-left: 1em !important;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(4,1fr);
     @include media(md){
       grid-template-columns: repeat(4,1fr);
       grid-template-rows: repeat(3,1fr);
       padding: 2em;
+      padding-left: 2em !important;
     }
     color: white;
   }
