@@ -55,6 +55,9 @@
     }
     padding: 1em 1em;
     font-size: 1.3em;
+    font-family: raleway;
+    line-height: 1.3em;
+    font-size: 1em; 
     // background-color: white; 
     // border-radius: 16px; 
     // box-shadow: 16px 16px 50px rgba(0,0,0,.05);
@@ -76,16 +79,18 @@
     }
       
     ol li ol li {
-      font-family: $primary-font;
     }
-      
+    ul,ol{
+      font-weight: 600;
+    } 
+    ul,ol ol,ul{
+      font-weight: normal;
+    } 
       
     ol li{
       padding:0;
       color: #636366;
-      font-weight: 400;
-      font-family: 'Raleway', sans-serif;
-      font-size: 1em;
+      // font-size: 1em;
     }
   }
   
