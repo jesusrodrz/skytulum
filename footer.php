@@ -80,7 +80,7 @@
   </footer>
   <?php wp_footer(); ?>
   <!-- GOOGLE MAPS START -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtS5WYRyer1rZS0ctPOLVlN0Xny1XJ7YE&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5GzyCirxbRwWAOcnz63t8r9-A8lXUTTM&callback=initMap"
     async defer></script>
     <script>
         const mapStyle = [
