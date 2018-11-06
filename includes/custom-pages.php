@@ -296,28 +296,6 @@
               } 
             ?>
           </figure>
-          <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[images][2]' );?>"><?php esc_html_e( 'Imagen 3', 'sky-tulum' );?></label>
-
-          <figure class="gallery__fig images-field" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
-            <input class="gallery__input" type="text" value="<?php if (is_array($meta) && isset($meta['images'][2])){ echo esc_attr($meta['images'][2]);} ?>" name="<?php echo esc_attr($meta_id . '[images][2]' );?>" id="<?php echo esc_attr($meta_id . '[images][2]' );?>">
-            <?php if (is_array($meta) && isset($meta['images'][2])){ 
-              ?>
-              <img width="100" class="gallery__img" src="<?php echo esc_attr($meta['images'][2]); ?>"  >
-              <?php 
-              } 
-            ?>
-          </figure>
-          <label class="custom-fields__label" for="<?php echo esc_attr($meta_id . '[images][3]' );?>"><?php esc_html_e( 'Imagen 4 ', 'sky-tulum' );?></label>
-
-          <figure class="gallery__fig images-field" data-title="<?php esc_html_e( 'Seleciona una imagen', 'sky-tulum' );?>" data-button="<?php esc_html_e( 'Selecionar', 'sky-tulum' );?>" >
-            <input class="gallery__input" type="text" value="<?php if (is_array($meta) && isset($meta['images'][3])){ echo esc_attr($meta['images'][3]);} ?>" name="<?php echo esc_attr($meta_id . '[images][3]' );?>" id="<?php echo esc_attr($meta_id . '[images][3]' );?>">
-            <?php if (is_array($meta) && isset($meta['images'][3])){ 
-              ?>
-              <img width="100" class="gallery__img" src="<?php echo esc_attr($meta['images'][3]); ?>"  >
-              <?php 
-              } 
-            ?>
-          </figure>
         </div>
         <br>
       <?php
@@ -404,7 +382,7 @@
     'custom-fields'  =>   array(
       $custom_fields['hero'],
       $custom_fields['image'],
-      $custom_fields['images'],
+      // $custom_fields['images'],
       $custom_fields['linkcta']
       // $custom_fields['text'],
     ) 

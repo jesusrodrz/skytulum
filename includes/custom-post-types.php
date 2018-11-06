@@ -3,7 +3,7 @@ $post_types['models'] = array(
     'name'=>'models',
     'post_id' =>'models',
     'custom-fields' => array(
-      $custom_fields['image'],
+      $custom_fields['images'],
       $custom_fields['sell'],
       $custom_fields['area'],
       $custom_fields['list'],

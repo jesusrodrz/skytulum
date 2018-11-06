@@ -42,23 +42,23 @@ get_header();
   endif;
 ?>
 <section class="section-models models">
-<?php $loop = new WP_Query( array( 'post_type' => 'models', 'posts_per_page' => -1, 'order' => 'ASC' ) ); ?>
-<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-<?php 
-  $post_id = get_the_ID();
-
-  $post_meta = get_post_meta( $post_id,  'models_custom_field', true );
-  // isset($post_meta['gallery'])
-?> 
-<?php 
-// if ( isset( $post_meta['area'] ) ) echo $post_meta['area']); 
-?>
-  <article class="models__item">
+  <?php $loop = new WP_Query( array( 'post_type' => 'models', 'posts_per_page' => -1, 'order' => 'ASC' ) ); ?>
+  <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+  <?php 
+    $post_id = get_the_ID();
+    $post_meta = get_post_meta( $post_id,  'models_custom_field', true );
+    if(isset($post_meta['images'])){
+      $imagesClass = ( $post_meta['images'][0] !='' && $post_meta['images'][1] !=''  ) ? 'models__item--2' : '';
+    }
+  ?>
+  <article class="models__item <?php echo $imagesClass;?>">
     <h2 class="models__title section__title title-2 bg-square-center t-uppercase"> <?php the_title();?></h2>
     <div class="models__description">
-      <p class="models__text"> <?php 
-        if (isset($post_meta['area'])) esc_html_e( $post_meta['area'], 'sky-tulum' ); 
-      ?></p>
+      <p class="models__text">
+        <?php 
+          if (isset($post_meta['area'])) esc_html_e( $post_meta['area'], 'sky-tulum' ); 
+        ?>
+      </p>
       <ul class="models__list">
         <?php	
           if (isset($post_meta['list'])) {
@@ -74,14 +74,17 @@ get_header();
         ?>
       </ul>
     </div>
-    <figure class="models__fig">
-      <img class="models__img" src="<?php 
-        if (isset($post_meta['image'])) echo $post_meta['image']; 
-      ?>" alt=""/>
-      <?php 
-      if (isset($post_meta['sell'])) echo '<span class="models__sold">' . $sell . '</span>'; 
-      ?>
-    </figure>
+    <?php if(isset($post_meta['images']) ): foreach ( $post_meta['images'] as $index => $img ): $class = $index + 1;  ?>
+      <figure class="models__fig">
+        <img class="models__img" src="<?php if (isset($img)) echo $img; ?>" alt=""/>
+        <?php 
+          if($index < 1 ){
+            
+            if (isset($post_meta['sell'])) echo '<span class="models__sold">' . $sell . '</span>'; 
+          }
+        ?>
+      </figure>
+    <?php endforeach; endif; ?>
   </article>
 <?php endwhile; wp_reset_query(); ?>
 </section>

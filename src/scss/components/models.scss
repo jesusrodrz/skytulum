@@ -8,16 +8,16 @@
     padding: 0 2em;
     padding-bottom: 5%;
   }
-  &__title{
-    grid-area: title;
-    align-self: end;
-  }
   &__text{
     font-size: 1.3em;
     font-family: Raleway, sans-serif;
   }
+  &__title{
+    grid-area: title;
+    align-self: end;
+  }
   &__item:nth-of-type(odd){
-    grid-template-areas: "img title" "img description";
+    grid-template-areas: "img1 title" "img1 description";
     grid-template-columns: 60% 1fr;
   }
   &__item:nth-of-type(odd) &__description, &__item:nth-of-type(odd) &__title{
@@ -26,12 +26,36 @@
     
   }
   &__item:nth-of-type(even){
-    grid-template-areas: "title img" "description img";
+    grid-template-areas: "title img1" "description img1";
     grid-template-columns: 1fr 60%;
   }
   &__item:nth-of-type(even) &__description, &__item:nth-of-type(even) &__title{
     justify-self: end;
     transform: translateX(10vw)
+    
+  }
+  &__fig:nth-of-type(1){
+    grid-area: img1
+  }
+  &__fig:nth-of-type(2){
+    grid-area: img2
+  }
+  &__item.models__item--2:nth-of-type(odd){
+    grid-template-areas: "img1 img2 title" "img1 img2 description";
+    grid-template-columns: 30% 30% 1fr;
+  }
+  &__item.models__item--2:nth-of-type(odd) &__description, &__item.models__item--2:nth-of-type(odd) &__title{
+    justify-self: start;
+    transform: translateX(-0vw)
+    
+  }
+  &__item.models__item--2:nth-of-type(even){
+    grid-template-areas: "title img1 img2 " "description img1 img2 ";
+    grid-template-columns: 1fr 30% 30%;
+  }
+  &__item.models__item--2:nth-of-type(even) &__description, &__item.models__item--2:nth-of-type(even) &__title{
+    justify-self: end;
+    transform: translateX(0vw)
     
   }
   
