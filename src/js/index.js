@@ -541,15 +541,17 @@ if (truncateContainer ) {
         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
     )
   }
+  if (element) {
 
-  const isVisible = () => {
-    if (isInViewport(element)) {
-      element.classList.add('active')
-      
-      window.removeEventListener('scroll', isVisible )
-
+    const isVisible = () => {
+      if (isInViewport(element)) {
+        element.classList.add('active')
+        
+        window.removeEventListener('scroll', isVisible )
+  
+      }
     }
+    window.addEventListener('scroll', isVisible)
+    isVisible()
   }
-  window.addEventListener('scroll', isVisible)
-  isVisible()
 }
