@@ -24,10 +24,11 @@
       <!-- yep 2 -->
       <style>
         .map-home{
-          height:80vh;width:100%
+          height:80vh;width:100%;
+          padding-bottom:2em;
         }
       </style>
-      <section id="map" class=".map-home" styles="">
+      <section id="map" class="map-home" styles="">
       </section>
     <?php endif;?>
     <!-- yep 3 -->
