@@ -20,7 +20,7 @@
       </article><img class="section-contact__img" src="<?php get_asset('assets/img/moon.png')?>" alt="alt">
     </section>
     <!-- yep 1  -->
-    <?php if($mapVisible)?>
+    <?php if($mapVisible):?>
       <!-- yep 2-->
       <section id="map" styles="height:80vh;width:100%">
       </section>
