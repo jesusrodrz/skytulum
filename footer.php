@@ -22,7 +22,12 @@
     <!-- yep 1  -->
     <?php if($mapVisible):?>
       <!-- yep 2 -->
-      <section id="map" styles="height:80vh;width:100%">
+      <style>
+        .map-home{
+          height:80vh;width:100%
+        }
+      </style>
+      <section id="map" class=".map-home" styles="">
       </section>
     <?php endif;?>
     <!-- yep 3 -->
