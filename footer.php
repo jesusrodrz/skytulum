@@ -24,7 +24,8 @@
       <!-- yep 2 -->
       <style>
         .map-home{
-          height:80vh;width:100%;
+          height:calc( 90vh - var(--header-height) );
+          width:100%;
           padding-bottom:2em;
         }
       </style>
@@ -101,7 +102,7 @@
 
           if (mapContainer) {
             const myLatLng = {lat: 20.199254, lng: -87.477989},
-            mapCenter = {lat: 20.202531, lng: -87.462453}  
+            mapCenter = <?php echo ($mapVisible) ? 'myLatLng' : '{lat: 20.202531, lng: -87.462453}' ?>  
             const map = new google.maps.Map(mapContainer, {
               center: myLatLng,
               zoom: 12,
