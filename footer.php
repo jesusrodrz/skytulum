@@ -24,7 +24,7 @@
       <!-- yep 2 -->
       <style>
         .map-home{
-          height:calc( 90vh - var(--header-height) );
+          height:calc( 80vh - var(--header-height) );
           width:100%;
           padding-bottom:2em;
         }
@@ -70,30 +70,30 @@
     <script>
         const mapStyle = [
           {
-          "elementType": "geometry.fill",
-          "stylers": [
-          {
-          "color": "#ffffff"
-          }
-          ]
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+              "color": "#ffffff"
+              }
+            ]
           },
           {
-          "featureType": "administrative.land_parcel",
-          "elementType": "geometry.fill",
-          "stylers": [
-          {
-          "visibility": "on"
-          }
-          ]
+            "featureType": "administrative.land_parcel",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+              "visibility": "on"
+              }
+            ]
           },
           {
-          "featureType": "water",
-          "elementType": "geometry.fill",
-          "stylers": [
-          {
-          "color": "#dceae9"
-          }
-          ]
+            "featureType": "water",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+              "color": "#dceae9"
+              }
+            ]
           }
         ]
         function initMap() {
