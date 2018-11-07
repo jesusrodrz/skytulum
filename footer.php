@@ -21,7 +21,7 @@
     </section>
     <!-- yep 1  -->
     <?php if($mapVisible):?>
-      <!-- yep 2-->
+      <!-- yep 2 -->
       <section id="map" styles="height:80vh;width:100%">
       </section>
     <?php endif;?>
