@@ -105,7 +105,7 @@
             mapCenter = <?php echo ($mapVisible) ? 'myLatLng' : '{lat: 20.202531, lng: -87.462453}' ?>  
             const map = new google.maps.Map(mapContainer, {
               center: myLatLng,
-              zoom: 12,
+              zoom: <?php echo ($mapVisible) ? '10' : '12' ?> ,
               styles: mapStyle
             })
 
