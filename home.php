@@ -84,5 +84,8 @@ get_header();
     ?>
     <p>Not desc</p>
     <?php endif; ?>
+  <section id="map" styles="height:80vh;width:100%">
+    
+  </section>
 <?php 
 get_footer();
