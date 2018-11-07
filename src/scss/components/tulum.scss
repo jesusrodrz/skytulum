@@ -23,11 +23,12 @@
   &__text{
     
     grid-area: text;
-    // background-color: white; 
-    // border-radius: 16px; 
-    // box-shadow: 16px 16px 50px rgba(0,0,0,.05);
     font-size: 1.3em;
     padding: 1em;
+    
+    font-family: raleway;
+    line-height: 1.3em;
+    font-size: 1em;
     @include media(md,max){
       margin-bottom: 2em;
     }
