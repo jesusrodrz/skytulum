@@ -5,6 +5,9 @@
       } else {
         $visible = '';
       }
+      $mapVisible = (is_page_template('home.php')) ? true : false;
+
+      
     ?>
     <section class="section section-contact <?php echo $visible;?>">
       <article class="contact" id="contact">
@@ -16,6 +19,11 @@
         </div>
       </article><img class="section-contact__img" src="<?php get_asset('assets/img/moon.png')?>" alt="alt">
     </section>
+    <?php if($mapVisible)?>
+      <section id="map" styles="height:80vh;width:100%">
+      </section>
+    <?php endif;?>
+
     <div class="particles" id="particles" data-jsonsrc="<?php get_asset('assets/particlesjs-config.json')?>">
         <div class="particles__bg"></div>
       </div>

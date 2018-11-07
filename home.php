@@ -77,6 +77,7 @@ get_header();
             ?>
               <button class="gallery__btn btn" id="galleryBtn"><?php esc_html_e('Ver Galería','sky-tulum'); ?></button>
               </section>
+              
             <?php
           endif;
       endwhile;
@@ -84,8 +85,6 @@ get_header();
     ?>
     <p>Not desc</p>
     <?php endif; ?>
-  <section id="map" styles="height:80vh;width:100%">
-    
-  </section>
+  
 <?php 
 get_footer();
