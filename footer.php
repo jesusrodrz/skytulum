@@ -5,7 +5,7 @@
       } else {
         $visible = '';
       }
-      $mapVisible = (is_page_template('home.php')) ? true : false;
+      $mapVisible = (is_page_template('proyect.php')) ? true : false;
 
       
     ?>
@@ -28,7 +28,7 @@
           padding-bottom:2em;
         }
       </style>
-      <section id="map" class="map-home" styles="">
+      <section id="map" class="map-home">
       </section>
     <?php endif;?>
     <!-- yep 3 -->
@@ -45,39 +45,6 @@
     <?php  endif; ?>
     <button class="up-btn" id="btnUp"><i class="icon-up"></i> <span class="up-btn__text"><?php esc_html_e('Inicio','sky-tulum'); ?></span>  </button>
   <footer class="footer">
-    <!-- <section class="footer__section notices-ft">
-      <h2 class="footer__title notices-ft__title"><?php esc_html_e('Noticias','sky-tulum'); ?></h2>
-      <?php 
-      $args = array(
-        'posts_per_page' => 2,
-        'offset' => 0,
-        'cat' => $cat->cat_ID,
-        'orderby' => 'ID',
-        'order' => 'DESC',
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'suppress_filters' => true 
-      );
-      
-      $posts = new WP_Query($args);
-      
-      ?>
-      <?php
-      if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post();
-      $post_id = get_the_ID();
-      // $post_meta = get_post_meta( $post->ID,  'specs_custom_field', true );
-      ?>
-      <article class="notice-item">
-        <h3 class="notice-item__title"><a class="notice-item" href="<?php the_permalink(); ?>" target="blank"><?php the_title(); ?></a></h3>
-        <p class="notice-item__text">
-          <time class="notice-item__date" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished" ><?php echo get_the_date(); ?></time>
-        </p>
-      </article>
-      <?php 
-      endwhile;
-      endif
-      ?>
-    </section> -->
     <section class="footer__section subscribe">
       <h2 class="footer__title subscribe__title contact__title"><?php echo _e( 'Suscribirse', 'sky-tulum' );?></h2>
 
