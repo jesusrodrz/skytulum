@@ -16,12 +16,15 @@ $gap: 15px;
 $color-primary:#429994;
 $color-gray:#636366;
 $color-darkgray: #404052;
-$color-lightgray: #eaeaea;
+$color-lightgray: rgb(234, 234, 234);
 // color variable map
 $colors: (
   // non-nested values
   text: $color-gray,
-  background: $color-lightgray,
+  background: (
+    base:$color-lightgray,
+    trans: rgba($color-lightgray,.8)
+  ),
   black:#000,
   cta:$color-gray,
   dark-footer: $color-darkgray,

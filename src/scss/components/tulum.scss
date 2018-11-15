@@ -9,7 +9,7 @@
     grid-template-columns: 70% 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: "title map" "text map";
-    min-height: 100vh;
+    // min-height: 100vh;
     grid-gap: $gap * 2;
   }
   &__title, &__text{
@@ -88,7 +88,7 @@
     height: 70vh;
     @include media(md){
       width: 100%;
-      min-height:80vh;
+      // min-height:80vh;
       height: 100%
     }
   }
