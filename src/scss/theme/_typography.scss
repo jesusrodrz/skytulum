@@ -16,6 +16,7 @@
   font-family: 'Raleway', sans-serif;
 
   font-size: 2em;
+  line-height:.7em;
   @extend %bg-square;
   &::before{
     width:100%;
